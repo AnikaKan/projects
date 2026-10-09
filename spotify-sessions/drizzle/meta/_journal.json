@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1788566400000,
+      "tag": "0000_hybrid_track_features",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1788760111835,
+      "tag": "0001_bent_franklin_storm",
+      "breakpoints": true
+    }
+  ]
+}

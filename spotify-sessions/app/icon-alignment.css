@@ -1,0 +1,12 @@
+.brand > span > svg,
+body > main > header > a > span > svg {
+  display: block;
+  width: 17px;
+  height: 17px;
+}
+
+.track-art.fallback svg,
+.history-track-art svg {
+  width: 20px;
+  height: 20px;
+}
