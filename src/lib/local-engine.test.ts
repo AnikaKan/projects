@@ -1,0 +1,6 @@
+import { describe,expect,it } from "vitest";
+import { evaluateLocally,firstQuestion } from "./local-engine";
+import { extractClaimsLocally } from "./parser";
+import { demoWorkspace } from "./seed";
+describe("resume extraction",()=>{it("keeps input bullets as confirmed source text",()=>{const claims=extractClaimsLocally("Led the checkout redesign and improved completed purchases by 12% over eight weeks.\nOwned discovery and rollout with engineering and design partners.");expect(claims).toHaveLength(2);expect(claims[0].evidence[0]).toMatchObject({kind:"fact",confirmed:true});expect(claims[0].status).toBe("unevaluated")})});
+describe("adaptive local interview",()=>{it("drills into missing ownership",()=>{const turn=evaluateLocally("The team improved conversion by 12 percent after changing onboarding, based on an eight week experiment with new accounts.","Resume Grilling","practice",demoWorkspace.claims);expect(turn.nextQuestion).toMatch(/decision was yours/i)});it("flags known contradictory metric",()=>{const turn=evaluateLocally("I personally led the work and achieved 35% improvement after the launch with the seller team and measured the overall result.","Resume Grilling","grill",demoWorkspace.claims);expect(turn.contradiction).toMatch(/conflicting 24%/i)});it("offers category starters",()=>expect(firstQuestion("Root Cause Analysis")).toMatch(/12%/))});
