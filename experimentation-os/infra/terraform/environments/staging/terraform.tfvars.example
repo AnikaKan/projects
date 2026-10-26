@@ -1,0 +1,18 @@
+aws_region                    = "REPLACE_WITH_AUTHORIZED_REGION"
+vpc_cidr                      = "REPLACE_WITH_APPROVED_STAGING_CIDR"
+db_instance_class             = "REPLACE_AFTER_CAPACITY_AND_COST_REVIEW"
+db_allocated_storage_gb       = 0 # REPLACE: zero is intentionally invalid for planning
+db_max_allocated_storage_gb   = 0 # REPLACE: zero is intentionally invalid for planning
+db_multi_az                   = false # REPLACE after availability decision
+db_backup_retention_days      = 0 # REPLACE after recovery decision
+deletion_protection           = false # REPLACE after recovery decision
+queue_retention_seconds       = 0 # REPLACE after outage/recovery decision
+log_retention_days            = 0 # REPLACE after data-retention decision
+monthly_budget_usd            = null
+budget_alert_email            = null
+operations_alert_email        = null
+tags = {
+  Owner      = "REPLACE_WITH_NAMED_OWNER"
+  CostCenter = "REPLACE_WITH_APPROVED_COST_CENTER"
+}
+

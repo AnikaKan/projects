@@ -1,0 +1,8 @@
+aws_region       = "REPLACE_WITH_AUTHORIZED_REGION"
+state_bucket_name = "REPLACE_WITH_GLOBALLY_UNIQUE_STATE_BUCKET"
+github_repository = "REPLACE_WITH_OWNER_AND_REPOSITORY"
+tags = {
+  Owner      = "REPLACE_WITH_NAMED_OWNER"
+  CostCenter = "REPLACE_WITH_APPROVED_COST_CENTER"
+}
+

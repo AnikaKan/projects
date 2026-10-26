@@ -1,0 +1,6 @@
+bucket       = "REPLACE_WITH_STATE_BUCKET"
+key          = "experimentos/staging/terraform.tfstate"
+region       = "REPLACE_WITH_AUTHORIZED_REGION"
+use_lockfile = true
+encrypt      = true
+

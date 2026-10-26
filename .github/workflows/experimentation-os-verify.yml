@@ -1,0 +1,114 @@
+name: ExperimentOS Verify
+
+on:
+  pull_request:
+    paths:
+      - "experimentation-os/**"
+      - ".github/workflows/experimentation-os-verify.yml"
+  push:
+    branches: [main]
+    paths:
+      - "experimentation-os/**"
+      - ".github/workflows/experimentation-os-verify.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17.7-alpine
+        env:
+          POSTGRES_DB: experimentos_test
+          POSTGRES_USER: experimentos
+          POSTGRES_PASSWORD: experimentos
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U experimentos -d experimentos_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    defaults:
+      run:
+        working-directory: experimentation-os/backend
+    env:
+      EXPERIMENTOS_ENVIRONMENT: test
+      AUTH_MODE: local
+      DATABASE_URL: postgresql+psycopg://experimentos:experimentos@localhost:5432/experimentos_test
+      CREDENTIAL_PEPPER: ci-only-credential-pepper-0000000000000000
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: astral-sh/setup-uv@v7
+        with:
+          version: "0.11.7"
+          enable-cache: true
+      - run: uv sync --frozen
+      - run: uv run ruff check app tests ../scripts migrations
+      - run: uv run mypy app
+      - run: uv run alembic upgrade head
+      - run: uv run pytest --cov=app --cov-report=term-missing
+      - run: uv run python ../scripts/smoke_api.py
+      - run: uv run alembic downgrade base && uv run alembic upgrade head
+
+  javascript:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experimentation-os
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: astral-sh/setup-uv@v7
+        with:
+          version: "0.11.7"
+          enable-cache: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm openapi:generate
+      - run: git diff --exit-code -- backend/openapi.json packages/api-client/src/schema.ts
+      - run: pnpm verify
+      - run: uv run --project backend python scripts/check_secrets.py
+
+  terraform:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experimentation-os
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.17.0"
+      - run: terraform fmt -check -recursive infra/terraform
+      - run: terraform -chdir=infra/terraform/bootstrap init -backend=false
+      - run: terraform -chdir=infra/terraform/bootstrap validate
+      - run: terraform -chdir=infra/terraform/environments/staging init -backend=false
+      - run: terraform -chdir=infra/terraform/environments/staging validate
+      - run: terraform -chdir=infra/terraform/environments/production init -backend=false
+      - run: terraform -chdir=infra/terraform/environments/production validate
+
+  containers:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experimentation-os
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - run: docker build -f backend/Dockerfile -t experimentos-api:ci .
+      - run: docker build -f frontend/Dockerfile -t experimentos-console:ci .
+      - run: docker build -f examples/host-app/Dockerfile -t experimentos-host:ci .
