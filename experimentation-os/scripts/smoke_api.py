@@ -1,6 +1,7 @@
 import json
 import os
 import subprocess
+import tempfile
 import time
 import urllib.error
 import urllib.request
@@ -18,9 +19,14 @@ environment.update(
         "EXPERIMENTOS_ENVIRONMENT": "test",
         "AUTH_MODE": "local",
         "CREDENTIAL_PEPPER": "runtime-test-pepper-0000000000000000",
-        "DATABASE_URL": "sqlite+pysqlite:////private/tmp/experimentos-runtime.sqlite3",
     }
 )
+runtime_database_path: Path | None = None
+if not environment.get("DATABASE_URL"):
+    runtime_database_path = (
+        Path(tempfile.gettempdir()) / f"experimentos-runtime-{os.getpid()}.sqlite3"
+    )
+    environment["DATABASE_URL"] = f"sqlite+pysqlite:///{runtime_database_path}"
 
 process = subprocess.Popen(  # noqa: S603 -- executable is the repository's fixed virtualenv path
     [
@@ -85,3 +91,5 @@ finally:
     except subprocess.TimeoutExpired:
         process.kill()
         process.wait(timeout=5)
+    if runtime_database_path is not None:
+        runtime_database_path.unlink(missing_ok=True)
