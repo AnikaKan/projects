@@ -1298,6 +1298,10 @@
       },
       "HealthResponse": {
         "properties": {
+          "release_version": {
+            "title": "Release Version",
+            "type": "string"
+          },
           "service": {
             "default": "experimentos-api",
             "title": "Service",
@@ -1309,6 +1313,9 @@
             "type": "string"
           }
         },
+        "required": [
+          "release_version"
+        ],
         "title": "HealthResponse",
         "type": "object"
       },
@@ -1600,7 +1607,7 @@
   "info": {
     "description": "ExperimentOS lifecycle, assignment, identity, and durable event boundary.",
     "title": "ExperimentOS API",
-    "version": "0.1.0"
+    "version": "day7-local-rc1"
   },
   "openapi": "3.1.0",
   "paths": {

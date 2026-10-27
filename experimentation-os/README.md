@@ -2,7 +2,7 @@
 
 ExperimentOS is an early-stage platform for running controlled product experiments with stable assignment, scoped access, durable event processing, reproducible analysis, and auditable human decisions.
 
-> **Status:** Days 1–6 are implemented and verified with synthetic data on a local Docker stack. Managed services, external alert delivery, independent statistical review, real traffic, and every production-admission gate remain open. This project is not production-ready.
+> **Status:** Days 1–7 are implemented and verified with synthetic data on a local Docker stack. The Day 7 readiness decision is **NO-GO for staging, production, and real traffic** until the documented external gates are resolved. This project is not production-ready.
 
 ## What works today
 
@@ -23,8 +23,9 @@ ExperimentOS is an early-stage platform for running controlled product experimen
 - Docker-based local PostgreSQL and queue emulation
 - Terraform definitions for isolated staging and production infrastructure
 - GitHub Actions checks for Python, TypeScript, Terraform, and container builds
+- Local release drills for clean migration, backup/restore, adjacent-image rollback, replay, emergency disable, credential recovery, and operator handoff
 
-Local verification has covered clean PostgreSQL migration, rollback and reapplication; service startup and health; unauthorized, role, and cross-environment denial; credential scope, hashing, rotation, and revocation; stable concurrent assignment; queue failure and replay; cohort and analysis edge cases; snapshot-linked decisions and invalidation; accessibility structure; bounded overload and database-failure recovery; container builds; secret scanning; and Terraform validation without creating cloud resources.
+Local verification has covered clean PostgreSQL migration, rollback and reapplication; service startup and health; unauthorized, role, and cross-environment denial; credential scope, hashing, rotation, and revocation; stable concurrent assignment; queue failure and replay; cohort and analysis edge cases; snapshot-linked decisions and invalidation; accessibility structure; bounded overload and database-failure recovery; isolated restore and compatible application rollback; container builds; secret scanning; and Terraform validation without creating cloud resources.
 
 ## Architecture
 
@@ -73,6 +74,7 @@ pnpm build
 
 cd backend
 uv sync --frozen
+uv run ruff format --check app tests ../scripts migrations
 uv run ruff check app tests ../scripts migrations
 uv run mypy app
 uv run pytest
@@ -80,7 +82,7 @@ uv run pytest
 
 Terraform validation uses remote state disabled and does not provision resources. A real plan requires reviewed account-specific values and authorized cloud credentials. Applying infrastructure is never the default.
 
-Reproducible Day 6 local load commands and the observed single-machine results are in [`docs/day6-load-testing.md`](docs/day6-load-testing.md) and [`docs/day6-load-results.json`](docs/day6-load-results.json). These results are not a production capacity claim.
+Reproducible local load evidence is in [`docs/day6-load-testing.md`](docs/day6-load-testing.md). Day 7 drill evidence and the explicit release decision are in [`docs/release-readiness.md`](docs/release-readiness.md), with procedures indexed in [`docs/runbooks/README.md`](docs/runbooks/README.md). These results describe one local machine and are not production-capacity or availability claims.
 
 ## Current boundaries
 
@@ -91,5 +93,6 @@ Reproducible Day 6 local load commands and the observed single-machine results a
 - Missing or invalid evidence blocks a recommendation, and a recommendation cannot deploy product code.
 - LocalStack and local identity are development substitutes, not evidence about managed services.
 - Statistical methods still require independent review before consequential use.
+- Subject deletion is not implemented, and real operational owners and alert routes are not selected.
 
-The next local phase is Day 7 release-candidate and recovery drills. Production admission still requires named owners, independent statistical review, managed identity/data/queue verification, external alert receipt, restore and rollback evidence, authorized infrastructure review, and staged real-world observation.
+The next safe step is a recruiter-facing local demo or static case study. Hosted staging remains blocked pending explicit authorization, named owners, independent statistical review, managed identity/data/queue validation, external alert receipt, deletion support, and the roadmap's staged real-world admission sequence.

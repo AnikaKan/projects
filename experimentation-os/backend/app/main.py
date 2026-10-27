@@ -20,7 +20,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     active_settings = settings or Settings()
     app = FastAPI(
         title="ExperimentOS API",
-        version="0.1.0",
+        version=active_settings.release_version,
         description="ExperimentOS lifecycle, assignment, identity, and durable event boundary.",
     )
     app.state.settings = active_settings

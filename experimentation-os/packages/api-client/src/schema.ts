@@ -985,6 +985,8 @@ export interface components {
         };
         /** HealthResponse */
         HealthResponse: {
+            /** Release Version */
+            release_version: string;
             /**
              * Service
              * @default experimentos-api

@@ -1,0 +1,41 @@
+{
+  "assignment_attribution_recovered": true,
+  "backup_seconds": 0.133,
+  "browser_decision_phrase_present": true,
+  "browser_decision_rationale_present": true,
+  "browser_workflow_rendered": true,
+  "candidate_image": "experimentos-api:day7-rc1",
+  "clean_install_seconds": 10.112,
+  "count_reconciliation": true,
+  "dead_letter_replay_reconciled": true,
+  "emergency_disable_propagated": true,
+  "evidence_boundary": "quiesced logical backup and synthetic traffic on one local Docker host; not managed PITR, concurrent-write RPO, production volume, or a deployment claim",
+  "finalized_analysis_recommendation": "inconclusive",
+  "operator_handoff_audited": true,
+  "passed": true,
+  "profile": "isolated_local_zero_spend",
+  "quiesced_backup_lost_records": 0,
+  "replay_idempotent": true,
+  "replayed_contributions": 401,
+  "restore_rto_seconds": 4.485,
+  "restored_counts": {
+    "assignments": 240,
+    "event_contributions": 460,
+    "event_receipts": 401,
+    "quarantined_events": 0,
+    "raw_events": 460
+  },
+  "revoked_credential_denied": true,
+  "rollback_assignment_preserved": true,
+  "rollback_image": "experimentos-api:day6-rollback",
+  "rollback_to_ready_seconds": 4.719,
+  "source_counts": {
+    "assignments": 240,
+    "event_contributions": 460,
+    "event_receipts": 401,
+    "quarantined_events": 0,
+    "raw_events": 460
+  },
+  "synthetic_assignment_target": 200,
+  "synthetic_event_target": 401
+}

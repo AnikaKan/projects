@@ -31,14 +31,14 @@ router = APIRouter()
 
 
 @router.get("/health/live", response_model=HealthResponse, tags=["health"])
-def live() -> HealthResponse:
-    return HealthResponse()
+def live(request: Request) -> HealthResponse:
+    return HealthResponse(release_version=settings_from_request(request).release_version)
 
 
 @router.get("/health/ready", response_model=HealthResponse, tags=["health"])
-def ready(session: Session = Depends(session_from_request)) -> HealthResponse:
+def ready(request: Request, session: Session = Depends(session_from_request)) -> HealthResponse:
     session.execute(select(1)).scalar_one()
-    return HealthResponse()
+    return HealthResponse(release_version=settings_from_request(request).release_version)
 
 
 @router.get("/v1/me", response_model=PrincipalResponse, tags=["operators"])

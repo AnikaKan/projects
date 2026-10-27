@@ -22,6 +22,9 @@ class Settings(BaseSettings):
     environment: RuntimeEnvironment = Field(
         default=RuntimeEnvironment.LOCAL, alias="EXPERIMENTOS_ENVIRONMENT"
     )
+    release_version: str = Field(
+        default="day7-local-rc1", min_length=1, max_length=80, alias="RELEASE_VERSION"
+    )
     auth_mode: AuthMode = Field(default=AuthMode.LOCAL, alias="AUTH_MODE")
     database_url: str = Field(
         default="postgresql+psycopg://experimentos:experimentos@localhost:5432/experimentos",

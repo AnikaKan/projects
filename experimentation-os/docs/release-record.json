@@ -1,0 +1,26 @@
+{
+  "admission_decision": "no_go_for_staging_production_or_real_traffic",
+  "api_candidate": {
+    "image_id": "sha256:ae8fbc251ba7d5d17a0c67f8aea93ec23bbbba739d37b16de9f47a461e657aa2",
+    "local_tag": "experimentos-api:day7-rc1",
+    "release_version": "day7-local-rc1"
+  },
+  "console_candidate": {
+    "image_id": "sha256:98e6688e18b5a2ee34394bc83348ede2f161e853ec32c7fc6b5c38a7c56cbf18",
+    "local_tag": "experimentos-console:day7-rc1",
+    "note": "Runtime image reused the verified Day 6 console because no console source changed; a fresh Day 7 typed production build passed separately."
+  },
+  "created_at": "2026-10-27T22:07:55Z",
+  "evidence": [
+    "docs/day7-drill-results.json",
+    "docs/release-readiness.md",
+    "docs/runbooks/README.md"
+  ],
+  "profile": "isolated_local_zero_spend",
+  "public_source_commit": "the Git commit containing this record",
+  "rollback": {
+    "image_id": "sha256:43d23827484f85564dbe809b566324810d33f1bfd16e61a531d10c723cc94eb8",
+    "local_tag": "experimentos-api:day6-rollback"
+  },
+  "schema_revision": "e8f1a6c2d904"
+}

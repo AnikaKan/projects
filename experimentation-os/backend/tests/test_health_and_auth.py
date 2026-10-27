@@ -9,7 +9,11 @@ def test_liveness_is_public(seeded_app) -> None:  # type: ignore[no-untyped-def]
     client, _, _ = seeded_app
     response = client.get("/health/live")
     assert response.status_code == 200
-    assert response.json() == {"status": "ok", "service": "experimentos-api"}
+    assert response.json() == {
+        "status": "ok",
+        "service": "experimentos-api",
+        "release_version": "day7-local-rc1",
+    }
 
 
 def test_operator_endpoint_denies_missing_identity(seeded_app) -> None:  # type: ignore[no-untyped-def]

@@ -165,6 +165,7 @@ class AssignmentResponse(BaseModel):
 class HealthResponse(BaseModel):
     status: str = "ok"
     service: str = "experimentos-api"
+    release_version: str
 
 
 class PrincipalResponse(BaseModel):
