@@ -1,0 +1,76 @@
+{
+  "observed_at": "2026-10-27",
+  "environment": "single Mac, Docker Desktop, loopback traffic, synthetic data",
+  "nominal": {
+    "requests": 200,
+    "concurrency": 10,
+    "fault_delay_milliseconds": 0,
+    "elapsed_seconds": 0.689,
+    "achieved_requests_per_second": 290.075,
+    "status_counts": {
+      "200": 200
+    },
+    "latency_milliseconds": {
+      "p50": 26.319,
+      "p95": 107.278,
+      "p99": 138.279,
+      "max": 167.789
+    },
+    "passed": true
+  },
+  "bounded_overload": {
+    "requests": 200,
+    "concurrency": 96,
+    "configured_concurrency_limit": 64,
+    "fault_delay_milliseconds": 250,
+    "elapsed_seconds": 0.506,
+    "achieved_requests_per_second": 395.077,
+    "status_counts": {
+      "200": 64,
+      "503": 136
+    },
+    "latency_milliseconds": {
+      "p50": 73.725,
+      "p95": 483.031,
+      "p99": 494.983,
+      "max": 496.503
+    },
+    "connection_failures": 0,
+    "passed": true
+  },
+  "dependency_failure": {
+    "dependency": "local PostgreSQL 17.7 container",
+    "fault": "container paused",
+    "readiness_while_paused": "timed out after 3.005 seconds with HTTP 000",
+    "recovery_after_unpause": "HTTP 200",
+    "passed": true
+  },
+  "resource_snapshot_after_profiles": {
+    "api": {
+      "cpu_percent": 0.09,
+      "memory": "171.2 MiB"
+    },
+    "postgres": {
+      "cpu_percent": 0.02,
+      "memory": "50.3 MiB"
+    },
+    "localstack": {
+      "cpu_percent": 0.05,
+      "memory": "138 MiB"
+    },
+    "ingestion_worker": {
+      "cpu_percent": 0.0,
+      "memory": "74.97 MiB"
+    },
+    "analysis_worker": {
+      "cpu_percent": 0.0,
+      "memory": "9.543 MiB"
+    }
+  },
+  "limitations": [
+    "These are short, single-machine measurements and are not a production capacity or availability claim.",
+    "The overload delay header is available only in local/test mode.",
+    "LocalStack is an emulator; managed queue age, alert routing, and managed-service failure behavior remain unverified.",
+    "No public endpoint, cloud account, paid resource, real traffic, or customer data was used."
+  ]
+}

@@ -1,6 +1,595 @@
 {
   "components": {
     "schemas": {
+      "AlertTestRequest": {
+        "properties": {
+          "recipient_label": {
+            "maxLength": 160,
+            "minLength": 3,
+            "title": "Recipient Label",
+            "type": "string"
+          }
+        },
+        "required": [
+          "recipient_label"
+        ],
+        "title": "AlertTestRequest",
+        "type": "object"
+      },
+      "AnalysisDeriveRequest": {
+        "properties": {
+          "analysis_version": {
+            "maxLength": 40,
+            "minLength": 10,
+            "pattern": "^analysis-[A-Za-z0-9._-]+$",
+            "title": "Analysis Version",
+            "type": "string"
+          },
+          "cohort_snapshot_id": {
+            "format": "uuid",
+            "title": "Cohort Snapshot Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "cohort_snapshot_id",
+          "analysis_version"
+        ],
+        "title": "AnalysisDeriveRequest",
+        "type": "object"
+      },
+      "AnalysisPlanDocument": {
+        "properties": {
+          "arrival_lateness_hours": {
+            "maximum": 720.0,
+            "minimum": 0.0,
+            "title": "Arrival Lateness Hours",
+            "type": "integer"
+          },
+          "baseline_rate": {
+            "anyOf": [
+              {
+                "exclusiveMaximum": 1.0,
+                "exclusiveMinimum": 0.0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Baseline Rate"
+          },
+          "desired_power": {
+            "anyOf": [
+              {
+                "exclusiveMaximum": 1.0,
+                "exclusiveMinimum": 0.5,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Desired Power"
+          },
+          "enrollment_ends_at": {
+            "format": "date-time",
+            "title": "Enrollment Ends At",
+            "type": "string"
+          },
+          "followup_hours": {
+            "maximum": 2160.0,
+            "minimum": 1.0,
+            "title": "Followup Hours",
+            "type": "integer"
+          },
+          "guardrail_baseline_rate": {
+            "anyOf": [
+              {
+                "exclusiveMaximum": 1.0,
+                "exclusiveMinimum": 0.0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Guardrail Baseline Rate"
+          },
+          "guardrail_harm_margin_percentage_points": {
+            "exclusiveMinimum": 0.0,
+            "maximum": 100.0,
+            "title": "Guardrail Harm Margin Percentage Points",
+            "type": "number"
+          },
+          "guardrail_metric": {
+            "$ref": "#/components/schemas/MetricDefinition"
+          },
+          "guardrail_one_sided_alpha": {
+            "anyOf": [
+              {
+                "exclusiveMinimum": 0.0,
+                "maximum": 0.05,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Guardrail One Sided Alpha"
+          },
+          "hypothesis": {
+            "maxLength": 1000,
+            "minLength": 1,
+            "title": "Hypothesis",
+            "type": "string"
+          },
+          "minimum_detectable_effect_percentage_points": {
+            "anyOf": [
+              {
+                "exclusiveMinimum": 0.0,
+                "maximum": 100.0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Minimum Detectable Effect Percentage Points"
+          },
+          "practical_significance_threshold_percentage_points": {
+            "anyOf": [
+              {
+                "maximum": 100.0,
+                "minimum": 0.0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Practical Significance Threshold Percentage Points"
+          },
+          "practical_threshold_semantics": {
+            "anyOf": [
+              {
+                "const": "lower_confidence_bound_above",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Practical Threshold Semantics"
+          },
+          "primary_alpha": {
+            "default": 0.05,
+            "maximum": 0.05,
+            "minimum": 0.05,
+            "title": "Primary Alpha",
+            "type": "number"
+          },
+          "primary_interval_method": {
+            "anyOf": [
+              {
+                "const": "score",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Primary Interval Method"
+          },
+          "primary_metric": {
+            "$ref": "#/components/schemas/MetricDefinition"
+          },
+          "primary_test_method": {
+            "anyOf": [
+              {
+                "const": "score",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Primary Test Method"
+          },
+          "score_correction": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Score Correction"
+          }
+        },
+        "required": [
+          "hypothesis",
+          "primary_metric",
+          "guardrail_metric",
+          "guardrail_harm_margin_percentage_points",
+          "enrollment_ends_at",
+          "followup_hours",
+          "arrival_lateness_hours"
+        ],
+        "title": "AnalysisPlanDocument",
+        "type": "object"
+      },
+      "AnalysisSnapshotResponse": {
+        "properties": {
+          "analysis_plan_id": {
+            "format": "uuid",
+            "title": "Analysis Plan Id",
+            "type": "string"
+          },
+          "analysis_version": {
+            "title": "Analysis Version",
+            "type": "string"
+          },
+          "checks": {
+            "additionalProperties": true,
+            "title": "Checks",
+            "type": "object"
+          },
+          "code_version": {
+            "title": "Code Version",
+            "type": "string"
+          },
+          "cohort_snapshot_id": {
+            "format": "uuid",
+            "title": "Cohort Snapshot Id",
+            "type": "string"
+          },
+          "configuration_version_id": {
+            "format": "uuid",
+            "title": "Configuration Version Id",
+            "type": "string"
+          },
+          "created": {
+            "default": false,
+            "title": "Created",
+            "type": "boolean"
+          },
+          "cutoff_at": {
+            "format": "date-time",
+            "title": "Cutoff At",
+            "type": "string"
+          },
+          "derivation_version": {
+            "title": "Derivation Version",
+            "type": "string"
+          },
+          "experiment_id": {
+            "format": "uuid",
+            "title": "Experiment Id",
+            "type": "string"
+          },
+          "finalized_at": {
+            "format": "date-time",
+            "title": "Finalized At",
+            "type": "string"
+          },
+          "id": {
+            "format": "uuid",
+            "title": "Id",
+            "type": "string"
+          },
+          "image_version": {
+            "title": "Image Version",
+            "type": "string"
+          },
+          "invalidated_at": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Invalidated At"
+          },
+          "library_versions": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "title": "Library Versions",
+            "type": "object"
+          },
+          "recommendation": {
+            "enum": [
+              "eligible_for_human_approval",
+              "do_not_launch",
+              "inconclusive"
+            ],
+            "title": "Recommendation",
+            "type": "string"
+          },
+          "results": {
+            "additionalProperties": true,
+            "title": "Results",
+            "type": "object"
+          },
+          "source_counts": {
+            "additionalProperties": true,
+            "title": "Source Counts",
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "experiment_id",
+          "configuration_version_id",
+          "analysis_plan_id",
+          "cohort_snapshot_id",
+          "analysis_version",
+          "derivation_version",
+          "code_version",
+          "image_version",
+          "library_versions",
+          "cutoff_at",
+          "source_counts",
+          "checks",
+          "results",
+          "recommendation",
+          "finalized_at",
+          "invalidated_at"
+        ],
+        "title": "AnalysisSnapshotResponse",
+        "type": "object"
+      },
+      "ArmDefinition": {
+        "properties": {
+          "allocation_basis_points": {
+            "const": 5000,
+            "default": 5000,
+            "title": "Allocation Basis Points",
+            "type": "integer"
+          },
+          "key": {
+            "enum": [
+              "control",
+              "treatment"
+            ],
+            "title": "Key",
+            "type": "string"
+          }
+        },
+        "required": [
+          "key"
+        ],
+        "title": "ArmDefinition",
+        "type": "object"
+      },
+      "AssignmentConfiguration": {
+        "properties": {
+          "algorithm_version": {
+            "const": "sha256-v1",
+            "default": "sha256-v1",
+            "title": "Algorithm Version",
+            "type": "string"
+          },
+          "arms": {
+            "items": {
+              "$ref": "#/components/schemas/ArmDefinition"
+            },
+            "title": "Arms",
+            "type": "array"
+          },
+          "eligibility": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/EligibilityRule"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "identity_namespace": {
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Identity Namespace",
+            "type": "string"
+          },
+          "safe_fallback": {
+            "const": "unavailable",
+            "default": "unavailable",
+            "title": "Safe Fallback",
+            "type": "string"
+          },
+          "salt": {
+            "maxLength": 160,
+            "minLength": 16,
+            "title": "Salt",
+            "type": "string"
+          },
+          "traffic_allocation_basis_points": {
+            "maximum": 10000.0,
+            "minimum": 0.0,
+            "title": "Traffic Allocation Basis Points",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "identity_namespace",
+          "traffic_allocation_basis_points",
+          "salt"
+        ],
+        "title": "AssignmentConfiguration",
+        "type": "object"
+      },
+      "AssignmentResolveRequest": {
+        "properties": {
+          "attributes": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "title": "Attributes",
+            "type": "object"
+          },
+          "subject_id": {
+            "maxLength": 255,
+            "minLength": 1,
+            "title": "Subject Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "subject_id"
+        ],
+        "title": "AssignmentResolveRequest",
+        "type": "object"
+      },
+      "AssignmentResponse": {
+        "properties": {
+          "arm": {
+            "anyOf": [
+              {
+                "enum": [
+                  "control",
+                  "treatment"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Arm"
+          },
+          "assignment_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Assignment Id"
+          },
+          "assignment_token": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Assignment Token"
+          },
+          "configuration_version_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Configuration Version Id"
+          },
+          "existing": {
+            "default": false,
+            "title": "Existing",
+            "type": "boolean"
+          },
+          "experiment_id": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Experiment Id"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reason"
+          },
+          "state": {
+            "$ref": "#/components/schemas/AssignmentState"
+          }
+        },
+        "required": [
+          "state"
+        ],
+        "title": "AssignmentResponse",
+        "type": "object"
+      },
+      "AssignmentState": {
+        "enum": [
+          "assigned",
+          "ineligible",
+          "out_of_traffic",
+          "not_running",
+          "enrollment_closed",
+          "disabled"
+        ],
+        "title": "AssignmentState",
+        "type": "string"
+      },
+      "AuditRecordResponse": {
+        "properties": {
+          "action": {
+            "title": "Action",
+            "type": "string"
+          },
+          "actor_id": {
+            "title": "Actor Id",
+            "type": "string"
+          },
+          "actor_type": {
+            "title": "Actor Type",
+            "type": "string"
+          },
+          "detail": {
+            "additionalProperties": true,
+            "title": "Detail",
+            "type": "object"
+          },
+          "id": {
+            "format": "uuid",
+            "title": "Id",
+            "type": "string"
+          },
+          "occurred_at": {
+            "format": "date-time",
+            "title": "Occurred At",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "actor_type",
+          "actor_id",
+          "action",
+          "detail",
+          "occurred_at"
+        ],
+        "title": "AuditRecordResponse",
+        "type": "object"
+      },
       "Capability": {
         "enum": [
           "assignment",
@@ -8,6 +597,125 @@
         ],
         "title": "Capability",
         "type": "string"
+      },
+      "CohortDeriveRequest": {
+        "properties": {
+          "derivation_version": {
+            "default": "cohort-v1",
+            "maxLength": 40,
+            "minLength": 8,
+            "pattern": "^cohort-[A-Za-z0-9._-]+$",
+            "title": "Derivation Version",
+            "type": "string"
+          },
+          "event_derivation_version": {
+            "default": "events-v1",
+            "maxLength": 40,
+            "minLength": 8,
+            "pattern": "^events-[A-Za-z0-9._-]+$",
+            "title": "Event Derivation Version",
+            "type": "string"
+          }
+        },
+        "title": "CohortDeriveRequest",
+        "type": "object"
+      },
+      "CohortSnapshotResponse": {
+        "properties": {
+          "analysis_plan_id": {
+            "format": "uuid",
+            "title": "Analysis Plan Id",
+            "type": "string"
+          },
+          "arm_counts": {
+            "additionalProperties": {
+              "additionalProperties": {
+                "type": "integer"
+              },
+              "type": "object"
+            },
+            "title": "Arm Counts",
+            "type": "object"
+          },
+          "arrival_cutoff_at": {
+            "format": "date-time",
+            "title": "Arrival Cutoff At",
+            "type": "string"
+          },
+          "checks": {
+            "additionalProperties": true,
+            "title": "Checks",
+            "type": "object"
+          },
+          "configuration_version_id": {
+            "format": "uuid",
+            "title": "Configuration Version Id",
+            "type": "string"
+          },
+          "created": {
+            "default": false,
+            "title": "Created",
+            "type": "boolean"
+          },
+          "derivation_version": {
+            "title": "Derivation Version",
+            "type": "string"
+          },
+          "evaluated_at": {
+            "format": "date-time",
+            "title": "Evaluated At",
+            "type": "string"
+          },
+          "event_derivation_version": {
+            "title": "Event Derivation Version",
+            "type": "string"
+          },
+          "experiment_id": {
+            "format": "uuid",
+            "title": "Experiment Id",
+            "type": "string"
+          },
+          "finalization_ready": {
+            "title": "Finalization Ready",
+            "type": "boolean"
+          },
+          "id": {
+            "format": "uuid",
+            "title": "Id",
+            "type": "string"
+          },
+          "readiness": {
+            "additionalProperties": {
+              "type": "boolean"
+            },
+            "title": "Readiness",
+            "type": "object"
+          },
+          "source_counts": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "title": "Source Counts",
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "experiment_id",
+          "configuration_version_id",
+          "analysis_plan_id",
+          "derivation_version",
+          "event_derivation_version",
+          "evaluated_at",
+          "arrival_cutoff_at",
+          "source_counts",
+          "arm_counts",
+          "checks",
+          "readiness",
+          "finalization_ready"
+        ],
+        "title": "CohortSnapshotResponse",
+        "type": "object"
       },
       "CredentialCreateRequest": {
         "properties": {
@@ -97,6 +805,484 @@
         "title": "CredentialResponse",
         "type": "object"
       },
+      "DecisionCreateRequest": {
+        "properties": {
+          "action": {
+            "enum": [
+              "approve_launch",
+              "reject_launch",
+              "request_new_experiment"
+            ],
+            "title": "Action",
+            "type": "string"
+          },
+          "rationale": {
+            "maxLength": 2000,
+            "minLength": 10,
+            "title": "Rationale",
+            "type": "string"
+          },
+          "rollout_reference": {
+            "anyOf": [
+              {
+                "maxLength": 500,
+                "minLength": 3,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rollout Reference"
+          }
+        },
+        "required": [
+          "action",
+          "rationale"
+        ],
+        "title": "DecisionCreateRequest",
+        "type": "object"
+      },
+      "DecisionResponse": {
+        "properties": {
+          "action": {
+            "title": "Action",
+            "type": "string"
+          },
+          "actor_subject": {
+            "title": "Actor Subject",
+            "type": "string"
+          },
+          "created_at": {
+            "format": "date-time",
+            "title": "Created At",
+            "type": "string"
+          },
+          "id": {
+            "format": "uuid",
+            "title": "Id",
+            "type": "string"
+          },
+          "rationale": {
+            "title": "Rationale",
+            "type": "string"
+          },
+          "rollout_reference": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rollout Reference"
+          },
+          "snapshot_id": {
+            "format": "uuid",
+            "title": "Snapshot Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "snapshot_id",
+          "actor_subject",
+          "action",
+          "rationale",
+          "rollout_reference",
+          "created_at"
+        ],
+        "title": "DecisionResponse",
+        "type": "object"
+      },
+      "EligibilityRule": {
+        "properties": {
+          "allowed_values": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 50,
+            "minItems": 1,
+            "title": "Allowed Values",
+            "type": "array"
+          },
+          "attribute": {
+            "maxLength": 80,
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "title": "Attribute",
+            "type": "string"
+          }
+        },
+        "required": [
+          "attribute",
+          "allowed_values"
+        ],
+        "title": "EligibilityRule",
+        "type": "object"
+      },
+      "EmergencyDisableRequest": {
+        "properties": {
+          "expected_version": {
+            "minimum": 1.0,
+            "title": "Expected Version",
+            "type": "integer"
+          },
+          "reason": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "required": [
+          "expected_version",
+          "reason"
+        ],
+        "title": "EmergencyDisableRequest",
+        "type": "object"
+      },
+      "EventBatchRequest": {
+        "properties": {
+          "events": {
+            "items": {
+              "$ref": "#/components/schemas/EventItem"
+            },
+            "maxItems": 100,
+            "minItems": 1,
+            "title": "Events",
+            "type": "array"
+          }
+        },
+        "required": [
+          "events"
+        ],
+        "title": "EventBatchRequest",
+        "type": "object"
+      },
+      "EventBatchResponse": {
+        "properties": {
+          "accepted_count": {
+            "title": "Accepted Count",
+            "type": "integer"
+          },
+          "failed_count": {
+            "title": "Failed Count",
+            "type": "integer"
+          },
+          "results": {
+            "items": {
+              "$ref": "#/components/schemas/EventItemResult"
+            },
+            "title": "Results",
+            "type": "array"
+          }
+        },
+        "required": [
+          "accepted_count",
+          "failed_count",
+          "results"
+        ],
+        "title": "EventBatchResponse",
+        "type": "object"
+      },
+      "EventItem": {
+        "properties": {
+          "assignment_id": {
+            "format": "uuid",
+            "title": "Assignment Id",
+            "type": "string"
+          },
+          "assignment_token": {
+            "maxLength": 2000,
+            "minLength": 40,
+            "title": "Assignment Token",
+            "type": "string"
+          },
+          "correlation_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Correlation Id",
+            "type": "string"
+          },
+          "event_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+            "title": "Event Id",
+            "type": "string"
+          },
+          "event_type": {
+            "maxLength": 120,
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "title": "Event Type",
+            "type": "string"
+          },
+          "occurred_at": {
+            "format": "date-time",
+            "title": "Occurred At",
+            "type": "string"
+          },
+          "payload": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "title": "Payload",
+            "type": "object"
+          },
+          "schema_version": {
+            "const": "1",
+            "default": "1",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "source_identity": {
+            "maxLength": 255,
+            "minLength": 1,
+            "title": "Source Identity",
+            "type": "string"
+          }
+        },
+        "required": [
+          "event_id",
+          "assignment_id",
+          "assignment_token",
+          "event_type",
+          "occurred_at",
+          "source_identity",
+          "correlation_id"
+        ],
+        "title": "EventItem",
+        "type": "object"
+      },
+      "EventItemResult": {
+        "properties": {
+          "accepted": {
+            "title": "Accepted",
+            "type": "boolean"
+          },
+          "event_id": {
+            "title": "Event Id",
+            "type": "string"
+          },
+          "queue_message_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Queue Message Id"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reason"
+          },
+          "status_code": {
+            "title": "Status Code",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "event_id",
+          "accepted",
+          "status_code"
+        ],
+        "title": "EventItemResult",
+        "type": "object"
+      },
+      "ExperimentCreateRequest": {
+        "properties": {
+          "analysis_plan": {
+            "$ref": "#/components/schemas/AnalysisPlanDocument"
+          },
+          "configuration": {
+            "$ref": "#/components/schemas/AssignmentConfiguration"
+          },
+          "key": {
+            "maxLength": 100,
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9-]*$",
+            "title": "Key",
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "key",
+          "name",
+          "configuration",
+          "analysis_plan"
+        ],
+        "title": "ExperimentCreateRequest",
+        "type": "object"
+      },
+      "ExperimentDraftUpdateRequest": {
+        "properties": {
+          "analysis_plan": {
+            "$ref": "#/components/schemas/AnalysisPlanDocument"
+          },
+          "configuration": {
+            "$ref": "#/components/schemas/AssignmentConfiguration"
+          },
+          "expected_version": {
+            "minimum": 1.0,
+            "title": "Expected Version",
+            "type": "integer"
+          },
+          "name": {
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "expected_version",
+          "name",
+          "configuration",
+          "analysis_plan"
+        ],
+        "title": "ExperimentDraftUpdateRequest",
+        "type": "object"
+      },
+      "ExperimentResponse": {
+        "properties": {
+          "analysis_plan": {
+            "$ref": "#/components/schemas/AnalysisPlanDocument"
+          },
+          "analysis_plan_digest": {
+            "title": "Analysis Plan Digest",
+            "type": "string"
+          },
+          "analysis_plan_id": {
+            "format": "uuid",
+            "title": "Analysis Plan Id",
+            "type": "string"
+          },
+          "analysis_plan_version": {
+            "title": "Analysis Plan Version",
+            "type": "integer"
+          },
+          "configuration": {
+            "$ref": "#/components/schemas/AssignmentConfiguration"
+          },
+          "configuration_digest": {
+            "title": "Configuration Digest",
+            "type": "string"
+          },
+          "configuration_version": {
+            "title": "Configuration Version",
+            "type": "integer"
+          },
+          "configuration_version_id": {
+            "format": "uuid",
+            "title": "Configuration Version Id",
+            "type": "string"
+          },
+          "environment_id": {
+            "format": "uuid",
+            "title": "Environment Id",
+            "type": "string"
+          },
+          "id": {
+            "format": "uuid",
+            "title": "Id",
+            "type": "string"
+          },
+          "key": {
+            "title": "Key",
+            "type": "string"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "owner_subject": {
+            "title": "Owner Subject",
+            "type": "string"
+          },
+          "project_id": {
+            "format": "uuid",
+            "title": "Project Id",
+            "type": "string"
+          },
+          "status": {
+            "title": "Status",
+            "type": "string"
+          },
+          "version": {
+            "title": "Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "project_id",
+          "environment_id",
+          "key",
+          "name",
+          "owner_subject",
+          "status",
+          "version",
+          "configuration_version_id",
+          "configuration_version",
+          "configuration_digest",
+          "configuration",
+          "analysis_plan_id",
+          "analysis_plan_version",
+          "analysis_plan_digest",
+          "analysis_plan"
+        ],
+        "title": "ExperimentResponse",
+        "type": "object"
+      },
+      "ExperimentTransitionRequest": {
+        "properties": {
+          "expected_version": {
+            "minimum": 1.0,
+            "title": "Expected Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "expected_version"
+        ],
+        "title": "ExperimentTransitionRequest",
+        "type": "object"
+      },
       "HTTPValidationError": {
         "properties": {
           "detail": {
@@ -124,6 +1310,140 @@
           }
         },
         "title": "HealthResponse",
+        "type": "object"
+      },
+      "MetricDefinition": {
+        "properties": {
+          "key": {
+            "maxLength": 120,
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "title": "Key",
+            "type": "string"
+          },
+          "kind": {
+            "const": "binary",
+            "default": "binary",
+            "title": "Kind",
+            "type": "string"
+          }
+        },
+        "required": [
+          "key"
+        ],
+        "title": "MetricDefinition",
+        "type": "object"
+      },
+      "OperationalAlertResponse": {
+        "properties": {
+          "created_at": {
+            "format": "date-time",
+            "title": "Created At",
+            "type": "string"
+          },
+          "delivery_status": {
+            "title": "Delivery Status",
+            "type": "string"
+          },
+          "destination": {
+            "title": "Destination",
+            "type": "string"
+          },
+          "id": {
+            "format": "uuid",
+            "title": "Id",
+            "type": "string"
+          },
+          "is_test": {
+            "title": "Is Test",
+            "type": "boolean"
+          },
+          "kind": {
+            "title": "Kind",
+            "type": "string"
+          },
+          "message": {
+            "title": "Message",
+            "type": "string"
+          },
+          "recipient_label": {
+            "title": "Recipient Label",
+            "type": "string"
+          },
+          "severity": {
+            "title": "Severity",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "severity",
+          "message",
+          "recipient_label",
+          "destination",
+          "delivery_status",
+          "is_test",
+          "created_at"
+        ],
+        "title": "OperationalAlertResponse",
+        "type": "object"
+      },
+      "OperationalStatusResponse": {
+        "properties": {
+          "alerts": {
+            "items": {
+              "$ref": "#/components/schemas/OperationalAlertResponse"
+            },
+            "title": "Alerts",
+            "type": "array"
+          },
+          "completeness": {
+            "additionalProperties": true,
+            "title": "Completeness",
+            "type": "object"
+          },
+          "database_pool": {
+            "additionalProperties": true,
+            "title": "Database Pool",
+            "type": "object"
+          },
+          "event_pipeline": {
+            "additionalProperties": true,
+            "title": "Event Pipeline",
+            "type": "object"
+          },
+          "evidence_scope": {
+            "title": "Evidence Scope",
+            "type": "string"
+          },
+          "observed_at": {
+            "format": "date-time",
+            "title": "Observed At",
+            "type": "string"
+          },
+          "override_state": {
+            "additionalProperties": true,
+            "title": "Override State",
+            "type": "object"
+          },
+          "request_metrics": {
+            "additionalProperties": true,
+            "title": "Request Metrics",
+            "type": "object"
+          }
+        },
+        "required": [
+          "observed_at",
+          "request_metrics",
+          "database_pool",
+          "event_pipeline",
+          "completeness",
+          "override_state",
+          "alerts",
+          "evidence_scope"
+        ],
+        "title": "OperationalStatusResponse",
         "type": "object"
       },
       "PrincipalResponse": {
@@ -214,6 +1534,21 @@
         "title": "ServiceContextResponse",
         "type": "object"
       },
+      "SnapshotInvalidationRequest": {
+        "properties": {
+          "reason": {
+            "maxLength": 1000,
+            "minLength": 10,
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "required": [
+          "reason"
+        ],
+        "title": "SnapshotInvalidationRequest",
+        "type": "object"
+      },
       "ValidationError": {
         "properties": {
           "ctx": {
@@ -263,7 +1598,7 @@
     }
   },
   "info": {
-    "description": "Day 1 management, identity, scope, and credential boundary.",
+    "description": "ExperimentOS lifecycle, assignment, identity, and durable event boundary.",
     "title": "ExperimentOS API",
     "version": "0.1.0"
   },
@@ -392,6 +1727,68 @@
         "summary": "Read Scope",
         "tags": [
           "operators"
+        ]
+      }
+    },
+    "/v1/projects/{project_id}/environments/{environment_id}/audit": {
+      "get": {
+        "operationId": "list_audit_records_v1_projects__project_id__environments__environment_id__audit_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/AuditRecordResponse"
+                  },
+                  "title": "Response List Audit Records V1 Projects  Project Id  Environments  Environment Id  Audit Get",
+                  "type": "array"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "List Audit Records",
+        "tags": [
+          "operations"
         ]
       }
     },
@@ -596,6 +1993,1405 @@
         "summary": "Rotate Credential",
         "tags": [
           "credentials"
+        ]
+      }
+    },
+    "/v1/projects/{project_id}/environments/{environment_id}/events:collect": {
+      "post": {
+        "operationId": "collect_events_v1_projects__project_id__environments__environment_id__events_collect_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EventBatchRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EventBatchResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Collect Events",
+        "tags": [
+          "events"
+        ]
+      }
+    },
+    "/v1/projects/{project_id}/environments/{environment_id}/experiments": {
+      "get": {
+        "operationId": "list_experiments_v1_projects__project_id__environments__environment_id__experiments_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/ExperimentResponse"
+                  },
+                  "title": "Response List Experiments V1 Projects  Project Id  Environments  Environment Id  Experiments Get",
+                  "type": "array"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "List Experiments",
+        "tags": [
+          "experiments"
+        ]
+      },
+      "post": {
+        "operationId": "create_experiment_v1_projects__project_id__environments__environment_id__experiments_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExperimentCreateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExperimentResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Create Experiment",
+        "tags": [
+          "experiments"
+        ]
+      }
+    },
+    "/v1/projects/{project_id}/environments/{environment_id}/experiments/{experiment_id}": {
+      "get": {
+        "operationId": "read_experiment_v1_projects__project_id__environments__environment_id__experiments__experiment_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "experiment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Experiment Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExperimentResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Read Experiment",
+        "tags": [
+          "experiments"
+        ]
+      },
+      "put": {
+        "operationId": "update_draft_v1_projects__project_id__environments__environment_id__experiments__experiment_id__put",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "experiment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Experiment Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExperimentDraftUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExperimentResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Update Draft",
+        "tags": [
+          "experiments"
+        ]
+      }
+    },
+    "/v1/projects/{project_id}/environments/{environment_id}/experiments/{experiment_id}/analysis": {
+      "get": {
+        "operationId": "read_analysis_v1_projects__project_id__environments__environment_id__experiments__experiment_id__analysis_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "experiment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Experiment Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalysisSnapshotResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Read Analysis",
+        "tags": [
+          "analysis"
+        ]
+      }
+    },
+    "/v1/projects/{project_id}/environments/{environment_id}/experiments/{experiment_id}/analysis-snapshots": {
+      "post": {
+        "operationId": "derive_analysis_v1_projects__project_id__environments__environment_id__experiments__experiment_id__analysis_snapshots_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "experiment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Experiment Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnalysisDeriveRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalysisSnapshotResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Derive Analysis",
+        "tags": [
+          "analysis"
+        ]
+      }
+    },
+    "/v1/projects/{project_id}/environments/{environment_id}/experiments/{experiment_id}/analysis/{snapshot_id}/decisions": {
+      "post": {
+        "operationId": "create_decision_v1_projects__project_id__environments__environment_id__experiments__experiment_id__analysis__snapshot_id__decisions_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "experiment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Experiment Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "snapshot_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Snapshot Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DecisionCreateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DecisionResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Create Decision",
+        "tags": [
+          "operations"
+        ]
+      }
+    },
+    "/v1/projects/{project_id}/environments/{environment_id}/experiments/{experiment_id}/analysis/{snapshot_id}/invalidate": {
+      "post": {
+        "operationId": "invalidate_snapshot_v1_projects__project_id__environments__environment_id__experiments__experiment_id__analysis__snapshot_id__invalidate_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "experiment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Experiment Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "snapshot_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Snapshot Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnapshotInvalidationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "title": "Response Invalidate Snapshot V1 Projects  Project Id  Environments  Environment Id  Experiments  Experiment Id  Analysis  Snapshot Id  Invalidate Post",
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Invalidate Snapshot",
+        "tags": [
+          "operations"
+        ]
+      }
+    },
+    "/v1/projects/{project_id}/environments/{environment_id}/experiments/{experiment_id}/approve": {
+      "post": {
+        "operationId": "approve_experiment_v1_projects__project_id__environments__environment_id__experiments__experiment_id__approve_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "experiment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Experiment Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExperimentTransitionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExperimentResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Approve Experiment",
+        "tags": [
+          "experiments"
+        ]
+      }
+    },
+    "/v1/projects/{project_id}/environments/{environment_id}/experiments/{experiment_id}/close-enrollment": {
+      "post": {
+        "operationId": "close_enrollment_v1_projects__project_id__environments__environment_id__experiments__experiment_id__close_enrollment_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "experiment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Experiment Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExperimentTransitionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExperimentResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Close Enrollment",
+        "tags": [
+          "experiments"
+        ]
+      }
+    },
+    "/v1/projects/{project_id}/environments/{environment_id}/experiments/{experiment_id}/decisions": {
+      "get": {
+        "operationId": "list_decisions_v1_projects__project_id__environments__environment_id__experiments__experiment_id__decisions_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "experiment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Experiment Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/DecisionResponse"
+                  },
+                  "title": "Response List Decisions V1 Projects  Project Id  Environments  Environment Id  Experiments  Experiment Id  Decisions Get",
+                  "type": "array"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "List Decisions",
+        "tags": [
+          "operations"
+        ]
+      }
+    },
+    "/v1/projects/{project_id}/environments/{environment_id}/experiments/{experiment_id}/disable": {
+      "post": {
+        "operationId": "emergency_disable_v1_projects__project_id__environments__environment_id__experiments__experiment_id__disable_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "experiment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Experiment Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmergencyDisableRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExperimentResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Emergency Disable",
+        "tags": [
+          "experiments"
+        ]
+      }
+    },
+    "/v1/projects/{project_id}/environments/{environment_id}/experiments/{experiment_id}/launch": {
+      "post": {
+        "operationId": "launch_experiment_v1_projects__project_id__environments__environment_id__experiments__experiment_id__launch_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "experiment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Experiment Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExperimentTransitionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExperimentResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Launch Experiment",
+        "tags": [
+          "experiments"
+        ]
+      }
+    },
+    "/v1/projects/{project_id}/environments/{environment_id}/experiments/{experiment_id}/quality": {
+      "get": {
+        "operationId": "read_quality_v1_projects__project_id__environments__environment_id__experiments__experiment_id__quality_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "experiment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Experiment Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CohortSnapshotResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Read Quality",
+        "tags": [
+          "quality"
+        ]
+      }
+    },
+    "/v1/projects/{project_id}/environments/{environment_id}/experiments/{experiment_id}/quality-snapshots": {
+      "post": {
+        "operationId": "derive_quality_v1_projects__project_id__environments__environment_id__experiments__experiment_id__quality_snapshots_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "experiment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Experiment Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CohortDeriveRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CohortSnapshotResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Derive Quality",
+        "tags": [
+          "quality"
+        ]
+      }
+    },
+    "/v1/projects/{project_id}/environments/{environment_id}/experiments/{experiment_key}/assignments/resolve": {
+      "post": {
+        "operationId": "resolve_v1_projects__project_id__environments__environment_id__experiments__experiment_key__assignments_resolve_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "experiment_key",
+            "required": true,
+            "schema": {
+              "title": "Experiment Key",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssignmentResolveRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssignmentResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Resolve",
+        "tags": [
+          "assignments"
+        ]
+      }
+    },
+    "/v1/projects/{project_id}/environments/{environment_id}/operations/status": {
+      "get": {
+        "operationId": "operational_status_v1_projects__project_id__environments__environment_id__operations_status_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationalStatusResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Operational Status",
+        "tags": [
+          "operations"
+        ]
+      }
+    },
+    "/v1/projects/{project_id}/environments/{environment_id}/operations/test-alert": {
+      "post": {
+        "operationId": "deliver_test_alert_v1_projects__project_id__environments__environment_id__operations_test_alert_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "project_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Project Id",
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "environment_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Environment Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlertTestRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationalAlertResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Deliver Test Alert",
+        "tags": [
+          "operations"
         ]
       }
     },

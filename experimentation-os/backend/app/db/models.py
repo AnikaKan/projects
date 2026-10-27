@@ -140,6 +140,7 @@ class Experiment(UUIDPrimaryKey, Timestamped, Base):
             "environment_id",
             unique=True,
             postgresql_where=text("status IN ('running', 'enrollment_closed', 'finalizing')"),
+            sqlite_where=text("status IN ('running', 'enrollment_closed', 'finalizing')"),
         ),
     )
 
@@ -166,6 +167,16 @@ class Experiment(UUIDPrimaryKey, Timestamped, Base):
             use_alter=True,
         )
     )
+    active_analysis_plan_id: Mapped[uuid.UUID | None] = mapped_column(
+        ForeignKey(
+            "analysis_plans.id",
+            name="fk_experiments_active_analysis_plan",
+            ondelete="RESTRICT",
+            use_alter=True,
+        )
+    )
+    launched_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    enrollment_closed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 
 
 class ConfigurationVersion(UUIDPrimaryKey, Base):
@@ -236,9 +247,14 @@ class RawEvent(UUIDPrimaryKey, Base):
     assignment_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("assignments.id", ondelete="RESTRICT"), nullable=False, index=True
     )
+    experiment_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("experiments.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
     event_id: Mapped[str] = mapped_column(String(160), nullable=False)
     schema_version: Mapped[str] = mapped_column(String(40), nullable=False)
     event_type: Mapped[str] = mapped_column(String(120), nullable=False)
+    source_identity: Mapped[str] = mapped_column(String(255), nullable=False)
+    correlation_id: Mapped[str] = mapped_column(String(160), nullable=False)
     payload_hash: Mapped[str] = mapped_column(String(64), nullable=False)
     payload: Mapped[dict[str, Any]] = mapped_column(JSON, nullable=False)
     occurred_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
@@ -260,17 +276,73 @@ class EventReceipt(UUIDPrimaryKey, Timestamped, Base):
     )
     delivery_id: Mapped[str] = mapped_column(String(160), nullable=False)
     event_id: Mapped[str] = mapped_column(String(160), nullable=False)
+    queue_message_id: Mapped[str | None] = mapped_column(String(160))
+    receive_count: Mapped[int] = mapped_column(Integer, nullable=False, default=1)
     status: Mapped[ReceiptStatus] = mapped_column(
         SqlEnum(ReceiptStatus, values_callable=enum_values, name="receipt_status"), nullable=False
     )
     failure_reason: Mapped[str | None] = mapped_column(Text)
     replayed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    queue_age_seconds: Mapped[float | None] = mapped_column()
+    reconciliation_delay_seconds: Mapped[float | None] = mapped_column()
+
+
+class QuarantinedEvent(UUIDPrimaryKey, Base):
+    __tablename__ = "quarantined_events"
+
+    project_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("projects.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    environment_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("environments.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    event_id: Mapped[str] = mapped_column(String(160), nullable=False, index=True)
+    delivery_id: Mapped[str] = mapped_column(String(160), nullable=False, unique=True)
+    payload_hash: Mapped[str] = mapped_column(String(64), nullable=False)
+    payload: Mapped[dict[str, Any]] = mapped_column(JSON, nullable=False)
+    reason: Mapped[str] = mapped_column(String(160), nullable=False)
+    quarantined_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), nullable=False, server_default=func.now()
+    )
+
+
+class EventContribution(UUIDPrimaryKey, Base):
+    __tablename__ = "event_contributions"
+    __table_args__ = (UniqueConstraint("raw_event_id", "derivation_version"),)
+
+    project_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("projects.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    environment_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("environments.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    experiment_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("experiments.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    assignment_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("assignments.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    raw_event_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("raw_events.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    event_type: Mapped[str] = mapped_column(String(120), nullable=False)
+    occurred_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    derivation_version: Mapped[str] = mapped_column(String(40), nullable=False)
+    derived_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), nullable=False, server_default=func.now()
+    )
 
 
 class UserFact(UUIDPrimaryKey, Base):
     __tablename__ = "user_facts"
     __table_args__ = (
-        UniqueConstraint("assignment_id", "metric_key", "window_start", "window_end"),
+        UniqueConstraint(
+            "assignment_id",
+            "metric_key",
+            "window_start",
+            "window_end",
+            "derivation_version",
+        ),
     )
 
     project_id: Mapped[uuid.UUID] = mapped_column(
@@ -279,11 +351,18 @@ class UserFact(UUIDPrimaryKey, Base):
     environment_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("environments.id", ondelete="RESTRICT"), nullable=False, index=True
     )
+    experiment_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("experiments.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
     assignment_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("assignments.id", ondelete="RESTRICT"), nullable=False, index=True
     )
+    arm: Mapped[str] = mapped_column(String(80), nullable=False)
     metric_key: Mapped[str] = mapped_column(String(120), nullable=False)
     value: Mapped[bool] = mapped_column(Boolean, nullable=False)
+    source_event_id: Mapped[uuid.UUID | None] = mapped_column(
+        ForeignKey("raw_events.id", ondelete="RESTRICT"), index=True
+    )
     window_start: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
     window_end: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
     derivation_version: Mapped[str] = mapped_column(String(40), nullable=False)
@@ -292,8 +371,61 @@ class UserFact(UUIDPrimaryKey, Base):
     )
 
 
-class AnalysisSnapshot(UUIDPrimaryKey, Base):
-    __tablename__ = "analysis_snapshots"
+class EventExclusion(UUIDPrimaryKey, Base):
+    __tablename__ = "event_exclusions"
+    __table_args__ = (UniqueConstraint("raw_event_id", "derivation_version"),)
+
+    project_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("projects.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    environment_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("environments.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    experiment_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("experiments.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    assignment_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("assignments.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    raw_event_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("raw_events.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    event_type: Mapped[str] = mapped_column(String(120), nullable=False)
+    reason: Mapped[str] = mapped_column(String(120), nullable=False)
+    derivation_version: Mapped[str] = mapped_column(String(40), nullable=False)
+    excluded_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), nullable=False, server_default=func.now()
+    )
+
+
+class PipelineCheckpoint(UUIDPrimaryKey, Base):
+    __tablename__ = "pipeline_checkpoints"
+    __table_args__ = (UniqueConstraint("experiment_id", "source_name", "partition_key"),)
+
+    project_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("projects.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    environment_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("environments.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    experiment_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("experiments.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    source_name: Mapped[str] = mapped_column(String(80), nullable=False)
+    partition_key: Mapped[str] = mapped_column(String(120), nullable=False)
+    window_start: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    window_end: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    complete: Mapped[bool] = mapped_column(Boolean, nullable=False)
+    observed_event_count: Mapped[int] = mapped_column(Integer, nullable=False)
+    missing_reason: Mapped[str | None] = mapped_column(String(240))
+    recorded_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), nullable=False, server_default=func.now()
+    )
+
+
+class CohortSnapshot(UUIDPrimaryKey, Base):
+    __tablename__ = "cohort_snapshots"
+    __table_args__ = (UniqueConstraint("experiment_id", "derivation_version"),)
 
     project_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("projects.id", ondelete="RESTRICT"), nullable=False, index=True
@@ -311,11 +443,52 @@ class AnalysisSnapshot(UUIDPrimaryKey, Base):
         ForeignKey("analysis_plans.id", ondelete="RESTRICT"), nullable=False
     )
     derivation_version: Mapped[str] = mapped_column(String(40), nullable=False)
+    event_derivation_version: Mapped[str] = mapped_column(String(40), nullable=False)
+    evaluated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    arrival_cutoff_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    source_counts: Mapped[dict[str, Any]] = mapped_column(JSON, nullable=False)
+    arm_counts: Mapped[dict[str, Any]] = mapped_column(JSON, nullable=False)
+    checks: Mapped[dict[str, Any]] = mapped_column(JSON, nullable=False)
+    readiness: Mapped[dict[str, Any]] = mapped_column(JSON, nullable=False)
+    finalization_ready: Mapped[bool] = mapped_column(Boolean, nullable=False)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), nullable=False, server_default=func.now()
+    )
+
+
+class AnalysisSnapshot(UUIDPrimaryKey, Base):
+    __tablename__ = "analysis_snapshots"
+    __table_args__ = (UniqueConstraint("cohort_snapshot_id", "analysis_version"),)
+
+    project_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("projects.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    environment_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("environments.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    experiment_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("experiments.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    configuration_version_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("configuration_versions.id", ondelete="RESTRICT"), nullable=False
+    )
+    analysis_plan_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("analysis_plans.id", ondelete="RESTRICT"), nullable=False
+    )
+    cohort_snapshot_id: Mapped[uuid.UUID | None] = mapped_column(
+        ForeignKey("cohort_snapshots.id", ondelete="RESTRICT"), index=True
+    )
+    analysis_version: Mapped[str | None] = mapped_column(String(40))
+    derivation_version: Mapped[str] = mapped_column(String(40), nullable=False)
     code_version: Mapped[str] = mapped_column(String(80), nullable=False)
+    image_version: Mapped[str | None] = mapped_column(String(160))
+    library_versions: Mapped[dict[str, Any] | None] = mapped_column(JSON)
     cutoff_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
     source_counts: Mapped[dict[str, Any]] = mapped_column(JSON, nullable=False)
     checks: Mapped[dict[str, Any]] = mapped_column(JSON, nullable=False)
     results: Mapped[dict[str, Any]] = mapped_column(JSON, nullable=False)
+    recommendation: Mapped[str | None] = mapped_column(String(80))
+    finalized_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     invalidated_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), nullable=False, server_default=func.now()
@@ -324,6 +497,7 @@ class AnalysisSnapshot(UUIDPrimaryKey, Base):
 
 class Decision(UUIDPrimaryKey, Base):
     __tablename__ = "decisions"
+    __table_args__ = (UniqueConstraint("snapshot_id"),)
 
     snapshot_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("analysis_snapshots.id", ondelete="RESTRICT"), nullable=False, index=True
@@ -332,6 +506,27 @@ class Decision(UUIDPrimaryKey, Base):
     action: Mapped[str] = mapped_column(String(80), nullable=False)
     rationale: Mapped[str] = mapped_column(Text, nullable=False)
     rollout_reference: Mapped[str | None] = mapped_column(String(500))
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), nullable=False, server_default=func.now()
+    )
+
+
+class OperationalAlert(UUIDPrimaryKey, Base):
+    __tablename__ = "operational_alerts"
+
+    project_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("projects.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    environment_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("environments.id", ondelete="RESTRICT"), nullable=False, index=True
+    )
+    kind: Mapped[str] = mapped_column(String(80), nullable=False)
+    severity: Mapped[str] = mapped_column(String(40), nullable=False)
+    message: Mapped[str] = mapped_column(String(500), nullable=False)
+    recipient_label: Mapped[str] = mapped_column(String(160), nullable=False)
+    destination: Mapped[str] = mapped_column(String(120), nullable=False)
+    delivery_status: Mapped[str] = mapped_column(String(40), nullable=False)
+    is_test: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), nullable=False, server_default=func.now()
     )

@@ -158,3 +158,17 @@ def authenticate_service_credential(
         credential.environment_id,
         frozenset(credential.capabilities),
     )
+
+
+def require_service_capability(capability: str):  # type: ignore[no-untyped-def]
+    def dependency(
+        principal: ServicePrincipal = Depends(authenticate_service_credential),
+    ) -> ServicePrincipal:
+        if capability not in principal.capabilities:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail=f"service credential lacks {capability} capability",
+            )
+        return principal
+
+    return dependency

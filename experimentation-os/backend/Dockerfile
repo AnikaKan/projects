@@ -1,5 +1,5 @@
 FROM ghcr.io/astral-sh/uv:0.11.7 AS uv
-FROM python:3.13.12-slim AS runtime
+FROM python:3.13.12-slim AS application
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
@@ -20,3 +20,16 @@ USER experimentos
 
 EXPOSE 8000
 CMD ["uvicorn", "app.main:create_app", "--factory", "--host", "0.0.0.0", "--port", "8000"]
+
+FROM application AS test
+
+USER root
+RUN uv sync --frozen
+COPY backend/tests ./tests
+COPY contracts /contracts
+COPY scripts ./scripts
+RUN chown -R experimentos:experimentos /app
+USER experimentos
+CMD ["pytest"]
+
+FROM application AS runtime

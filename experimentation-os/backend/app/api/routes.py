@@ -5,13 +5,8 @@ from fastapi import APIRouter, Depends, HTTPException, Request, status
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.db.models import (
-    AuditRecord,
-    Environment,
-    OperatorRole,
-    Project,
-    ServiceCredential,
-)
+from app.api.scope import scoped_environment
+from app.db.models import AuditRecord, OperatorRole, ServiceCredential
 from app.schemas import (
     CredentialCreateRequest,
     CredentialCreateResponse,
@@ -33,26 +28,6 @@ from app.security import (
 )
 
 router = APIRouter()
-
-
-def scoped_environment(
-    session: Session,
-    principal: Principal,
-    project_id: uuid.UUID,
-    environment_id: uuid.UUID,
-) -> tuple[Project, Environment]:
-    row = session.execute(
-        select(Project, Environment)
-        .join(Environment, Environment.project_id == Project.id)
-        .where(
-            Project.id == project_id,
-            Project.organization_id == principal.organization_id,
-            Environment.id == environment_id,
-        )
-    ).one_or_none()
-    if row is None:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="scope not found")
-    return row[0], row[1]
 
 
 @router.get("/health/live", response_model=HealthResponse, tags=["health"])
