@@ -22,6 +22,12 @@ services:
     environment:
       SERVICES: sqs
       DEFAULT_REGION: us-west-2
+      SQS_ENDPOINT_STRATEGY: path
+    healthcheck:
+      test: ["CMD", "awslocal", "sqs", "list-queues"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
     ports:
       - "4566:4566"
 
@@ -35,8 +41,33 @@ services:
       AUTH_MODE: local
       DATABASE_URL: postgresql+psycopg://experimentos:experimentos@postgres:5432/experimentos
       CREDENTIAL_PEPPER: local-compose-pepper-not-for-managed-use-0001
+      AWS_REGION: us-west-2
+      SQS_ENDPOINT_URL: http://localstack:4566
+      EVENT_QUEUE_NAME: experimentos-events
+      EVENT_DLQ_NAME: experimentos-events-dlq
+      AWS_EC2_METADATA_DISABLED: "true"
     depends_on:
       postgres:
+        condition: service_healthy
+
+  seed-demo:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    command: ["python", "-m", "app.local_seed"]
+    environment: *backend-environment
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+  queue-bootstrap:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    command: ["python", "-m", "app.queue_bootstrap"]
+    environment: *backend-environment
+    depends_on:
+      localstack:
         condition: service_healthy
 
   api:
@@ -45,7 +76,9 @@ services:
       dockerfile: backend/Dockerfile
     environment: *backend-environment
     depends_on:
-      migrate:
+      seed-demo:
+        condition: service_completed_successfully
+      queue-bootstrap:
         condition: service_completed_successfully
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health/ready')"]
@@ -64,6 +97,8 @@ services:
     depends_on:
       migrate:
         condition: service_completed_successfully
+      queue-bootstrap:
+        condition: service_completed_successfully
 
   analysis-worker:
     build:
@@ -81,6 +116,10 @@ services:
       dockerfile: frontend/Dockerfile
     environment:
       API_BASE_URL: http://api:8000
+      LOCAL_OPERATOR_SUBJECT: portfolio-owner@example.test
+      LOCAL_ORGANIZATION_ID: 00000000-0000-4000-8000-000000000001
+      EXPERIMENTOS_PROJECT_ID: 00000000-0000-4000-8000-000000000002
+      EXPERIMENTOS_ENVIRONMENT_ID: 00000000-0000-4000-8000-000000000003
     depends_on:
       api:
         condition: service_healthy
@@ -94,9 +133,21 @@ services:
     depends_on:
       api:
         condition: service_healthy
+    environment:
+      EXPERIMENTOS_API_URL: http://api:8000
+      EXPERIMENTOS_SERVICE_CREDENTIAL: ${EXPERIMENTOS_SERVICE_CREDENTIAL:-}
+      EXPERIMENTOS_PROJECT_ID: 00000000-0000-4000-8000-000000000002
+      EXPERIMENTOS_ENVIRONMENT_ID: 00000000-0000-4000-8000-000000000003
+      EXPERIMENTOS_EXPERIMENT_KEY: ${EXPERIMENTOS_EXPERIMENT_KEY:-signup-message}
+      DEMO_SUBJECT_ID: ${DEMO_SUBJECT_ID:-visitor-1001}
+      DEMO_MARKET: ${DEMO_MARKET:-US}
+      EXPERIMENTOS_OUTBOX_DIRECTORY: /var/lib/experimentos-outbox
+    volumes:
+      - host-outbox:/var/lib/experimentos-outbox
     ports:
       - "3100:3100"
 
 volumes:
   postgres-data:
+  host-outbox:
 

@@ -8,10 +8,12 @@ SKIP_PARTS = {
     ".git",
     ".mypy_cache",
     ".next",
+    ".pnpm-store",
     ".pytest_cache",
     ".ruff_cache",
     ".terraform",
     ".venv",
+    ".turbo",
     "node_modules",
     "dist",
 }
