@@ -1,0 +1,33 @@
+{
+  "calibration_version": "statistics-calibration-v1",
+  "checks": {
+    "aa_false_positive_rate": true,
+    "complete_simulation_rate": true,
+    "effect_detection_power": true,
+    "effect_interval_coverage": true
+  },
+  "complete_simulations": 999,
+  "passed": true,
+  "prespecified_tolerances": {
+    "aa_false_positive_rate": [0.025, 0.075],
+    "complete_simulation_rate": [0.99, 1.0],
+    "effect_detection_power": [0.95, 1.0],
+    "effect_interval_coverage": [0.92, 0.98]
+  },
+  "rates": {
+    "aa_false_positive_rate": 0.05205205205205205,
+    "complete_simulation_rate": 0.999,
+    "effect_detection_power": 0.990990990990991,
+    "effect_interval_coverage": 0.94994994994995
+  },
+  "repetitions": 1000,
+  "scenario": {
+    "absolute_effect": 0.04,
+    "alpha": 0.05,
+    "arm_size": 4000,
+    "baseline_rate": 0.2,
+    "method": "score risk-difference test and compatible score interval",
+    "score_correction": true
+  },
+  "seed": 20261026
+}
