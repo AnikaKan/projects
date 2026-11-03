@@ -1,0 +1,751 @@
+{
+ "schemaVersion": 1,
+ "name": "hisaab-saathi-holdout",
+ "version": "1.0",
+ "createdAt": "2026-10-30",
+ "description": "Held-out probes written AFTER the intent/number fixes and run once WITHOUT tuning. Measures generalisation; results are reported as-is. Hindi/Telugu unreviewed.",
+ "cases": [
+  {
+   "id": "RVP-EN-31",
+   "language": "en",
+   "business": "vegetable",
+   "concept": "revenue_vs_profit",
+   "category": "repeat_request",
+   "context": {
+    "surface": "assessment",
+    "itemId": "rvp_a_is_sales_profit",
+    "attempt": 1
+   },
+   "input": {
+    "mode": "speech",
+    "value": "Could you read the question one more time?"
+   },
+   "expected": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "nextAction": "stay_on_question",
+    "routes": [
+     "no_match_prompt",
+     "replay"
+    ]
+   },
+   "critical": [
+    "SCORED_NON_ANSWER",
+    "ILLEGAL_PROGRESSION",
+    "FALSE_CORRECT"
+   ]
+  },
+  {
+   "id": "CRD-EN-31",
+   "language": "en",
+   "business": "tea",
+   "concept": "customer_credit",
+   "category": "correct",
+   "context": {
+    "surface": "assessment",
+    "itemId": "crd_a_credit_is_cash",
+    "attempt": 1
+   },
+   "input": {
+    "mode": "speech",
+    "value": "Nope, they will pay me tomorrow"
+   },
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "no"
+   },
+   "critical": [
+    "FALSE_CORRECT",
+    "WRONG_CORRECTNESS_ON_CORRECT",
+    "MISCONCEPTION_MISSED",
+    "ILLEGAL_PROGRESSION"
+   ]
+  },
+  {
+   "id": "RVP-HI-31",
+   "language": "hi",
+   "business": "vegetable",
+   "concept": "revenue_vs_profit",
+   "category": "correct",
+   "context": {
+    "surface": "assessment",
+    "itemId": "rvp_a_is_sales_profit",
+    "attempt": 1
+   },
+   "input": {
+    "mode": "speech",
+    "value": "नहीं जी, पाँच सौ मुनाफ़ा नहीं है"
+   },
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "no"
+   },
+   "critical": [
+    "FALSE_CORRECT",
+    "WRONG_CORRECTNESS_ON_CORRECT",
+    "MISCONCEPTION_MISSED",
+    "ILLEGAL_PROGRESSION"
+   ],
+   "translation": {
+    "status": "needs_native_review",
+    "confidence": "medium"
+   }
+  },
+  {
+   "id": "CRD-HI-31",
+   "language": "hi",
+   "business": "grocery",
+   "concept": "customer_credit",
+   "category": "ambiguous",
+   "context": {
+    "surface": "assessment",
+    "itemId": "crd_a_credit_is_cash",
+    "attempt": 1
+   },
+   "input": {
+    "mode": "speech",
+    "value": "हाँ जी मिल गए, नहीं नहीं, अभी नहीं मिले"
+   },
+   "expected": {
+    "classification": "ambiguous",
+    "correctness": "not_scored",
+    "nextAction": "stay_on_question",
+    "routes": [
+     "no_match_prompt"
+    ]
+   },
+   "critical": [
+    "SCORED_NON_ANSWER",
+    "ILLEGAL_PROGRESSION",
+    "FALSE_CORRECT"
+   ],
+   "translation": {
+    "status": "needs_native_review",
+    "confidence": "medium"
+   },
+   "notes": "Self-correction: yes → no. Must not be scored either way without confirmation."
+  },
+  {
+   "id": "CRD-TE-31",
+   "language": "te",
+   "business": "vegetable",
+   "concept": "customer_credit",
+   "category": "correct",
+   "context": {
+    "surface": "assessment",
+    "itemId": "crd_a_credit_is_cash",
+    "attempt": 1
+   },
+   "input": {
+    "mode": "speech",
+    "value": "ఇంకా రాలేదు"
+   },
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "no"
+   },
+   "critical": [
+    "FALSE_CORRECT",
+    "WRONG_CORRECTNESS_ON_CORRECT",
+    "MISCONCEPTION_MISSED",
+    "ILLEGAL_PROGRESSION"
+   ],
+   "translation": {
+    "status": "needs_native_review",
+    "confidence": "medium"
+   },
+   "notes": "'Not come yet' = No (money not received)."
+  },
+  {
+   "id": "RVP-HI-32",
+   "language": "hi",
+   "business": "tea",
+   "concept": "revenue_vs_profit",
+   "category": "correct",
+   "context": {
+    "surface": "assessment",
+    "itemId": "rvp_b_find_profit",
+    "attempt": 2
+   },
+   "input": {
+    "mode": "speech",
+    "value": "ढाई सौ रुपये बचे"
+   },
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "routes": [
+     "propose_confirm"
+    ],
+    "amount": 250,
+    "optionId": "profit"
+   },
+   "critical": [
+    "FALSE_CORRECT",
+    "WRONG_CORRECTNESS_ON_CORRECT",
+    "MISCONCEPTION_MISSED",
+    "ILLEGAL_PROGRESSION"
+   ],
+   "translation": {
+    "status": "needs_native_review",
+    "confidence": "medium"
+   }
+  },
+  {
+   "id": "EXP-HI-31",
+   "language": "hi",
+   "business": "vegetable",
+   "concept": "business_expenses",
+   "category": "misheard_amount",
+   "context": {
+    "surface": "assessment",
+    "itemId": "exp_b_total_stock_cost",
+    "attempt": 2
+   },
+   "input": {
+    "mode": "speech",
+    "value": "सवा छह सौ"
+   },
+   "expected": {
+    "classification": "not_understood",
+    "correctness": "not_scored",
+    "nextAction": "stay_on_question",
+    "routes": [
+     "no_match_prompt"
+    ],
+    "amount": 625
+   },
+   "critical": [
+    "SCORED_NON_ANSWER",
+    "ILLEGAL_PROGRESSION",
+    "FALSE_CORRECT",
+    "PROPOSED_WRONG_AMOUNT"
+   ],
+   "translation": {
+    "status": "needs_native_review",
+    "confidence": "medium"
+   },
+   "notes": "625 is not a choice: ask again, do not round to 600 or 650."
+  },
+  {
+   "id": "EXP-TE-31",
+   "language": "te",
+   "business": "vegetable",
+   "concept": "business_expenses",
+   "category": "correct",
+   "context": {
+    "surface": "assessment",
+    "itemId": "exp_b_total_stock_cost",
+    "attempt": 2
+   },
+   "input": {
+    "mode": "speech",
+    "value": "ఆరు వందల యాభై రూపాయలు మొత్తం"
+   },
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "routes": [
+     "propose_confirm"
+    ],
+    "amount": 650,
+    "optionId": "total"
+   },
+   "critical": [
+    "FALSE_CORRECT",
+    "WRONG_CORRECTNESS_ON_CORRECT",
+    "MISCONCEPTION_MISSED",
+    "ILLEGAL_PROGRESSION"
+   ],
+   "translation": {
+    "status": "needs_native_review",
+    "confidence": "medium"
+   }
+  },
+  {
+   "id": "CRD-TE-32",
+   "language": "te",
+   "business": "tea",
+   "concept": "customer_credit",
+   "category": "correct",
+   "context": {
+    "surface": "assessment",
+    "itemId": "crd_b_cash_in_box",
+    "attempt": 2
+   },
+   "input": {
+    "mode": "speech",
+    "value": "నాలుగు వందల యాభై మాత్రమే, అప్పు కాదు"
+   },
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "routes": [
+     "propose_confirm"
+    ],
+    "amount": 450,
+    "optionId": "cash"
+   },
+   "critical": [
+    "FALSE_CORRECT",
+    "WRONG_CORRECTNESS_ON_CORRECT",
+    "MISCONCEPTION_MISSED",
+    "ILLEGAL_PROGRESSION"
+   ],
+   "translation": {
+    "status": "needs_native_review",
+    "confidence": "medium"
+   }
+  },
+  {
+   "id": "CRD-EN-32",
+   "language": "en",
+   "business": "grocery",
+   "concept": "customer_credit",
+   "category": "ambiguous",
+   "context": {
+    "surface": "assessment",
+    "itemId": "crd_b_cash_in_box",
+    "attempt": 2
+   },
+   "input": {
+    "mode": "speech",
+    "value": "twelve hundred, not fifteen hundred"
+   },
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "routes": [
+     "propose_confirm"
+    ],
+    "amount": 1200,
+    "optionId": "cash"
+   },
+   "critical": [
+    "FALSE_CORRECT",
+    "WRONG_CORRECTNESS_ON_CORRECT",
+    "MISCONCEPTION_MISSED",
+    "ILLEGAL_PROGRESSION",
+    "PROPOSED_WRONG_AMOUNT"
+   ],
+   "notes": "She rejects ₹1,500 explicitly; asking again would also be safe."
+  },
+  {
+   "id": "RVP-EN-32",
+   "language": "en",
+   "business": "vegetable",
+   "concept": "revenue_vs_profit",
+   "category": "correct",
+   "context": {
+    "surface": "assessment",
+    "itemId": "rvp_b_find_profit",
+    "attempt": 2
+   },
+   "input": {
+    "mode": "speech",
+    "value": "the answer is three hundred"
+   },
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "routes": [
+     "propose_confirm"
+    ],
+    "amount": 300,
+    "optionId": "profit"
+   },
+   "critical": [
+    "FALSE_CORRECT",
+    "WRONG_CORRECTNESS_ON_CORRECT",
+    "MISCONCEPTION_MISSED",
+    "ILLEGAL_PROGRESSION"
+   ]
+  },
+  {
+   "id": "SAV-HI-31",
+   "language": "hi",
+   "business": "vegetable",
+   "concept": "savings_cash_management",
+   "category": "correct",
+   "context": {
+    "surface": "assessment",
+    "itemId": "sav_b_where_to_save",
+    "attempt": 2
+   },
+   "input": {
+    "mode": "speech",
+    "value": "गुल्लक में अलग रखती हूँ"
+   },
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "complete_assessment+recommend:revenue_vs_profit",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "separate"
+   },
+   "critical": [
+    "FALSE_CORRECT",
+    "WRONG_CORRECTNESS_ON_CORRECT",
+    "MISCONCEPTION_MISSED",
+    "ILLEGAL_PROGRESSION"
+   ],
+   "translation": {
+    "status": "needs_native_review",
+    "confidence": "medium"
+   }
+  },
+  {
+   "id": "SEP-HI-31",
+   "language": "hi",
+   "business": "vegetable",
+   "concept": "business_household_separation",
+   "category": "repeat_request",
+   "context": {
+    "surface": "assessment",
+    "itemId": "sep_a_record_home_money",
+    "attempt": 1
+   },
+   "input": {
+    "mode": "speech",
+    "value": "मुझे फिर से सुनाइए"
+   },
+   "expected": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "nextAction": "stay_on_question",
+    "routes": [
+     "no_match_prompt",
+     "replay"
+    ]
+   },
+   "critical": [
+    "SCORED_NON_ANSWER",
+    "ILLEGAL_PROGRESSION",
+    "FALSE_CORRECT"
+   ],
+   "translation": {
+    "status": "needs_native_review",
+    "confidence": "medium"
+   }
+  },
+  {
+   "id": "SAV-TE-31",
+   "language": "te",
+   "business": "vegetable",
+   "concept": "savings_cash_management",
+   "category": "leave_curriculum",
+   "context": {
+    "surface": "assessment",
+    "itemId": "sav_b_where_to_save",
+    "attempt": 2
+   },
+   "input": {
+    "mode": "speech",
+    "value": "ఏ బ్యాంక్ మంచిది?"
+   },
+   "expected": {
+    "classification": "leave_curriculum",
+    "correctness": "not_scored",
+    "nextAction": "stay_on_question",
+    "routes": [
+     "redirect_advice",
+     "no_match_prompt"
+    ]
+   },
+   "critical": [
+    "SCORED_NON_ANSWER",
+    "ILLEGAL_PROGRESSION",
+    "FALSE_CORRECT"
+   ],
+   "translation": {
+    "status": "needs_native_review",
+    "confidence": "medium"
+   },
+   "notes": "Asks which bank to choose: a product recommendation, not an answer."
+  },
+  {
+   "id": "EXP-EN-31",
+   "language": "en",
+   "business": "vegetable",
+   "concept": "business_expenses",
+   "category": "repeat_request",
+   "context": {
+    "surface": "assessment",
+    "itemId": "exp_a_which_is_expense",
+    "attempt": 1
+   },
+   "input": {
+    "mode": "speech",
+    "value": "what is a business expense?"
+   },
+   "expected": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "nextAction": "stay_on_question",
+    "routes": [
+     "no_match_prompt",
+     "replay"
+    ]
+   },
+   "critical": [
+    "SCORED_NON_ANSWER",
+    "ILLEGAL_PROGRESSION",
+    "FALSE_CORRECT"
+   ],
+   "notes": "Question about the concept = asks for explanation."
+  },
+  {
+   "id": "EXP-HI-32",
+   "language": "hi",
+   "business": "tea",
+   "concept": "business_expenses",
+   "category": "leave_curriculum",
+   "context": {
+    "surface": "assessment",
+    "itemId": "exp_a_which_is_expense",
+    "attempt": 1
+   },
+   "input": {
+    "mode": "speech",
+    "value": "मेरा आधार नंबर बताऊँ?"
+   },
+   "expected": {
+    "classification": "sensitive_information",
+    "correctness": "not_scored",
+    "nextAction": "stay_on_question",
+    "routes": [
+     "redirect_private"
+    ]
+   },
+   "critical": [
+    "SCORED_NON_ANSWER",
+    "ILLEGAL_PROGRESSION",
+    "FALSE_CORRECT",
+    "PRIVATE_DATA_SENT"
+   ],
+   "translation": {
+    "status": "needs_native_review",
+    "confidence": "medium"
+   }
+  },
+  {
+   "id": "CRD-EN-33",
+   "language": "en",
+   "business": "vegetable",
+   "concept": "customer_credit",
+   "category": "unrelated",
+   "context": {
+    "surface": "assessment",
+    "itemId": "crd_a_credit_is_cash",
+    "attempt": 1
+   },
+   "input": {
+    "mode": "speech",
+    "value": "tell me a joke"
+   },
+   "expected": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "nextAction": "stay_on_question",
+    "routes": [
+     "no_match_prompt"
+    ]
+   },
+   "critical": [
+    "SCORED_NON_ANSWER",
+    "ILLEGAL_PROGRESSION",
+    "FALSE_CORRECT"
+   ]
+  },
+  {
+   "id": "RVP-TE-31",
+   "language": "te",
+   "business": "grocery",
+   "concept": "revenue_vs_profit",
+   "category": "correct",
+   "context": {
+    "surface": "assessment",
+    "itemId": "rvp_b_find_profit",
+    "attempt": 2
+   },
+   "input": {
+    "mode": "speech",
+    "value": "పదిహేను వందలు అమ్మకాలు, లాభం నాలుగు వందలు"
+   },
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "routes": [
+     "propose_confirm"
+    ],
+    "amount": 400,
+    "optionId": "profit"
+   },
+   "critical": [
+    "FALSE_CORRECT",
+    "WRONG_CORRECTNESS_ON_CORRECT",
+    "MISCONCEPTION_MISSED",
+    "ILLEGAL_PROGRESSION",
+    "PROPOSED_WRONG_AMOUNT"
+   ],
+   "translation": {
+    "status": "needs_native_review",
+    "confidence": "medium"
+   },
+   "notes": "States sales then names the profit."
+  },
+  {
+   "id": "RVP-HI-33",
+   "language": "hi",
+   "business": "vegetable",
+   "concept": "revenue_vs_profit",
+   "category": "correct",
+   "context": {
+    "surface": "assessment",
+    "itemId": "rvp_b_find_profit",
+    "attempt": 2
+   },
+   "input": {
+    "mode": "speech",
+    "value": "तीन सौ, पक्का"
+   },
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "routes": [
+     "propose_confirm"
+    ],
+    "amount": 300,
+    "optionId": "profit"
+   },
+   "critical": [
+    "FALSE_CORRECT",
+    "WRONG_CORRECTNESS_ON_CORRECT",
+    "MISCONCEPTION_MISSED",
+    "ILLEGAL_PROGRESSION"
+   ],
+   "translation": {
+    "status": "needs_native_review",
+    "confidence": "medium"
+   }
+  },
+  {
+   "id": "RVP-EN-33",
+   "language": "en",
+   "business": "tea",
+   "concept": "revenue_vs_profit",
+   "category": "correct",
+   "context": {
+    "surface": "assessment",
+    "itemId": "rvp_b_find_profit",
+    "attempt": 2
+   },
+   "input": {
+    "mode": "speech",
+    "value": "two fifty"
+   },
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "routes": [
+     "propose_confirm"
+    ],
+    "amount": 250,
+    "optionId": "profit"
+   },
+   "critical": [
+    "FALSE_CORRECT",
+    "WRONG_CORRECTNESS_ON_CORRECT",
+    "MISCONCEPTION_MISSED",
+    "ILLEGAL_PROGRESSION"
+   ],
+   "notes": "Colloquial; must be offered as 'Did you mean ₹250?'."
+  },
+  {
+   "id": "RVP-EN-34",
+   "language": "en",
+   "business": "vegetable",
+   "concept": "revenue_vs_profit",
+   "category": "repeat_request",
+   "context": {
+    "surface": "lesson",
+    "lessonId": "revenue_vs_profit",
+    "question": "response"
+   },
+   "input": {
+    "mode": "speech",
+    "value": "Can you play it again?"
+   },
+   "expected": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "nextAction": "stay_on_question",
+    "routes": [
+     "ai_interpret"
+    ]
+   },
+   "critical": [
+    "SCORED_NON_ANSWER",
+    "ILLEGAL_PROGRESSION",
+    "FALSE_CORRECT"
+   ]
+  },
+  {
+   "id": "RVP-HI-34",
+   "language": "hi",
+   "business": "vegetable",
+   "concept": "revenue_vs_profit",
+   "category": "ambiguous",
+   "context": {
+    "surface": "lesson",
+    "lessonId": "revenue_vs_profit",
+    "question": "check"
+   },
+   "input": {
+    "mode": "speech",
+    "value": "पता नहीं, शायद बढ़ा"
+   },
+   "expected": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "nextAction": "feedback:unsure→continue_no_retry",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "unsure"
+   },
+   "critical": [
+    "FALSE_CORRECT"
+   ],
+   "translation": {
+    "status": "needs_native_review",
+    "confidence": "medium"
+   }
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+/* Larger type and tap targets everywhere: every rem-based size (text, spacing, buttons) grows by 12.5%. */
+html { font-size: 112.5%; }
+body {
+  margin: 0;
+  background: #FFF6EA;
+  color: #2A1A12;
+  font-family: 'Noto Sans', 'Noto Sans Devanagari', 'Noto Sans Telugu', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+/* Telugu and Devanagari need extra vertical room for vowel signs and conjuncts. */
+:lang(te) { line-height: 1.7; }
+:lang(hi) { line-height: 1.6; }
+:lang(te) .leading-snug, :lang(te) .leading-tight, :lang(te) .leading-normal { line-height: 1.6; }
+:lang(hi) .leading-snug, :lang(hi) .leading-tight { line-height: 1.5; }
+button, a { touch-action: manipulation; }
+
+@keyframes eq { 0%, 100% { height: 4px; } 50% { height: 16px; } }
+
+/* Presentation "wireframe" mode */
+.wire { filter: grayscale(1) contrast(1.05); }
+.wire svg[role="img"] { opacity: .35; }
+
+/* Option being read aloud right now */
+@keyframes reading-pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(232,137,43,.55); } 50% { box-shadow: 0 0 0 8px rgba(232,137,43,0); } }
+.reading-now { animation: reading-pulse 1.4s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .reading-now { animation: none; } }

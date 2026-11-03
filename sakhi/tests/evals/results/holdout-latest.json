@@ -1,0 +1,2022 @@
+{
+ "ranAt": "2026-11-02T00:50:56.452Z",
+ "dataset": {
+  "name": "hisaab-saathi-holdout",
+  "version": "1.0",
+  "cases": 22
+ },
+ "summary": {
+  "casesPassed": {
+   "pass": 21,
+   "total": 22,
+   "rate": 95.5
+  },
+  "casesPassedWithPending": 0,
+  "casesFullyPassed": {
+   "pass": 21,
+   "total": 22,
+   "rate": 95.5
+  },
+  "casesFailed": 1,
+  "casesWithCriticalFailures": [],
+  "casesWithPendingChecks": [],
+  "byLanguage": {
+   "en": {
+    "pass": 8,
+    "total": 8,
+    "rate": 100
+   },
+   "hi": {
+    "pass": 9,
+    "total": 9,
+    "rate": 100
+   },
+   "te": {
+    "pass": 4,
+    "total": 5,
+    "rate": 80
+   }
+  },
+  "byCategory": {
+   "repeat_request": {
+    "pass": 4,
+    "total": 4,
+    "rate": 100
+   },
+   "correct": {
+    "pass": 10,
+    "total": 11,
+    "rate": 90.9
+   },
+   "ambiguous": {
+    "pass": 3,
+    "total": 3,
+    "rate": 100
+   },
+   "misheard_amount": {
+    "pass": 1,
+    "total": 1,
+    "rate": 100
+   },
+   "leave_curriculum": {
+    "pass": 2,
+    "total": 2,
+    "rate": 100
+   },
+   "unrelated": {
+    "pass": 1,
+    "total": 1,
+    "rate": 100
+   }
+  },
+  "byConcept": {
+   "revenue_vs_profit": {
+    "pass": 8,
+    "total": 9,
+    "rate": 88.9
+   },
+   "customer_credit": {
+    "pass": 6,
+    "total": 6,
+    "rate": 100
+   },
+   "business_expenses": {
+    "pass": 4,
+    "total": 4,
+    "rate": 100
+   },
+   "savings_cash_management": {
+    "pass": 2,
+    "total": 2,
+    "rate": 100
+   },
+   "business_household_separation": {
+    "pass": 1,
+    "total": 1,
+    "rate": 100
+   }
+  }
+ },
+ "referenceBased": {
+  "financialCalculationAccuracy": {
+   "referenceTable": {
+    "pass": 133,
+    "total": 133,
+    "rate": 100
+   },
+   "spokenAmountParsing": {
+    "pass": 8,
+    "total": 9,
+    "rate": 88.9
+   }
+  },
+  "correctAnswerClassification": {
+   "recall": {
+    "pass": 11,
+    "total": 12,
+    "rate": 91.7
+   },
+   "precision": {
+    "pass": 11,
+    "total": 11,
+    "rate": 100
+   }
+  },
+  "misconceptionDetection": {
+   "pass": 0,
+   "total": 0,
+   "rate": null
+  },
+  "classificationOverall": {
+   "pass": 21,
+   "total": 22,
+   "rate": 95.5
+  },
+  "routing": {
+   "pass": 21,
+   "total": 22,
+   "rate": 95.5
+  },
+  "lessonProgressionCorrectness": {
+   "pass": 21,
+   "total": 22,
+   "rate": 95.5
+  },
+  "responseSchemaValidity": {
+   "pass": 22,
+   "total": 22,
+   "rate": 100
+  },
+  "crossLanguageConsistency": {
+   "contentSweep": {
+    "pass": 39,
+    "total": 39,
+    "rate": 100
+   },
+   "caseGroups": {
+    "pass": 0,
+    "total": 0,
+    "rate": null
+   }
+  }
+ },
+ "referenceFreeProxies": {
+  "clarity": {
+   "pass": 22,
+   "total": 22,
+   "rate": 100
+  },
+  "tone": {
+   "pass": 22,
+   "total": 22,
+   "rate": 100
+  },
+  "grounding": {
+   "pass": 22,
+   "total": 22,
+   "rate": 100
+  },
+  "languageScript": {
+   "pass": 22,
+   "total": 22,
+   "rate": 100
+  },
+  "length": {
+   "pass": 22,
+   "total": 22,
+   "rate": 100
+  },
+  "correctiveHelpfulness": {
+   "pass": 1,
+   "total": 1,
+   "rate": 100
+  }
+ },
+ "consistencyGroups": [],
+ "sweeps": {
+  "financial": [],
+  "language": [],
+  "financialTotal": 133,
+  "languageTotal": 39
+ },
+ "synonymCoverage": [
+  {
+   "optionId": "yes",
+   "lang": "en",
+   "native": 0,
+   "romanised": 0,
+   "english": 4
+  },
+  {
+   "optionId": "yes",
+   "lang": "hi",
+   "native": 4,
+   "romanised": 3,
+   "english": 1
+  },
+  {
+   "optionId": "yes",
+   "lang": "te",
+   "native": 3,
+   "romanised": 3,
+   "english": 1
+  },
+  {
+   "optionId": "no",
+   "lang": "en",
+   "native": 0,
+   "romanised": 0,
+   "english": 3
+  },
+  {
+   "optionId": "no",
+   "lang": "hi",
+   "native": 2,
+   "romanised": 2,
+   "english": 1
+  },
+  {
+   "optionId": "no",
+   "lang": "te",
+   "native": 6,
+   "romanised": 7,
+   "english": 1
+  },
+  {
+   "optionId": "unsure",
+   "lang": "en",
+   "native": 0,
+   "romanised": 0,
+   "english": 4
+  },
+  {
+   "optionId": "unsure",
+   "lang": "hi",
+   "native": 3,
+   "romanised": 6,
+   "english": 1
+  },
+  {
+   "optionId": "unsure",
+   "lang": "te",
+   "native": 4,
+   "romanised": 4,
+   "english": 1
+  },
+  {
+   "optionId": "up",
+   "lang": "en",
+   "native": 0,
+   "romanised": 0,
+   "english": 4
+  },
+  {
+   "optionId": "up",
+   "lang": "hi",
+   "native": 5,
+   "romanised": 4,
+   "english": 0
+  },
+  {
+   "optionId": "up",
+   "lang": "te",
+   "native": 3,
+   "romanised": 3,
+   "english": 0
+  },
+  {
+   "optionId": "down",
+   "lang": "en",
+   "native": 0,
+   "romanised": 0,
+   "english": 5
+  },
+  {
+   "optionId": "down",
+   "lang": "hi",
+   "native": 6,
+   "romanised": 5,
+   "english": 0
+  },
+  {
+   "optionId": "down",
+   "lang": "te",
+   "native": 4,
+   "romanised": 3,
+   "english": 0
+  },
+  {
+   "optionId": "stock",
+   "lang": "en",
+   "native": 0,
+   "romanised": 0,
+   "english": 2
+  },
+  {
+   "optionId": "stock",
+   "lang": "hi",
+   "native": 3,
+   "romanised": 4,
+   "english": 1
+  },
+  {
+   "optionId": "stock",
+   "lang": "te",
+   "native": 3,
+   "romanised": 4,
+   "english": 1
+  },
+  {
+   "optionId": "school",
+   "lang": "en",
+   "native": 0,
+   "romanised": 0,
+   "english": 2
+  },
+  {
+   "optionId": "school",
+   "lang": "hi",
+   "native": 3,
+   "romanised": 0,
+   "english": 2
+  },
+  {
+   "optionId": "school",
+   "lang": "te",
+   "native": 2,
+   "romanised": 1,
+   "english": 2
+  },
+  {
+   "optionId": "clothes",
+   "lang": "en",
+   "native": 0,
+   "romanised": 0,
+   "english": 2
+  },
+  {
+   "optionId": "clothes",
+   "lang": "hi",
+   "native": 2,
+   "romanised": 3,
+   "english": 1
+  },
+  {
+   "optionId": "clothes",
+   "lang": "te",
+   "native": 2,
+   "romanised": 2,
+   "english": 1
+  },
+  {
+   "optionId": "mixed",
+   "lang": "en",
+   "native": 0,
+   "romanised": 0,
+   "english": 4
+  },
+  {
+   "optionId": "mixed",
+   "lang": "hi",
+   "native": 6,
+   "romanised": 7,
+   "english": 2
+  },
+  {
+   "optionId": "mixed",
+   "lang": "te",
+   "native": 5,
+   "romanised": 3,
+   "english": 2
+  },
+  {
+   "optionId": "separate",
+   "lang": "en",
+   "native": 0,
+   "romanised": 0,
+   "english": 4
+  },
+  {
+   "optionId": "separate",
+   "lang": "hi",
+   "native": 3,
+   "romanised": 2,
+   "english": 2
+  },
+  {
+   "optionId": "separate",
+   "lang": "te",
+   "native": 6,
+   "romanised": 4,
+   "english": 3
+  },
+  {
+   "optionId": "cashbox",
+   "lang": "en",
+   "native": 0,
+   "romanised": 0,
+   "english": 2
+  },
+  {
+   "optionId": "cashbox",
+   "lang": "hi",
+   "native": 3,
+   "romanised": 5,
+   "english": 0
+  },
+  {
+   "optionId": "cashbox",
+   "lang": "te",
+   "native": 2,
+   "romanised": 2,
+   "english": 0
+  },
+  {
+   "optionId": "fixed",
+   "lang": "en",
+   "native": 0,
+   "romanised": 0,
+   "english": 2
+  },
+  {
+   "optionId": "fixed",
+   "lang": "hi",
+   "native": 3,
+   "romanised": 2,
+   "english": 1
+  },
+  {
+   "optionId": "fixed",
+   "lang": "te",
+   "native": 3,
+   "romanised": 3,
+   "english": 1
+  }
+ ],
+ "notRun": {
+  "liveAiResponses": "not run — needs ANTHROPIC_API_KEY and --confirm (scripts: npm run eval:llm -- live --confirm)",
+  "llmJudge": "not run — needs ANTHROPIC_API_KEY and --confirm (npm run eval:llm -- judge --confirm)",
+  "nativeSpeakerReview": "not done — 14 Hindi/Telugu/code-mixed inputs and their responses are listed in native-review.csv with empty reviewer columns"
+ },
+ "cases": [
+  {
+   "id": "RVP-EN-31",
+   "language": "en",
+   "business": "vegetable",
+   "concept": "revenue_vs_profit",
+   "category": "repeat_request",
+   "input": "speech: Could you read the question one more time?",
+   "system": {
+    "allowed": [
+     500,
+     300,
+     200
+    ],
+    "route": "replay",
+    "matchReason": "clarification_request",
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "nextAction": "stay_on_question",
+    "sentToModel": false,
+    "responseSource": "no_match_prompt",
+    "responseText": "Sure. Here is the question again."
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "n/a"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "33 chars, 2 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 5 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": null
+  },
+  {
+   "id": "CRD-EN-31",
+   "language": "en",
+   "business": "tea",
+   "concept": "customer_credit",
+   "category": "correct",
+   "input": "speech: Nope, they will pay me tomorrow",
+   "system": {
+    "allowed": [
+     50
+    ],
+    "route": "propose_confirm",
+    "optionId": "no",
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "sentToModel": false,
+    "responseSource": "assessment_feedback",
+    "responseText": "That’s right. Money on udhaar is owed to you. It becomes cash only when the customer pays."
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "n/a"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "90 chars, 3 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 8 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": null
+  },
+  {
+   "id": "RVP-HI-31",
+   "language": "hi",
+   "business": "vegetable",
+   "concept": "revenue_vs_profit",
+   "category": "correct",
+   "input": "speech: नहीं जी, पाँच सौ मुनाफ़ा नहीं है",
+   "system": {
+    "allowed": [
+     500,
+     300,
+     200
+    ],
+    "route": "propose_confirm",
+    "optionId": "no",
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "sentToModel": false,
+    "responseSource": "assessment_feedback",
+    "responseText": "बिल्कुल सही। मुनाफ़ा वह है जो बेचे गए सामान की लागत चुकाने के बाद बचता है: ₹500 − ₹300 = ₹200।"
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "n/a"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "94 chars, 2 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 19 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": "needs_native_review (medium)"
+  },
+  {
+   "id": "CRD-HI-31",
+   "language": "hi",
+   "business": "grocery",
+   "concept": "customer_credit",
+   "category": "ambiguous",
+   "input": "speech: हाँ जी मिल गए, नहीं नहीं, अभी नहीं मिले",
+   "system": {
+    "allowed": [
+     100
+    ],
+    "route": "no_match_prompt",
+    "matchReason": "ambiguous_option",
+    "classification": "ambiguous",
+    "correctness": "not_scored",
+    "nextAction": "stay_on_question",
+    "sentToModel": false,
+    "responseSource": "no_match_prompt",
+    "responseText": "ये शब्द किसी जवाब से नहीं मिलते। शब्द ठीक करें, फिर से बोलें, या जवाब दबाएँ।"
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "n/a"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "76 chars, 2 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 9 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": "needs_native_review (medium)"
+  },
+  {
+   "id": "CRD-TE-31",
+   "language": "te",
+   "business": "vegetable",
+   "concept": "customer_credit",
+   "category": "correct",
+   "input": "speech: ఇంకా రాలేదు",
+   "system": {
+    "allowed": [
+     60
+    ],
+    "route": "propose_confirm",
+    "optionId": "no",
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "sentToModel": false,
+    "responseSource": "assessment_feedback",
+    "responseText": "సరిగ్గా చెప్పారు. అప్పుగా ఇచ్చిన డబ్బు మీకు రావాల్సి ఉంది. కస్టమర్ చెల్లించినప్పుడే అది నగదు అవుతుంది."
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "n/a"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "102 chars, 3 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 6 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": "needs_native_review (medium)"
+  },
+  {
+   "id": "RVP-HI-32",
+   "language": "hi",
+   "business": "tea",
+   "concept": "revenue_vs_profit",
+   "category": "correct",
+   "input": "speech: ढाई सौ रुपये बचे",
+   "system": {
+    "allowed": [
+     600,
+     350,
+     250,
+     950
+    ],
+    "correctAmount": 250,
+    "parsedAmount": 250,
+    "proposedAmount": 250,
+    "route": "propose_confirm",
+    "optionId": "profit",
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "sentToModel": false,
+    "responseSource": "assessment_feedback",
+    "responseText": "बिल्कुल सही। मुनाफ़ा वह है जो बेचे गए सामान की लागत चुकाने के बाद बचता है: ₹600 − ₹350 = ₹250।"
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "pass"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "94 chars, 2 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 19 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": "needs_native_review (medium)"
+  },
+  {
+   "id": "EXP-HI-31",
+   "language": "hi",
+   "business": "vegetable",
+   "concept": "business_expenses",
+   "category": "misheard_amount",
+   "input": "speech: सवा छह सौ",
+   "system": {
+    "allowed": [
+     600,
+     50,
+     650
+    ],
+    "correctAmount": 650,
+    "parsedAmount": 625,
+    "route": "no_match_prompt",
+    "matchReason": "not_understood",
+    "classification": "not_understood",
+    "correctness": "not_scored",
+    "nextAction": "stay_on_question",
+    "sentToModel": false,
+    "responseSource": "no_match_prompt",
+    "responseText": "ये शब्द किसी जवाब से नहीं मिलते। शब्द ठीक करें, फिर से बोलें, या जवाब दबाएँ।"
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "pass"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "76 chars, 2 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 9 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": "needs_native_review (medium)"
+  },
+  {
+   "id": "EXP-TE-31",
+   "language": "te",
+   "business": "vegetable",
+   "concept": "business_expenses",
+   "category": "correct",
+   "input": "speech: ఆరు వందల యాభై రూపాయలు మొత్తం",
+   "system": {
+    "allowed": [
+     600,
+     50,
+     650
+    ],
+    "correctAmount": 650,
+    "parsedAmount": 650,
+    "proposedAmount": 650,
+    "route": "propose_confirm",
+    "optionId": "total",
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "sentToModel": false,
+    "responseSource": "assessment_feedback",
+    "responseText": "సరిగ్గా చెప్పారు. సరుకు తెచ్చుకోవడానికి చెల్లించేదంతా దాని ఖర్చులో భాగమే: ₹600 + ₹50 = ₹650."
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "pass"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "92 chars, 2 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 11 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": "needs_native_review (medium)"
+  },
+  {
+   "id": "CRD-TE-32",
+   "language": "te",
+   "business": "tea",
+   "concept": "customer_credit",
+   "category": "correct",
+   "input": "speech: నాలుగు వందల యాభై మాత్రమే, అప్పు కాదు",
+   "system": {
+    "allowed": [
+     450,
+     150,
+     600
+    ],
+    "correctAmount": 450,
+    "parsedAmount": 450,
+    "proposedAmount": 450,
+    "route": "propose_confirm",
+    "optionId": "cash",
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "sentToModel": false,
+    "responseSource": "assessment_feedback",
+    "responseText": "సరిగ్గా చెప్పారు. ఈ రోజు గల్లాలోకి నగదు అమ్మకాలు మాత్రమే వస్తాయి: ₹450. అప్పుగా ఇచ్చిన ₹150 కస్టమర్లు చెల్లించినప్పుడు తర్వాత వస్తుంది."
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "pass"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "135 chars, 3 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 8 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": "needs_native_review (medium)"
+  },
+  {
+   "id": "CRD-EN-32",
+   "language": "en",
+   "business": "grocery",
+   "concept": "customer_credit",
+   "category": "ambiguous",
+   "input": "speech: twelve hundred, not fifteen hundred",
+   "system": {
+    "allowed": [
+     1200,
+     300,
+     1500
+    ],
+    "correctAmount": 1200,
+    "parsedAmount": 1200,
+    "proposedAmount": 1200,
+    "route": "propose_confirm",
+    "optionId": "cash",
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "sentToModel": false,
+    "responseSource": "assessment_feedback",
+    "responseText": "That’s right. Only cash sales come into the box today: ₹1,200. The ₹300 on udhaar comes later, when customers pay."
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "pass"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "114 chars, 3 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 9 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": null
+  },
+  {
+   "id": "RVP-EN-32",
+   "language": "en",
+   "business": "vegetable",
+   "concept": "revenue_vs_profit",
+   "category": "correct",
+   "input": "speech: the answer is three hundred",
+   "system": {
+    "allowed": [
+     1000,
+     700,
+     300,
+     1700
+    ],
+    "correctAmount": 300,
+    "parsedAmount": 300,
+    "proposedAmount": 300,
+    "route": "propose_confirm",
+    "optionId": "profit",
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "sentToModel": false,
+    "responseSource": "assessment_feedback",
+    "responseText": "That’s right. Profit is what is left after paying for the goods you sold: ₹1,000 − ₹700 = ₹300."
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "pass"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "95 chars, 2 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 17 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": null
+  },
+  {
+   "id": "SAV-HI-31",
+   "language": "hi",
+   "business": "vegetable",
+   "concept": "savings_cash_management",
+   "category": "correct",
+   "input": "speech: गुल्लक में अलग रखती हूँ",
+   "system": {
+    "allowed": [],
+    "route": "propose_confirm",
+    "optionId": "separate",
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "complete_assessment+recommend:revenue_vs_profit",
+    "sentToModel": false,
+    "responseSource": "assessment_feedback",
+    "responseText": "बिल्कुल सही। दुकान के पैसों से अलग रखी बचत गलती से खर्च नहीं होती।"
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "n/a"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "66 chars, 2 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 12 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": "needs_native_review (medium)"
+  },
+  {
+   "id": "SEP-HI-31",
+   "language": "hi",
+   "business": "vegetable",
+   "concept": "business_household_separation",
+   "category": "repeat_request",
+   "input": "speech: मुझे फिर से सुनाइए",
+   "system": {
+    "allowed": [
+     150
+    ],
+    "route": "replay",
+    "matchReason": "clarification_request",
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "nextAction": "stay_on_question",
+    "sentToModel": false,
+    "responseSource": "no_match_prompt",
+    "responseText": "ज़रूर। सवाल फिर से सुनिए।"
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "n/a"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "25 chars, 2 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 4 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": "needs_native_review (medium)"
+  },
+  {
+   "id": "SAV-TE-31",
+   "language": "te",
+   "business": "vegetable",
+   "concept": "savings_cash_management",
+   "category": "leave_curriculum",
+   "input": "speech: ఏ బ్యాంక్ మంచిది?",
+   "system": {
+    "allowed": [],
+    "route": "redirect_advice",
+    "matchReason": "out_of_scope",
+    "classification": "leave_curriculum",
+    "correctness": "not_scored",
+    "nextAction": "stay_on_question",
+    "sentToModel": false,
+    "responseSource": "no_match_prompt",
+    "responseText": "లోన్, పొదుపు పథకాలు లేదా పెట్టుబడుల గురించి నేను సలహా ఇవ్వలేను. దయచేసి మీ కోచ్‌ని అడగండి. ప్రశ్నకు తిరిగి వెళ్దాం."
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "n/a"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "114 chars, 3 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 9 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": "needs_native_review (medium)"
+  },
+  {
+   "id": "EXP-EN-31",
+   "language": "en",
+   "business": "vegetable",
+   "concept": "business_expenses",
+   "category": "repeat_request",
+   "input": "speech: what is a business expense?",
+   "system": {
+    "allowed": [],
+    "route": "replay",
+    "matchReason": "clarification_request",
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "nextAction": "stay_on_question",
+    "sentToModel": false,
+    "responseSource": "no_match_prompt",
+    "responseText": "This is a short check of what you already know, so I can’t explain it here. I’ll read the question slowly. If you are not sure, choose “I’m not sure” — that is fine."
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "n/a"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "165 chars, 3 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 16 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": null
+  },
+  {
+   "id": "EXP-HI-32",
+   "language": "hi",
+   "business": "tea",
+   "concept": "business_expenses",
+   "category": "leave_curriculum",
+   "input": "speech: मेरा आधार नंबर बताऊँ?",
+   "system": {
+    "allowed": [],
+    "route": "redirect_private",
+    "matchReason": "sensitive_information",
+    "classification": "sensitive_information",
+    "correctness": "not_scored",
+    "nextAction": "stay_on_question",
+    "sentToModel": false,
+    "responseSource": "no_match_prompt",
+    "responseText": "कृपया यहाँ बैंक, फ़ोन या पहचान के नंबर न बोलें। कुछ भी सेव नहीं हुआ। कृपया सवाल का जवाब दें।"
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "n/a"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "92 chars, 3 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 10 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": "needs_native_review (medium)"
+  },
+  {
+   "id": "CRD-EN-33",
+   "language": "en",
+   "business": "vegetable",
+   "concept": "customer_credit",
+   "category": "unrelated",
+   "input": "speech: tell me a joke",
+   "system": {
+    "allowed": [
+     60
+    ],
+    "route": "no_match_prompt",
+    "matchReason": "unrelated",
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "nextAction": "stay_on_question",
+    "sentToModel": false,
+    "responseSource": "no_match_prompt",
+    "responseText": "This question is about the money in your business. Please choose one of the answers."
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "n/a"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "84 chars, 2 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 9 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": null
+  },
+  {
+   "id": "RVP-TE-31",
+   "language": "te",
+   "business": "grocery",
+   "concept": "revenue_vs_profit",
+   "category": "correct",
+   "input": "speech: పదిహేను వందలు అమ్మకాలు, లాభం నాలుగు వందలు",
+   "system": {
+    "allowed": [
+     1500,
+     1100,
+     400,
+     2600
+    ],
+    "correctAmount": 400,
+    "parsedAmount": null,
+    "route": "no_match_prompt",
+    "matchReason": "ambiguous_amount",
+    "classification": "ambiguous",
+    "correctness": "not_scored",
+    "nextAction": "stay_on_question",
+    "sentToModel": false,
+    "responseSource": "no_match_prompt",
+    "responseText": "నాకు ₹1,500 / ₹400 వినిపించాయి. మీ జవాబు ఏది? దయచేసి దాన్ని నొక్కండి."
+   },
+   "checks": {
+    "route": {
+     "status": "fail",
+     "detail": "got no_match_prompt, expected propose_confirm"
+    },
+    "correctness": {
+     "status": "fail",
+     "detail": "got not_scored, expected correct"
+    },
+    "classification": {
+     "status": "fail",
+     "detail": "got ambiguous, expected correct"
+    },
+    "nextAction": {
+     "status": "fail",
+     "detail": "got stay_on_question, expected continue_assessment"
+    },
+    "amount": {
+     "status": "fail",
+     "detail": "parsed nothing, expected 400"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "69 chars, 3 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 5 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": false,
+   "pending": [],
+   "translationReview": "needs_native_review (medium)"
+  },
+  {
+   "id": "RVP-HI-33",
+   "language": "hi",
+   "business": "vegetable",
+   "concept": "revenue_vs_profit",
+   "category": "correct",
+   "input": "speech: तीन सौ, पक्का",
+   "system": {
+    "allowed": [
+     1000,
+     700,
+     300,
+     1700
+    ],
+    "correctAmount": 300,
+    "parsedAmount": 300,
+    "proposedAmount": 300,
+    "route": "propose_confirm",
+    "optionId": "profit",
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "sentToModel": false,
+    "responseSource": "assessment_feedback",
+    "responseText": "बिल्कुल सही। मुनाफ़ा वह है जो बेचे गए सामान की लागत चुकाने के बाद बचता है: ₹1,000 − ₹700 = ₹300।"
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "pass"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "96 chars, 2 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 19 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": "needs_native_review (medium)"
+  },
+  {
+   "id": "RVP-EN-33",
+   "language": "en",
+   "business": "tea",
+   "concept": "revenue_vs_profit",
+   "category": "correct",
+   "input": "speech: two fifty",
+   "system": {
+    "allowed": [
+     600,
+     350,
+     250,
+     950
+    ],
+    "correctAmount": 250,
+    "parsedAmount": 250,
+    "proposedAmount": 250,
+    "route": "propose_confirm",
+    "optionId": "profit",
+    "classification": "correct",
+    "correctness": "correct",
+    "nextAction": "continue_assessment",
+    "sentToModel": false,
+    "responseSource": "assessment_feedback",
+    "responseText": "That’s right. Profit is what is left after paying for the goods you sold: ₹600 − ₹350 = ₹250."
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "pass"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "93 chars, 2 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 17 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": null
+  },
+  {
+   "id": "RVP-EN-34",
+   "language": "en",
+   "business": "vegetable",
+   "concept": "revenue_vs_profit",
+   "category": "repeat_request",
+   "input": "speech: Can you play it again?",
+   "system": {
+    "allowed": [
+     30,
+     40,
+     200,
+     300,
+     500,
+     800
+    ],
+    "correctAmount": 200,
+    "route": "ai_interpret",
+    "parsedAmount": null,
+    "matchReason": "clarification_request",
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "nextAction": "stay_on_question",
+    "sentToModel": true,
+    "responseSource": "approved_fallback",
+    "responseText": "I didn’t fully understand. Please choose one of the answers below."
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "n/a"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "66 chars, 2 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 7 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "n/a"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": null
+  },
+  {
+   "id": "RVP-HI-34",
+   "language": "hi",
+   "business": "vegetable",
+   "concept": "revenue_vs_profit",
+   "category": "ambiguous",
+   "input": "speech: पता नहीं, शायद बढ़ा",
+   "system": {
+    "allowed": [
+     -50,
+     50,
+     150,
+     200,
+     300,
+     500,
+     550,
+     700
+    ],
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "classification": "unsure",
+    "correctness": "unsure",
+    "nextAction": "feedback:unsure→continue_no_retry",
+    "sentToModel": false,
+    "responseSource": "lesson_feedback",
+    "responseText": "कोई बात नहीं। मुनाफ़ा ₹200 से घटकर ₹150 हो गया, क्योंकि खर्च बिक्री से ज़्यादा बढ़ा।"
+   },
+   "checks": {
+    "route": {
+     "status": "pass"
+    },
+    "correctness": {
+     "status": "pass"
+    },
+    "classification": {
+     "status": "pass"
+    },
+    "nextAction": {
+     "status": "pass"
+    },
+    "amount": {
+     "status": "n/a"
+    }
+   },
+   "responseChecks": {
+    "schema": {
+     "status": "pass"
+    },
+    "languageScript": {
+     "status": "pass"
+    },
+    "grounding": {
+     "status": "pass"
+    },
+    "length": {
+     "status": "pass",
+     "detail": "84 chars, 2 sentences"
+    },
+    "clarity": {
+     "status": "pass",
+     "detail": "longest sentence 13 words"
+    },
+    "tone": {
+     "status": "pass"
+    },
+    "correctiveHelpfulness": {
+     "status": "pass"
+    }
+   },
+   "critical": [],
+   "warnings": [],
+   "pass": true,
+   "pending": [],
+   "translationReview": "needs_native_review (medium)"
+  }
+ ]
+}

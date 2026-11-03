@@ -1,0 +1,340 @@
+﻿namespace,key,en,hi,te
+ui,appName,Hisaab Saathi,हिसाब साथी,హిసాబ్ సాథీ
+ui,tagline,Money skills for your business,आपके व्यापार के लिए पैसों की समझ,మీ వ్యాపారం కోసం డబ్బు నైపుణ్యాలు
+ui,listen,Listen,सुनें,వినండి
+ui,playing,Playing…,चल रहा है…,ప్లే అవుతోంది…
+ui,next,Next,आगे,తర్వాత
+ui,continue,Continue,आगे बढ़ें,కొనసాగించండి
+ui,back,Back,पीछे,వెనక్కి
+ui,speak,Tap and speak,दबाकर बोलें,నొక్కి మాట్లాడండి
+ui,listening,Listening…,सुन रहे हैं…,వింటున్నాం…
+ui,didYouSay,Did you say “{x}”?,क्या आपने “{x}” कहा?,మీరు “{x}” అన్నారా?
+ui,yes,Yes,हाँ,అవును
+ui,noAgain,"No, try again","नहीं, फिर से","కాదు, మళ్లీ"
+ui,typeInstead,Type a number,नंबर लिखें,సంఖ్య టైప్ చేయండి
+ui,orTap,Or tap your answer,या अपना जवाब दबाएँ,లేదా మీ జవాబును నొక్కండి
+ui,coach,Coach,कोच,కోచ్
+ui,language,Language,भाषा,భాష
+ui,stepOf,Step {n} of {total},चरण {n} / {total},దశ {n} / {total}
+ui,questionOf,Question {n} of {total},सवाल {n} / {total},ప్రశ్న {n} / {total}
+ui,notSure,Not sure,पता नहीं,తెలియదు
+ui,offline,You are offline. Lessons still work.,आप ऑफ़लाइन हैं। पाठ फिर भी चलेंगे।,మీరు ఆఫ్‌లైన్‌లో ఉన్నారు. పాఠాలు పనిచేస్తాయి.
+ui,offline.voice,Voice answers are off. Saved lesson audio or the phone’s voice may still play.,बोलकर जवाब अभी बंद है। सेव की हुई आवाज़ या फ़ोन की आवाज़ फिर भी चल सकती है।,మాటతో జవాబులు ఇప్పుడు పనిచేయవు. సేవ్ చేసిన పాఠం ఆడియో లేదా ఫోన్ గొంతు వినిపించవచ్చు.
+ui,close,Close,बंद करें,మూసివేయండి
+ui,langKept,Your progress is kept.,आपकी प्रगति सुरक्षित है।,మీ పురోగతి భద్రంగా ఉంది.
+ui,nav.home,Home,होम,హోమ్
+ui,nav.lessons,My Lessons,मेरे पाठ,నా పాఠాలు
+ui,nav.practice,My Practice,मेरा अभ्यास,నా అభ్యాసం
+ui,nav.progress,Progress,प्रगति,పురోగతి
+ui,lang.title,Choose your language,अपनी भाषा चुनें,మీ భాషను ఎంచుకోండి
+ui,lang.sub,You can change this anytime.,आप इसे कभी भी बदल सकती हैं।,దీన్ని ఎప్పుడైనా మార్చుకోవచ్చు.
+ui,biz.title,What is your business?,आपका व्यापार क्या है?,మీ వ్యాపారం ఏమిటి?
+ui,biz.sub,We will use examples from your work.,हम आपके काम के उदाहरण देंगे।,మీ పనికి సంబంధించిన ఉదాహరణలు చూపిస్తాం.
+ui,biz.vegetable,Vegetable stall,सब्ज़ी की दुकान,కూరగాయల అంగడి
+ui,biz.tea,Tea stall,चाय की दुकान,టీ కొట్టు
+ui,biz.grocery,Grocery shop,किराना दुकान,కిరాణా దుకాణం
+ui,diag.introTitle,Let’s see where to start,चलिए देखें कहाँ से शुरू करें,ఎక్కడ మొదలుపెట్టాలో చూద్దాం
+ui,diag.introBody,4 short questions. There are no wrong answers here.,4 छोटे सवाल। यहाँ कोई जवाब गलत नहीं है।,4 చిన్న ప్రశ్నలు. ఇక్కడ తప్పు జవాబులు ఉండవు.
+ui,diag.start,Start,शुरू करें,మొదలుపెట్టండి
+ui,diag.q1,Radha’s sales today were {sales}. She paid {stock} for stock. How much did she earn?,आज राधा की बिक्री {sales} हुई। उसने माल के लिए {stock} दिए। उसने कितना कमाया?,ఈ రోజు రాధ అమ్మకాలు {sales}. సరుకు కోసం {stock} చెల్లించింది. ఆమె ఎంత సంపాదించింది?
+ui,diag.q2,Which one is a business cost?,इनमें से व्यापार का खर्च कौन-सा है?,వీటిలో వ్యాపార ఖర్చు ఏది?
+ui,diag.q2a,Buying stock,माल खरीदना,సరుకు కొనడం
+ui,diag.q2b,School fees,स्कूल की फ़ीस,స్కూల్ ఫీజు
+ui,diag.q2c,Festival clothes,त्योहार के कपड़े,పండుగ బట్టలు
+ui,diag.q3,A customer takes goods worth {amt} and will pay next week. Is this money in your hand today?,एक ग्राहक {amt} का सामान ले गया और अगले हफ़्ते पैसे देगा। क्या ये पैसे आज आपके हाथ में हैं?,"ఒక కస్టమర్ {amt} విలువైన సరుకు తీసుకెళ్లి, వచ్చే వారం డబ్బు ఇస్తారు. ఈ డబ్బు ఈ రోజు మీ చేతిలో ఉందా?"
+ui,diag.yes,Yes,हाँ,అవును
+ui,diag.no,No,नहीं,లేదు
+ui,diag.q4,Money for household groceries should come from…,घर के राशन के पैसे कहाँ से आने चाहिए?,ఇంటి సరుకుల డబ్బు ఎక్కడి నుంచి రావాలి?
+ui,diag.q4a,The shop cash box,दुकान के गल्ले से,దుకాణం గల్లా పెట్టె నుంచి
+ui,diag.q4b,Separate home money,घर के अलग पैसों से,ఇంటి కోసం వేరుగా ఉంచిన డబ్బు
+ui,diag.doneTitle,Thank you!,धन्यवाद!,ధన్యవాదాలు!
+ui,diag.doneBody,We will start with:,हम यहाँ से शुरू करेंगे:,మనం దీనితో మొదలుపెడదాం:
+ui,diag.doneCta,Go to my home,मेरे होम पर जाएँ,నా హోమ్‌కి వెళ్లండి
+ui,home.greeting,"Namaste, {name}","नमस्ते, {name}","నమస్తే, {name}"
+ui,home.today,Today’s lesson,आज का पाठ,ఈ రోజు పాఠం
+ui,home.minutes,{n} min,{n} मिनट,{n} నిమిషాలు
+ui,home.start,Start today’s lesson,आज का पाठ शुरू करें,ఈ రోజు పాఠం మొదలుపెట్టండి
+ui,home.listenPlan,Today’s plan,आज की योजना,ఈ రోజు ప్లాన్
+ui,home.challengeTitle,This week’s challenge,इस हफ़्ते की चुनौती,ఈ వారం సవాలు
+ui,home.checkin,Did you try it?,क्या आपने कोशिश की?,మీరు ప్రయత్నించారా?
+ui,home.did,Yes,हाँ,అవును
+ui,home.partly,Partly,थोड़ा,కొంచెం
+ui,home.notYet,Not yet,अभी नहीं,ఇంకా లేదు
+ui,home.thanks,Thank you for telling us.,बताने के लिए धन्यवाद।,చెప్పినందుకు ధన్యవాదాలు.
+ui,home.noChallenge,Finish today’s lesson to get your challenge.,चुनौती पाने के लिए आज का पाठ पूरा करें।,సవాలు కోసం ఈ రోజు పాఠం పూర్తి చేయండి.
+ui,home.journey,Your journey,आपका सफ़र,మీ ప్రయాణం
+ui,home.moduleOf,Module {n} of 5,मॉड्यूल {n} / 5,మాడ్యూల్ {n} / 5
+ui,home.allDone,Lesson done for today. Practise to remember it.,आज का पाठ पूरा हुआ। याद रखने के लिए अभ्यास करें।,ఈ రోజు పాఠం పూర్తయింది. గుర్తుంచుకోవడానికి అభ్యాసం చేయండి.
+ui,home.practiceCta,Go to practice,अभ्यास पर जाएँ,అభ్యాసానికి వెళ్లండి
+ui,m1.title,Sales and profit,बिक्री और मुनाफ़ा,"అమ్మకాలు, లాభం"
+ui,m1.desc,What is really left for you,असल में आपके लिए कितना बचा,మీకు నిజంగా ఎంత మిగిలింది
+ui,m2.title,Everyday costs,रोज़ के खर्च,రోజువారీ ఖర్చులు
+ui,m2.desc,Small costs add up,छोटे खर्च जुड़ जाते हैं,చిన్న ఖర్చులు కలిసి పెద్దవవుతాయి
+ui,m3.title,Customer credit,ग्राहक का उधार,కస్టమర్ అప్పు
+ui,m3.desc,Money given on udhaar,उधार पर दिया पैसा,అప్పుగా ఇచ్చిన డబ్బు
+ui,m4.title,Saving a little daily,रोज़ थोड़ी बचत,రోజూ కొంచెం పొదుపు
+ui,m4.desc,Small amounts grow,छोटी रकम बढ़ती है,చిన్న మొత్తాలు పెరుగుతాయి
+ui,m5.title,Two pockets,दो जेबें,రెండు జేబులు
+ui,m5.desc,Home money and shop money,घर का पैसा और दुकान का पैसा,"ఇంటి డబ్బు, దుకాణం డబ్బు"
+ui,lessons.title,My Lessons,मेरे पाठ,నా పాఠాలు
+ui,lessons.sub,One lesson each visit.,हर मुलाक़ात में एक पाठ।,ప్రతి సందర్శనలో ఒక పాఠం.
+ui,lessons.start,Start,शुरू करें,మొదలుపెట్టండి
+ui,lessons.done,Done,पूरा,పూర్తయింది
+ui,lessons.later,Later,बाद में,తర్వాత
+ui,lesson.s1Title,Radha’s day,राधा का दिन,రాధ రోజు
+ui,lesson.s1Body,Today Radha’s {item} sales were {sales}.,आज राधा की {item} की बिक्री {sales} हुई।,ఈ రోజు రాధ {item} అమ్మకాలు {sales}.
+ui,lesson.s2Title,Where did the money go?,पैसा कहाँ गया?,డబ్బు ఎక్కడికి వెళ్లింది?
+ui,lesson.stock,Paid for stock,माल के लिए दिए,సరుకు కోసం చెల్లించింది
+ui,lesson.waste,Spoiled or wasted,खराब या बर्बाद,పాడైంది / వృథా
+ui,lesson.left,Left for Radha,राधा के लिए बचा,రాధకు మిగిలింది
+ui,lesson.s2Body,Profit is what is left after paying all costs.,"सारे खर्च चुकाने के बाद जो बचता है, वही मुनाफ़ा है।",అన్ని ఖర్చులు చెల్లించిన తర్వాత మిగిలేదే లాభం.
+ui,lesson.s3Title,Think about it,सोचिए,ఆలోచించండి
+ui,lesson.s3Q,"At the end of the day, how do you know what is left for you?",दिन के अंत में आपको कैसे पता चलता है कि आपके लिए कितना बचा?,రోజు చివర మీకు ఎంత మిగిలిందో ఎలా తెలుసుకుంటారు?
+ui,lesson.r1,I count the cash box,गल्ला गिनती हूँ,గల్లా పెట్టె లెక్కపెడతాను
+ui,lesson.r2,I guess,अंदाज़ा लगाती हूँ,అంచనా వేస్తాను
+ui,lesson.r3,I write it down,लिख लेती हूँ,రాసుకుంటాను
+ui,lesson.r4,I don’t check,जाँच नहीं करती,చూడను
+ui,lesson.shortOnTime,Short on time?,समय कम है?,సమయం తక్కువగా ఉందా?
+ui,lesson.toPractice,Go to practice,अभ्यास पर जाएँ,అభ్యాసానికి వెళ్లండి
+ui,item.vegetable,vegetable,सब्ज़ी,కూరగాయల
+ui,item.tea,tea and snacks,चाय-नाश्ते,"టీ, టిఫిన్"
+ui,item.grocery,grocery,किराने,కిరాణా
+ui,pr.q,Radha’s {item} sales: {sales}. Stock cost: {stock}. Wasted goods: {waste}. What is her profit?,राधा की {item} की बिक्री: {sales}। माल की कीमत: {stock}। बर्बाद सामान: {waste}। उसका मुनाफ़ा कितना है?,రాధ {item} అమ్మకాలు: {sales}. సరుకు ఖర్చు: {stock}. వృథా సరుకు: {waste}. ఆమె లాభం ఎంత?
+ui,pr.check,Check answer,जवाब देखें,జవాబు చూడండి
+ui,pr.correctTitle,That’s right,बिल्कुल सही,సరిగ్గా చెప్పారు
+ui,pr.correctBody,This is what is left for Radha.,यही राधा के लिए बचा है।,రాధకు మిగిలింది ఇదే.
+ui,pr.hintSales,You took all the sales money. First take out what Radha paid for stock and waste.,आपने बिक्री का पूरा पैसा लिया। पहले माल और बर्बादी का खर्च घटाइए।,"మీరు అమ్మకాల మొత్తం డబ్బు తీసుకున్నారు. ముందు సరుకు, వృథా ఖర్చులు తీసేయండి."
+ui,pr.hintWaste,Close! You took out stock. Wasted goods also cost money. Take that out too.,"करीब! आपने माल का खर्च घटाया। बर्बाद सामान का भी पैसा लगा था, उसे भी घटाइए।",దగ్గరకు వచ్చారు! సరుకు ఖర్చు తీసేశారు. వృథా అయిన సరుకుకు కూడా డబ్బు పోయింది. దాన్ని కూడా తీసేయండి.
+ui,pr.tryAgain,Try again,फिर से कोशिश करें,మళ్లీ ప్రయత్నించండి
+ui,pr.workedTitle,Let’s work it out together,चलिए साथ में हल करें,కలిసి లెక్క చేద్దాం
+ui,pr.workedNote,Your coach will go over this with you.,आपकी कोच इसे आपके साथ दोहराएँगी।,మీ కోచ్ దీన్ని మీతో మళ్లీ చూస్తారు.
+ui,pr.typeLabel,Type the amount,रकम लिखें,మొత్తం టైప్ చేయండి
+ui,pr.sales,Sales,बिक्री,అమ్మకాలు
+ui,pr.stock,Stock,माल,సరుకు
+ui,pr.waste,Waste,बर्बादी,వృథా
+ui,pr.profit,Profit,मुनाफ़ा,లాభం
+ui,practice.title,My Practice,मेरा अभ्यास,నా అభ్యాసం
+ui,practice.sub,Short practice to remember what you learned.,सीखी हुई बात याद रखने के लिए छोटा अभ्यास।,నేర్చుకున్నది గుర్తుంచుకోవడానికి చిన్న అభ్యాసం.
+ui,practice.review,Quick review,जल्दी दोहराएँ,త్వరిత పునశ్చరణ
+ui,practice.reviewSub,2 questions · 2 min,2 सवाल · 2 मिनट,2 ప్రశ్నలు · 2 నిమిషాలు
+ui,practice.ready,Ready,तैयार,సిద్ధం
+ui,practice.afterLesson,After the lesson,पाठ के बाद,పాఠం తర్వాత
+ui,done.title,Lesson complete,पाठ पूरा हुआ,పాఠం పూర్తయింది
+ui,done.body,You learned how to find what is really left for you.,आपने सीखा कि असल में आपके लिए कितना बचता है।,మీకు నిజంగా ఎంత మిగులుతుందో తెలుసుకోవడం నేర్చుకున్నారు.
+ui,done.challengeLabel,Your challenge this week,इस हफ़्ते की आपकी चुनौती,ఈ వారం మీ సవాలు
+ui,done.accept,I’ll do this,मैं यह करूँगी,నేను ఇది చేస్తాను
+ui,challenge.vegetable,"Each evening, put spoiled vegetables in one bag. On Sunday, count what they cost you.",हर शाम खराब सब्ज़ियाँ एक थैले में रखें। रविवार को गिनें कि उनकी कीमत कितनी थी।,ప్రతి సాయంత్రం పాడైన కూరగాయలను ఒక సంచిలో వేయండి. ఆదివారం వాటి విలువ ఎంతో లెక్కపెట్టండి.
+ui,challenge.tea,"Each evening, see how much milk or snacks went to waste. On Sunday, add up the cost.",हर शाम देखें कि कितना दूध या नाश्ता बेकार गया। रविवार को उसकी कीमत जोड़ें।,ప్రతి సాయంత్రం ఎంత పాలు లేదా టిఫిన్ వృథా అయిందో చూడండి. ఆదివారం దాని ఖర్చు కలపండి.
+ui,challenge.grocery,"This week, keep damaged or expired items in one box. On Sunday, count what they cost.",इस हफ़्ते खराब या एक्सपायर सामान एक डिब्बे में रखें। रविवार को उसकी कीमत गिनें।,ఈ వారం పాడైన లేదా గడువు ముగిసిన సరుకును ఒక డబ్బాలో ఉంచండి. ఆదివారం వాటి విలువ లెక్కపెట్టండి.
+ui,prog.title,Learning Progress,सीखने की प्रगति,నేర్చుకున్న పురోగతి
+ui,prog.hear,Hear my progress,मेरी प्रगति सुनें,నా పురోగతి వినండి
+ui,prog.summary,Lessons finished: {n} of 5. Keep going!,पूरे हुए पाठ: 5 में से {n}। आगे बढ़ती रहें!,పూర్తయిన పాఠాలు: 5లో {n}. కొనసాగించండి!
+ui,prog.challenges,My challenges,मेरी चुनौतियाँ,నా సవాళ్లు
+ui,prog.none,No challenges yet.,अभी कोई चुनौती नहीं।,ఇంకా సవాళ్లు లేవు.
+ui,prog.cta,Continue learning,सीखना जारी रखें,నేర్చుకోవడం కొనసాగించండి
+ui,state.notStarted,Not started,शुरू नहीं हुआ,మొదలుకాలేదు
+ui,state.learning,Learning,सीख रही हैं,నేర్చుకుంటున్నారు
+ui,state.practising,Practising,अभ्यास में,అభ్యాసంలో
+ui,state.confident,Confident,भरोसे से,నమ్మకంగా
+ui,ch.pending,In progress,चल रही है,జరుగుతోంది
+ui,ch.done,Done,पूरी की,పూర్తి చేశారు
+ui,ch.partly,Partly,थोड़ी की,కొంచెం చేశారు
+ui,ch.notYet,Not yet,अभी नहीं,ఇంకా లేదు
+ui,coach.title,Coach View,कोच व्यू,కోచ్ వ్యూ
+ui,coach.sub,Your learners,आपकी प्रतिभागी,మీ అభ్యాసకులు
+ui,coach.search,Search name or village,नाम या गाँव खोजें,పేరు లేదా ఊరు వెతకండి
+ui,coach.visitDue,Visit due,मुलाक़ात बाकी,సందర్శన బాకీ
+ui,coach.lastVisit,Last visit: {d},पिछली मुलाक़ात: {d},చివరి సందర్శన: {d}
+ui,coach.daysAgo,{n} days ago,{n} दिन पहले,{n} రోజుల క్రితం
+ui,coach.next,Next: {m},अगला: {m},తర్వాత: {m}
+ui,coach.flagged,Needs attention,ध्यान दें,శ్రద్ధ అవసరం
+ui,coach.gaps,Concept check,विषयों की समझ,అంశాల అవగాహన
+ui,coach.talking,Talking points,बातचीत के सवाल,మాట్లాడాల్సిన ప్రశ్నలు
+ui,coach.challenge,Challenge,चुनौती,సవాలు
+ui,coach.start,Start session with {name},{name} के साथ सत्र शुरू करें,{name}తో సెషన్ మొదలుపెట్టండి
+ui,coach.back,All learners,सभी प्रतिभागी,అందరు అభ్యాసకులు
+ui,coach.exit,Exit Coach View,कोच व्यू से बाहर,కోచ్ వ్యూ నుంచి బయటకు
+ui,coach.sessions,{n} sessions,{n} सत्र,{n} సెషన్లు
+ui,coach.learnerLang,Learner language,प्रतिभागी की भाषा,అభ్యాసకురాలి భాష
+ui,coach.business,Business,व्यापार,వ్యాపారం
+ui,coach.all,All,सभी,అందరూ
+ui,coach.dueOnly,Visit due,मुलाक़ात बाकी,సందర్శన బాకీ
+ui,coach.attention,Needs attention,ध्यान दें,శ్రద్ధ అవసరం
+ui,coach.privacy,No banking or income data is stored.,बैंक या आमदनी की कोई जानकारी नहीं रखी जाती।,బ్యాంకు లేదా ఆదాయ వివరాలు నిల్వ చేయబడవు.
+ui,coach.noFlags,No concerns right now.,अभी कोई चिंता नहीं।,ప్రస్తుతం ఆందోళనలు లేవు.
+ui,lang.name.en,English,अंग्रेज़ी,ఇంగ్లీష్
+ui,lang.name.hi,Hindi,हिन्दी,హిందీ
+ui,lang.name.te,Telugu,तेलुगु,తెలుగు
+ui,tts.listen,Listen,सुनें,వినండి
+ui,tts.replay,Replay,फिर से सुनें,మళ్లీ వినండి
+ui,tts.pause,Pause,रोकें,ఆపండి
+ui,tts.resume,Resume,आगे सुनें,కొనసాగించండి
+ui,tts.stop,Stop,बंद करें,నిలిపివేయండి
+ui,tts.slow,Slow,धीरे,నెమ్మదిగా
+ui,tts.noVoice,"No {language} voice on this phone. Please read the text, or ask your coach.",इस फ़ोन में {language} आवाज़ नहीं है। कृपया लिखा हुआ पढ़ें या अपनी कोच से पूछें।,"ఈ ఫోన్‌లో {language} గొంతు లేదు. దయచేసి రాసింది చదవండి, లేదా మీ కోచ్‌ను అడగండి."
+ui,tts.unsupported,This browser cannot read aloud. Please read the text.,यह ब्राउज़र पढ़कर नहीं सुना सकता। कृपया लिखा हुआ पढ़ें।,ఈ బ్రౌజర్ చదివి వినిపించలేదు. దయచేసి రాసింది చదవండి.
+ui,stt.speak,Tap and speak your answer,दबाएँ और अपना जवाब बोलें,నొక్కి మీ జవాబు చెప్పండి
+ui,stt.requesting,Please allow the microphone…,कृपया माइक की अनुमति दें…,దయచేసి మైక్‌కు అనుమతి ఇవ్వండి…
+ui,stt.listening,Listening… speak now,सुन रहे हैं… अब बोलिए,వింటున్నాం… ఇప్పుడు చెప్పండి
+ui,stt.processing,Understanding…,समझ रहे हैं…,అర్థం చేసుకుంటున్నాం…
+ui,stt.heard,We heard:,हमने सुना:,మేము విన్నది:
+ui,stt.editHint,You can fix the words,आप शब्द ठीक कर सकती हैं,మీరు పదాలు సరిచేయవచ్చు
+ui,stt.matches,This matches:,यह जवाब बनता है:,ఈ జవాబుకు సరిపోతుంది:
+ui,stt.confirm,Use this answer,यही जवाब लें,ఈ జవాబు తీసుకోండి
+ui,stt.retry,Speak again,फिर से बोलें,మళ్లీ చెప్పండి
+ui,stt.cancel,Cancel,रद्द करें,రద్దు చేయండి
+ui,stt.noMatch,"These words don’t match an answer. Fix the words, speak again, or tap your answer.","ये शब्द किसी जवाब से नहीं मिलते। शब्द ठीक करें, फिर से बोलें, या जवाब दबाएँ।","ఈ పదాలు ఏ జవాబుకూ సరిపోలేదు. పదాలు సరిచేయండి, మళ్లీ చెప్పండి, లేదా జవాబు నొక్కండి."
+ui,stt.privacy,Your voice is not saved.,आपकी आवाज़ सेव नहीं होती।,మీ గొంతు సేవ్ కాదు.
+ui,stt.err.permission,"The microphone is blocked. Tap your answer, or allow the microphone in browser settings.","माइक बंद है। अपना जवाब दबाएँ, या ब्राउज़र सेटिंग में माइक की अनुमति दें।","మైక్ ఆగి ఉంది. జవాబు నొక్కండి, లేదా బ్రౌజర్ సెట్టింగ్‌లో మైక్‌కు అనుమతి ఇవ్వండి."
+ui,stt.err.unsupported,Voice answers don’t work in this browser. Please tap your answer.,इस ब्राउज़र में बोलकर जवाब नहीं दे सकते। कृपया जवाब दबाएँ।,ఈ బ్రౌజర్‌లో మాటతో జవాబు ఇవ్వలేరు. దయచేసి జవాబు నొక్కండి.
+ui,stt.err.language,Voice answers in {language} aren’t available here. Please tap your answer.,यहाँ {language} में बोलकर जवाब देने की सुविधा नहीं है। कृपया जवाब दबाएँ।,ఇక్కడ {language}లో మాటతో జవాబు ఇవ్వడం అందుబాటులో లేదు. దయచేసి జవాబు నొక్కండి.
+ui,stt.err.noSpeech,We didn’t hear anything. Speak again or tap your answer.,हमें कुछ सुनाई नहीं दिया। फिर से बोलें या जवाब दबाएँ।,మాకు ఏమీ వినిపించలేదు. మళ్లీ చెప్పండి లేదా జవాబు నొక్కండి.
+ui,stt.err.noMatch,We couldn’t catch the words. Speak again or tap your answer.,हम शब्द समझ नहीं पाए। फिर से बोलें या जवाब दबाएँ।,పదాలు అర్థం కాలేదు. మళ్లీ చెప్పండి లేదా జవాబు నొక్కండి.
+ui,stt.err.network,Voice answers need internet. Please tap your answer.,बोलकर जवाब देने के लिए इंटरनेट चाहिए। कृपया जवाब दबाएँ।,మాటతో జవాబుకు ఇంటర్నెట్ కావాలి. దయచేసి జవాబు నొక్కండి.
+ui,stt.err.audio,No microphone found. Please tap your answer.,माइक नहीं मिला। कृपया जवाब दबाएँ।,మైక్ కనిపించలేదు. దయచేసి జవాబు నొక్కండి.
+ui,stt.err.unknown,Voice isn’t working right now. Please tap your answer.,अभी आवाज़ काम नहीं कर रही। कृपया जवाब दबाएँ।,ఇప్పుడు గొంతు పని చేయడం లేదు. దయచేసి జవాబు నొక్కండి.
+ui,flag.SALES_AS_PROFIT,Counts sales as profit,बिक्री को मुनाफ़ा मानती हैं,అమ్మకాలనే లాభంగా లెక్కిస్తారు
+ui,flag.IGNORES_WASTE,Forgets waste and spoilage,बर्बादी का खर्च भूल जाती हैं,వృథా ఖర్చును మర్చిపోతారు
+ui,flag.CREDIT_AS_CASH,Counts credit as cash in hand,उधार को हाथ का पैसा मानती हैं,అప్పును చేతిలో ఉన్న డబ్బుగా లెక్కిస్తారు
+ui,flag.MIXES_POCKETS,Mixes home and shop money,घर और दुकान का पैसा मिलाती हैं,"ఇంటి, దుకాణం డబ్బు కలిపేస్తారు"
+ui,tp.SALES_AS_PROFIT,"Ask: after paying for stock yesterday, what was left in the box?",पूछें: कल माल के पैसे देने के बाद गल्ले में कितना बचा?,అడగండి: నిన్న సరుకు డబ్బు చెల్లించాక గల్లాలో ఎంత మిగిలింది?
+ui,tp.IGNORES_WASTE,Ask her to show last week’s spoiled goods. What did they cost?,पिछले हफ़्ते का खराब सामान दिखाने को कहें। उसकी कीमत कितनी थी?,గత వారం పాడైన సరుకు చూపించమని అడగండి. దాని విలువ ఎంత?
+ui,tp.CREDIT_AS_CASH,Ask: who owes you money right now? When will they pay?,पूछें: अभी किस-किस पर आपका उधार है? वे कब देंगे?,అడగండి: ఇప్పుడు మీకు ఎవరు డబ్బు ఇవ్వాలి? ఎప్పుడు ఇస్తారు?
+ui,tp.MIXES_POCKETS,Ask: where did today’s household money come from?,पूछें: आज घर का पैसा कहाँ से आया?,అడగండి: ఈ రోజు ఇంటి ఖర్చుకు డబ్బు ఎక్కడి నుంచి వచ్చింది?
+ui,tp.FOLLOWUP,Start by asking how this week’s challenge went.,शुरुआत इस हफ़्ते की चुनौती के बारे में पूछकर करें।,ఈ వారం సవాలు ఎలా జరిగిందో అడిగి మొదలుపెట్టండి.
+assessment,goods.vegetable,vegetables,सब्ज़ी,కూరగాయలు
+assessment,goods.tea,tea and snacks,चाय-नाश्ते,"టీ, టిఫిన్"
+assessment,goods.grocery,groceries,किराने के सामान,కిరాణా సరుకులు
+assessment,opt.yes,Yes,हाँ,అవును
+assessment,opt.no,No,नहीं,లేదు
+assessment,opt.unsure,I’m not sure,पता नहीं,తెలియదు
+assessment,opt.exp_stock.vegetable,Buying vegetables at the mandi,मंडी से सब्ज़ी खरीदना,మండీలో కూరగాయలు కొనడం
+assessment,opt.exp_stock.tea,Buying milk and tea leaves,दूध और चाय पत्ती खरीदना,"పాలు, టీ పొడి కొనడం"
+assessment,opt.exp_stock.grocery,Buying stock from the wholesaler,थोक व्यापारी से माल खरीदना,హోల్‌సేల్ వ్యాపారి నుంచి సరుకు కొనడం
+assessment,opt.exp_school,Your child’s school fees,बच्चे की स्कूल फ़ीस,పిల్లల స్కూల్ ఫీజు
+assessment,opt.exp_clothes,New clothes for a festival,त्योहार के नए कपड़े,పండుగకు కొత్త బట్టలు
+assessment,opt.sav_mixed,Mixed with the shop cash,दुकान के पैसों के साथ मिलाकर,దుకాణం డబ్బుతో కలిపి
+assessment,opt.sav_separate,"Separately, like a savings box or bank account","अलग से, जैसे गुल्लक या बैंक खाते में","విడిగా, పొదుపు డబ్బా లేదా బ్యాంకు ఖాతాలో"
+assessment,opt.sep_cashbox,"The shop cash box, whenever needed","जब ज़रूरत हो, दुकान के गल्ले से",అవసరమైనప్పుడల్లా దుకాణం గల్లా నుంచి
+assessment,opt.sep_fixed,A fixed amount you set aside for home,घर के लिए अलग रखी एक तय रकम से,ఇంటి కోసం వేరుగా ఉంచిన నిర్ణీత మొత్తం నుంచి
+assessment,q.rvp_a,You sold {sales} worth of {goods} and spent {cost} on the {goods} sold. Is your profit {sales}?,आपकी {goods} की बिक्री {sales} हुई। बेचे गए सामान पर {cost} खर्च हुए। क्या आपका मुनाफ़ा {sales} है?,మీరు {sales} విలువైన {goods} అమ్మారు. అమ్మిన సరుకు కోసం {cost} ఖర్చు చేశారు. మీ లాభం {sales} అవుతుందా?
+assessment,q.rvp_b,You sold {sales} worth of {goods}. The goods you sold cost you {cost}. How much profit did you make?,आपकी {goods} की बिक्री {sales} हुई। बेचे गए सामान की लागत {cost} थी। आपको कितना मुनाफ़ा हुआ?,మీరు {sales} విలువైన {goods} అమ్మారు. అమ్మిన సరుకు ఖర్చు {cost}. మీకు ఎంత లాభం వచ్చింది?
+assessment,q.exp_a,Which of these is a business expense?,इनमें से व्यापार का खर्च कौन-सा है?,వీటిలో వ్యాపార ఖర్చు ఏది?
+assessment,q.exp_b,You paid {stock} for new stock and {transport} for an auto to bring it. What did this stock cost you in total?,आपने नए माल के लिए {stock} दिए और उसे लाने के लिए ऑटो को {transport} दिए। इस माल पर कुल कितना खर्च हुआ?,"కొత్త సరుకు కోసం {stock}, దాన్ని తీసుకురావడానికి ఆటోకు {transport} చెల్లించారు. ఈ సరుకుకు మొత్తం ఎంత ఖర్చయింది?"
+assessment,q.crd_a,A customer buys {amount} of {goods} but will pay tomorrow. Is that {amount} cash you received today?,"एक ग्राहक {goods} की {amount} की खरीदारी करता है, पर पैसे कल देगा। क्या ये {amount} आज आपको नकद मिले?","ఒక కస్టమర్ {amount} విలువైన {goods} తీసుకుని, డబ్బు రేపు ఇస్తారు. ఆ {amount} ఈ రోజు మీకు నగదుగా వచ్చిందా?"
+assessment,q.crd_b,Today you sold {cash} for cash and {credit} on udhaar (credit). How much cash came into your box today?,आज आपने {cash} का सामान नकद में बेचा और {credit} का उधार पर दिया। आज आपके गल्ले में कितना नकद आया?,"ఈ రోజు {cash} నగదుకు అమ్మారు, {credit} అప్పుగా ఇచ్చారు. ఈ రోజు మీ గల్లా పెట్టెలోకి ఎంత నగదు వచ్చింది?"
+assessment,q.sav_a,At the end of the day your cash box has {box}. You need {stock} to buy stock tomorrow morning. Can you spend all {box} today?,दिन के अंत में आपके गल्ले में {box} हैं। कल सुबह माल खरीदने के लिए {stock} चाहिए। क्या आप आज पूरे {box} खर्च कर सकती हैं?,రోజు చివర మీ గల్లా పెట్టెలో {box} ఉన్నాయి. రేపు ఉదయం సరుకు కొనడానికి {stock} కావాలి. ఈ రోజు మొత్తం {box} ఖర్చు చేయవచ్చా?
+assessment,q.sav_b,Where is it safer to keep the money you are saving?,बचत का पैसा कहाँ रखना ज़्यादा सुरक्षित है?,పొదుపు చేస్తున్న డబ్బు ఎక్కడ ఉంచడం సురక్షితం?
+assessment,q.sep_a,You take {amount} from the business cash to buy food for your household. Should this be recorded separately?,आप घर के खाने के लिए दुकान के पैसों से {amount} लेती हैं। क्या इसे अलग से लिखना चाहिए?,ఇంటి భోజనం కోసం వ్యాపారం డబ్బు నుంచి {amount} తీసుకుంటారు. దీన్ని విడిగా రాసుకోవాలా?
+assessment,q.sep_b,Money for household needs should come from…,घर की ज़रूरतों के पैसे कहाँ से आने चाहिए?,ఇంటి అవసరాల డబ్బు ఎక్కడి నుంచి రావాలి?
+assessment,x.rvp,Profit is what is left after paying for the goods you sold: {sales} − {cost} = {profit}.,मुनाफ़ा वह है जो बेचे गए सामान की लागत चुकाने के बाद बचता है: {sales} − {cost} = {profit}।,అమ్మిన సరుకు ఖర్చు తీసేశాక మిగిలేదే లాభం: {sales} − {cost} = {profit}.
+assessment,x.exp_a,"Business expenses are money spent to run the business, like buying stock. School fees and festival clothes are home spending.","व्यापार का खर्च वह पैसा है जो व्यापार चलाने में लगता है, जैसे माल खरीदना। स्कूल फ़ीस और त्योहार के कपड़े घर के खर्च हैं।","వ్యాపారం నడపడానికి పెట్టే డబ్బే వ్యాపార ఖర్చు, ఉదాహరణకు సరుకు కొనడం. స్కూల్ ఫీజు, పండుగ బట్టలు ఇంటి ఖర్చులు."
+assessment,x.exp_b,Everything you pay to get your stock is part of its cost: {stock} + {transport} = {total}.,"माल लाने में जो भी पैसा लगता है, वह उसकी लागत में जुड़ता है: {stock} + {transport} = {total}।",సరుకు తెచ్చుకోవడానికి చెల్లించేదంతా దాని ఖర్చులో భాగమే: {stock} + {transport} = {total}.
+assessment,x.crd_a,Money on udhaar is owed to you. It becomes cash only when the customer pays.,उधार का पैसा आपको मिलना बाकी है। ग्राहक के पैसे देने पर ही यह नकद बनता है।,అప్పుగా ఇచ్చిన డబ్బు మీకు రావాల్సి ఉంది. కస్టమర్ చెల్లించినప్పుడే అది నగదు అవుతుంది.
+assessment,x.crd_b,"Only cash sales come into the box today: {cash}. The {credit} on udhaar comes later, when customers pay.","आज गल्ले में सिर्फ़ नकद बिक्री का पैसा आता है: {cash}। उधार के {credit} बाद में आएँगे, जब ग्राहक पैसे देंगे।",ఈ రోజు గల్లాలోకి నగదు అమ్మకాలు మాత్రమే వస్తాయి: {cash}. అప్పుగా ఇచ్చిన {credit} కస్టమర్లు చెల్లించినప్పుడు తర్వాత వస్తుంది.
+assessment,x.sav_a,Keep {stock} for tomorrow’s stock. Only the rest is free to use: {box} − {stock} = {spare}.,कल के माल के लिए {stock} रखें। सिर्फ़ बाकी पैसा इस्तेमाल के लिए है: {box} − {stock} = {spare}।,రేపటి సరుకు కోసం {stock} ఉంచండి. మిగిలింది మాత్రమే వాడుకోవచ్చు: {box} − {stock} = {spare}.
+assessment,x.sav_b,Savings kept apart from shop cash are not spent by mistake.,दुकान के पैसों से अलग रखी बचत गलती से खर्च नहीं होती।,దుకాణం డబ్బు నుంచి విడిగా ఉంచిన పొదుపు పొరపాటున ఖర్చు కాదు.
+assessment,x.sep_a,Writing down money taken for home shows what the business really earned.,घर के लिए लिया गया पैसा लिखने से पता चलता है कि व्यापार ने असल में कितना कमाया।,ఇంటి కోసం తీసుకున్న డబ్బు రాసుకుంటే వ్యాపారం నిజంగా ఎంత సంపాదించిందో తెలుస్తుంది.
+assessment,x.sep_b,A fixed amount for home keeps shop money safe for stock and costs.,घर के लिए तय रकम रखने से दुकान का पैसा माल और खर्चों के लिए बचा रहता है।,"ఇంటికి నిర్ణీత మొత్తం ఉంచితే దుకాణం డబ్బు సరుకు, ఖర్చుల కోసం భద్రంగా ఉంటుంది."
+assessment,a.introTitle,Let’s see where to start,चलिए देखें कहाँ से शुरू करें,ఎక్కడ మొదలుపెట్టాలో చూద్దాం
+assessment,a.introBody,{n} short questions. Tap or speak your answer. There are no marks.,{n} छोटे सवाल। जवाब दबाएँ या बोलें। इसमें कोई नंबर नहीं मिलते।,{n} చిన్న ప్రశ్నలు. జవాబును నొక్కండి లేదా చెప్పండి. ఇందులో మార్కులు ఉండవు.
+assessment,a.start,Start,शुरू करें,మొదలుపెట్టండి
+assessment,a.resumeTitle,Continue where you left off?,"जहाँ छोड़ा था, वहीं से आगे बढ़ें?",ఆపిన చోటు నుంచి కొనసాగించాలా?
+assessment,a.resumeBody,You answered {done} of {total} questions.,आपने {total} में से {done} सवालों के जवाब दिए हैं।,{total} ప్రశ్నల్లో {done}కి జవాబు ఇచ్చారు.
+assessment,a.resume,Continue,आगे बढ़ें,కొనసాగించండి
+assessment,a.startOver,Start again,फिर से शुरू करें,మళ్లీ మొదలుపెట్టండి
+assessment,a.confirm,Confirm answer,जवाब पक्का करें,జవాబు నిర్ధారించండి
+assessment,a.next,Next question,अगला सवाल,తర్వాతి ప్రశ్న
+assessment,a.seeResult,See my starting lesson,मेरा पहला पाठ देखें,నా మొదటి పాఠం చూడండి
+assessment,a.voiceNoMatch,We didn’t catch that. Please tap your answer.,हम समझ नहीं पाए। कृपया अपना जवाब दबाएँ।,మాకు అర్థం కాలేదు. దయచేసి మీ జవాబును నొక్కండి.
+assessment,fb.correct,That’s right.,बिल्कुल सही।,సరిగ్గా చెప్పారు.
+assessment,fb.misconception,Many shop owners think this too.,बहुत-से दुकानदार भी ऐसा ही सोचते हैं।,చాలామంది దుకాణదారులు కూడా ఇలాగే అనుకుంటారు.
+assessment,fb.unsure,That’s okay. We’ll learn this together.,कोई बात नहीं। हम इसे साथ में सीखेंगे।,పర్వాలేదు. దీన్ని కలిసి నేర్చుకుందాం.
+assessment,fb.together,We’ll practise this in your lessons.,हम पाठों में इसका अभ्यास करेंगे।,మీ పాఠాల్లో దీన్ని అభ్యాసం చేద్దాం.
+assessment,r.title,Your starting lesson,आपका पहला पाठ,మీ మొదటి పాఠం
+assessment,r.start,Start this lesson,यह पाठ शुरू करें,ఈ పాఠం మొదలుపెట్టండి
+assessment,r.retry,Answer new questions,नए सवालों के जवाब दें,కొత్త ప్రశ్నలకు జవాబు ఇవ్వండి
+assessment,r.home,Go to Home,होम पर जाएँ,హోమ్‌కి వెళ్లండి
+assessment,r.reason.misconception,Your answers show this lesson will help most right now.,आपके जवाबों से पता चलता है कि अभी यह पाठ सबसे ज़्यादा मदद करेगा।,మీ జవాబులను బట్టి ఇప్పుడు ఈ పాఠం ఎక్కువగా ఉపయోగపడుతుంది.
+assessment,r.reason.unsure,"You were not sure about this, so we’ll start here.","आपको इसके बारे में पक्का पता नहीं था, इसलिए हम यहाँ से शुरू करेंगे।","దీని గురించి మీకు ఖచ్చితంగా తెలియలేదు, కాబట్టి ఇక్కడి నుంచి మొదలుపెడదాం."
+assessment,r.reason.next_in_path,You answered every question well. This is the next lesson in your path.,आपने सभी सवालों के अच्छे जवाब दिए। आपके सफ़र में अगला पाठ यह है।,అన్ని ప్రశ్నలకు బాగా జవాబు ఇచ్చారు. మీ ప్రయాణంలో తర్వాతి పాఠం ఇది.
+assessment,r.reason.not_assessed,We’ll start here and learn together.,हम यहाँ से शुरू करेंगे और साथ में सीखेंगे।,ఇక్కడి నుంచి మొదలుపెట్టి కలిసి నేర్చుకుందాం.
+assessment,r.why.revenue_vs_profit,It shows how to find what is really left after costs.,इसमें सीखेंगे कि खर्च के बाद असल में कितना बचता है।,ఖర్చుల తర్వాత నిజంగా ఎంత మిగులుతుందో ఇందులో నేర్చుకుంటారు.
+assessment,r.why.business_expenses,"It shows which costs belong to the business, including small ones.","इसमें सीखेंगे कि कौन-से खर्च व्यापार के हैं, छोटे खर्च भी।","ఏ ఖర్చులు వ్యాపారానికి చెందుతాయో, చిన్నవి కూడా, ఇందులో నేర్చుకుంటారు."
+assessment,r.why.customer_credit,It shows how udhaar affects the cash in your box.,इसमें सीखेंगे कि उधार से गल्ले के नकद पर क्या असर पड़ता है।,అప్పు మీ గల్లాలోని నగదుపై ఎలా ప్రభావం చూపుతుందో ఇందులో నేర్చుకుంటారు.
+assessment,r.why.savings_cash_management,It shows how to keep money for stock and save a little daily.,इसमें सीखेंगे कि माल के लिए पैसा कैसे रखें और रोज़ थोड़ी बचत कैसे करें।,"సరుకు కోసం డబ్బు ఎలా ఉంచాలో, రోజూ కొంచెం ఎలా పొదుపు చేయాలో ఇందులో నేర్చుకుంటారు."
+assessment,r.why.business_household_separation,It shows how to keep home money and shop money apart.,इसमें सीखेंगे कि घर और दुकान का पैसा अलग कैसे रखें।,"ఇంటి డబ్బు, దుకాణం డబ్బు వేరుగా ఎలా ఉంచాలో ఇందులో నేర్చుకుంటారు."
+assessment,r.summaryTitle,Your starting point,आपकी शुरुआत,మీ మొదలు
+assessment,r.alsoReview,Coming up after this:,इसके बाद आएँगे:,దీని తర్వాత వచ్చేవి:
+assessment,r.noMastery,One right answer is a good start. We’ll check again during practice.,एक सही जवाब अच्छी शुरुआत है। अभ्यास में हम फिर से देखेंगे।,ఒక సరైన జవాబు మంచి మొదలు. అభ్యాసంలో మళ్లీ చూద్దాం.
+assessment,level.not_assessed,Not asked yet,अभी पूछा नहीं,ఇంకా అడగలేదు
+assessment,level.gap,Let’s learn this,चलिए इसे सीखें,దీన్ని నేర్చుకుందాం
+assessment,level.unsure,Not sure yet,अभी पक्का नहीं,ఇంకా ఖచ్చితంగా లేదు
+assessment,level.emerging,Good start,अच्छी शुरुआत,మంచి మొదలు
+assessment,level.consistent,Answered well more than once,एक से ज़्यादा बार सही,ఒకటి కంటే ఎక్కువసార్లు సరిగ్గా
+lesson.revenue_vs_profit,result.misconception,"From your answers, it looked like all the sales money was counted as profit. Many sellers think this way. Today we’ll see the difference.",आपके जवाबों से लगा कि बिक्री का पूरा पैसा मुनाफ़ा माना गया। बहुत-से दुकानदार ऐसा ही सोचते हैं। आज हम दोनों का फ़र्क देखेंगे।,మీ జవాబులను బట్టి అమ్మకాల డబ్బంతా లాభంగా లెక్కించినట్లు అనిపించింది. చాలామంది దుకాణదారులు ఇలాగే అనుకుంటారు. ఈ రోజు రెండింటి మధ్య తేడా చూద్దాం.
+lesson.revenue_vs_profit,result.generic,This is the next lesson in your path. Let’s look at sales and profit together.,"आपके सफ़र में अगला पाठ यही है। चलिए, बिक्री और मुनाफ़ा साथ में समझें।","మీ ప్రయాణంలో తర్వాతి పాఠం ఇదే. అమ్మకాలు, లాభం కలిసి అర్థం చేసుకుందాం."
+lesson.revenue_vs_profit,h.intro,Sales are not the same as profit,बिक्री और मुनाफ़ा एक नहीं हैं,"అమ్మకాలు, లాభం ఒకటి కాదు"
+lesson.revenue_vs_profit,intro.0,Sales is all the money customers pay you. Profit is what is left for you after you pay your costs.,बिक्री (sales) वह सारा पैसा है जो ग्राहक आपको देते हैं। मुनाफ़ा (profit) वह है जो सारे खर्च चुकाने के बाद आपके लिए बचता है।,కస్టమర్లు మీకు ఇచ్చే మొత్తం డబ్బే అమ్మకాలు (sales). ఖర్చులన్నీ చెల్లించాక మీకు మిగిలేదే లాభం (profit).
+lesson.revenue_vs_profit,intro.1.vegetable,Think of your cash box at night. Part of that money already went to the mandi for vegetables. Only what is left is your profit.,"रात को अपने गल्ले के बारे में सोचिए। उसमें से कुछ पैसा मंडी में सब्ज़ी खरीदने में जा चुका है। जो बचता है, वही आपका मुनाफ़ा है।",రాత్రి మీ గల్లా పెట్టె గురించి ఆలోచించండి. అందులో కొంత డబ్బు మండీలో కూరగాయలకు ఇప్పటికే పోయింది. మిగిలేదే మీ లాభం.
+lesson.revenue_vs_profit,intro.1.tea,"Think of your cash box at night. Part of that money paid for milk, tea leaves, sugar and gas. Only what is left is your profit.","रात को अपने गल्ले के बारे में सोचिए। उसमें से कुछ पैसा दूध, चाय पत्ती, चीनी और गैस में जा चुका है। जो बचता है, वही आपका मुनाफ़ा है।","రాత్రి మీ గల్లా పెట్టె గురించి ఆలోచించండి. అందులో కొంత డబ్బు పాలు, టీ పొడి, చక్కెర, గ్యాస్‌కు పోయింది. మిగిలేదే మీ లాభం."
+lesson.revenue_vs_profit,intro.1.grocery,Think of your cash box at night. Part of that money pays for the stock you sold. Only what is left is your profit.,"रात को अपने गल्ले के बारे में सोचिए। उसमें से कुछ पैसा बेचे गए माल की कीमत का है। जो बचता है, वही आपका मुनाफ़ा है।",రాత్రి మీ గల్లా పెట్టె గురించి ఆలోచించండి. అందులో కొంత డబ్బు అమ్మిన సరుకు ఖరీదు. మిగిలేదే మీ లాభం.
+lesson.revenue_vs_profit,intro.2,Sales is the full basket. Profit is what stays in the basket after you take out what you paid.,"बिक्री पूरी टोकरी है। जो खरीदने में दिया, वह निकालने के बाद टोकरी में जो बचे, वही मुनाफ़ा है।",అమ్మకాలు అంటే నిండు బుట్ట. కొనడానికి పెట్టింది తీసేశాక బుట్టలో మిగిలేదే లాభం.
+lesson.revenue_vs_profit,h.example,A day at your stall,आपकी दुकान का एक दिन,మీ దుకాణంలో ఒక రోజు
+lesson.revenue_vs_profit,example.0.vegetable,"You sold vegetables for {sales}. Those vegetables cost you {goodsCost} at the mandi. After paying for them, {left} is left.",आपने {sales} की सब्ज़ी बेची। मंडी में उन सब्ज़ियों की कीमत {goodsCost} थी। उसे चुकाने के बाद {left} बचते हैं।,మీరు {sales}కి కూరగాయలు అమ్మారు. మండీలో ఆ కూరగాయల ఖరీదు {goodsCost}. అది చెల్లించాక {left} మిగులుతుంది.
+lesson.revenue_vs_profit,example.1.vegetable,Hold {sales} in your hand. Give back {goodsCost} for the vegetables. What stays in your hand is {left}.,"अपने हाथ में {sales} रखिए। सब्ज़ी के {goodsCost} वापस दीजिए। हाथ में जो बचा, वह {left} है।",మీ చేతిలో {sales} పట్టుకోండి. కూరగాయల కోసం {goodsCost} తిరిగి ఇవ్వండి. చేతిలో మిగిలింది {left}.
+lesson.revenue_vs_profit,example.0.tea,"You sold tea for {sales}. The milk, tea leaves and sugar for those cups cost {goodsCost}. After paying for them, {left} is left.","आपने {sales} की चाय बेची। उन कपों के दूध, चाय पत्ती और चीनी पर {goodsCost} लगे। उसे चुकाने के बाद {left} बचते हैं।","మీరు {sales}కి టీ అమ్మారు. ఆ కప్పుల పాలు, టీ పొడి, చక్కెరకు {goodsCost} అయింది. అది చెల్లించాక {left} మిగులుతుంది."
+lesson.revenue_vs_profit,example.1.tea,"Hold {sales} in your hand. Give back {goodsCost} for milk, tea leaves and sugar. What stays in your hand is {left}.","अपने हाथ में {sales} रखिए। दूध, चाय पत्ती और चीनी के {goodsCost} वापस दीजिए। हाथ में जो बचा, वह {left} है।","మీ చేతిలో {sales} పట్టుకోండి. పాలు, టీ పొడి, చక్కెర కోసం {goodsCost} తిరిగి ఇవ్వండి. చేతిలో మిగిలింది {left}."
+lesson.revenue_vs_profit,example.0.grocery,"Today’s sales were {sales}. The stock you sold had cost you {goodsCost}. After paying for that stock, {left} is left.",आज की बिक्री {sales} हुई। बेचे गए माल की कीमत {goodsCost} थी। उसे चुकाने के बाद {left} बचते हैं।,ఈ రోజు అమ్మకాలు {sales}. అమ్మిన సరుకు ఖరీదు {goodsCost}. అది చెల్లించాక {left} మిగులుతుంది.
+lesson.revenue_vs_profit,example.1.grocery,Hold {sales} in your hand. Give back {goodsCost} for the stock you sold. What stays in your hand is {left}.,"अपने हाथ में {sales} रखिए। बेचे गए माल के {goodsCost} वापस दीजिए। हाथ में जो बचा, वह {left} है।",మీ చేతిలో {sales} పట్టుకోండి. అమ్మిన సరుకు కోసం {goodsCost} తిరిగి ఇవ్వండి. చేతిలో మిగిలింది {left}.
+lesson.revenue_vs_profit,h.more,What about other costs?,दूसरे खर्चों का क्या?,ఇతర ఖర్చుల సంగతి?
+lesson.revenue_vs_profit,example.more.vegetable,Other costs make the final profit smaller. Spoiled vegetables cost {spoilage} and the auto cost {transport}. So your final profit is {profit}.,दूसरे खर्च आख़िरी मुनाफ़े को और कम करते हैं। खराब हुई सब्ज़ी {spoilage} की थी और ऑटो का किराया {transport} था। इसलिए आपका असली मुनाफ़ा {profit} है।,"ఇతర ఖర్చులు చివరి లాభాన్ని ఇంకా తగ్గిస్తాయి. పాడైన కూరగాయల విలువ {spoilage}, ఆటో కిరాయి {transport}. కాబట్టి మీ నిజమైన లాభం {profit}."
+lesson.revenue_vs_profit,example.more.tea,Other costs make the final profit smaller. Gas for the stove cost {fuel}. So your final profit is {profit}.,दूसरे खर्च आख़िरी मुनाफ़े को और कम करते हैं। चूल्हे की गैस पर {fuel} लगे। इसलिए आपका असली मुनाफ़ा {profit} है।,ఇతర ఖర్చులు చివరి లాభాన్ని ఇంకా తగ్గిస్తాయి. పొయ్యి గ్యాస్‌కు {fuel} అయింది. కాబట్టి మీ నిజమైన లాభం {profit}.
+lesson.revenue_vs_profit,example.more.grocery,Other costs make the final profit smaller. Bags and transport cost {bags}. So your final profit is {profit}.,दूसरे खर्च आख़िरी मुनाफ़े को और कम करते हैं। थैलियों और ढुलाई पर {bags} लगे। इसलिए आपका असली मुनाफ़ा {profit} है।,"ఇతర ఖర్చులు చివరి లాభాన్ని ఇంకా తగ్గిస్తాయి. సంచులు, రవాణాకు {bags} అయింది. కాబట్టి మీ నిజమైన లాభం {profit}."
+lesson.revenue_vs_profit,example.note.grocery,Also remember: {credit} of today’s sales were on udhaar. That money is not in your box until the customer pays.,यह भी याद रखें: आज की बिक्री में से {credit} उधार पर था। ग्राहक के पैसे देने तक वह पैसा गल्ले में नहीं है।,ఇది కూడా గుర్తుంచుకోండి: ఈ రోజు అమ్మకాల్లో {credit} అప్పుగా ఇచ్చారు. కస్టమర్ చెల్లించే వరకు ఆ డబ్బు గల్లాలో ఉండదు.
+lesson.revenue_vs_profit,bar.sales,Sales,बिक्री,అమ్మకాలు
+lesson.revenue_vs_profit,bar.goods.vegetable,Vegetables from the mandi,मंडी की सब्ज़ी,మండీ కూరగాయలు
+lesson.revenue_vs_profit,bar.goods.tea,"Milk, tea leaves, sugar","दूध, चाय पत्ती, चीनी","పాలు, టీ పొడి, చక్కెర"
+lesson.revenue_vs_profit,bar.goods.grocery,Stock you sold,बेचा गया माल,అమ్మిన సరుకు
+lesson.revenue_vs_profit,bar.left,Left after paying for goods,माल चुकाने के बाद बचा,సరుకు చెల్లించాక మిగిలింది
+lesson.revenue_vs_profit,bar.spoilage,Spoiled vegetables,खराब सब्ज़ी,పాడైన కూరగాయలు
+lesson.revenue_vs_profit,bar.transport,Auto fare,ऑटो किराया,ఆటో కిరాయి
+lesson.revenue_vs_profit,bar.fuel,Gas,गैस,గ్యాస్
+lesson.revenue_vs_profit,bar.bags,Bags and transport,थैलियाँ और ढुलाई,"సంచులు, రవాణా"
+lesson.revenue_vs_profit,bar.profit,Your profit,आपका मुनाफ़ा,మీ లాభం
+lesson.revenue_vs_profit,response.q.vegetable,Your sales today were {sales}. The vegetables you sold cost {goodsCost}. How much is left after paying for the vegetables?,आज आपकी बिक्री {sales} हुई। बेची गई सब्ज़ी की कीमत {goodsCost} थी। सब्ज़ी के पैसे चुकाने के बाद कितना बचता है?,ఈ రోజు మీ అమ్మకాలు {sales}. అమ్మిన కూరగాయల ఖరీదు {goodsCost}. కూరగాయల డబ్బు చెల్లించాక ఎంత మిగులుతుంది?
+lesson.revenue_vs_profit,response.q.tea,"Your tea sales today were {sales}. Milk, tea leaves and sugar cost {goodsCost}. How much is left after paying for them?","आज चाय की बिक्री {sales} हुई। दूध, चाय पत्ती और चीनी पर {goodsCost} लगे। इन्हें चुकाने के बाद कितना बचता है?","ఈ రోజు టీ అమ్మకాలు {sales}. పాలు, టీ పొడి, చక్కెరకు {goodsCost} అయింది. అవి చెల్లించాక ఎంత మిగులుతుంది?"
+lesson.revenue_vs_profit,response.q.grocery,Your sales today were {sales}. The stock you sold cost {goodsCost}. How much is left after paying for that stock?,आज आपकी बिक्री {sales} हुई। बेचे गए माल की कीमत {goodsCost} थी। माल के पैसे चुकाने के बाद कितना बचता है?,ఈ రోజు మీ అమ్మకాలు {sales}. అమ్మిన సరుకు ఖరీదు {goodsCost}. సరుకు డబ్బు చెల్లించాక ఎంత మిగులుతుంది?
+lesson.revenue_vs_profit,fb.response.correct,Yes! {sales} − {goodsCost} = {left}. That {left} is what is left after paying for the goods.,"हाँ, बिल्कुल! {sales} − {goodsCost} = {left}। माल का पैसा चुकाने के बाद यही {left} बचता है।",అవును! {sales} − {goodsCost} = {left}. సరుకు డబ్బు చెల్లించాక మిగిలేది ఈ {left}.
+lesson.revenue_vs_profit,fb.response.revenue,"Many sellers think this. {sales} is your sales, the money customers gave you. But {goodsCost} of it paid for the goods. So {left} is left.","बहुत-से दुकानदार ऐसा सोचते हैं। {sales} आपकी बिक्री है, यानी ग्राहकों से मिला पैसा। पर उसमें से {goodsCost} माल के लिए गए। इसलिए {left} बचता है।","చాలామంది దుకాణదారులు ఇలాగే అనుకుంటారు. {sales} మీ అమ్మకాలు, అంటే కస్టమర్లు ఇచ్చిన డబ్బు. కానీ అందులో {goodsCost} సరుకుకు పోయింది. కాబట్టి {left} మిగులుతుంది."
+lesson.revenue_vs_profit,fb.response.adds,"Good try. Costs are taken away, not added: {sales} − {goodsCost} = {left}.","अच्छी कोशिश। खर्च जोड़े नहीं, घटाए जाते हैं: {sales} − {goodsCost} = {left}।","మంచి ప్రయత్నం. ఖర్చులు కలపకూడదు, తీసేయాలి: {sales} − {goodsCost} = {left}."
+lesson.revenue_vs_profit,fb.response.unsure,That’s okay. Let’s look again: {sales} − {goodsCost} = {left}.,कोई बात नहीं। फिर से देखें: {sales} − {goodsCost} = {left}।,పర్వాలేదు. మళ్లీ చూద్దాం: {sales} − {goodsCost} = {left}.
+lesson.revenue_vs_profit,fb.response.another,Think of it like this: you have {sales} and you pay {goodsCost}. You have {left} left.,ऐसे सोचिए: आपके पास {sales} हैं और आप {goodsCost} चुकाती हैं। आपके पास {left} बचते हैं।,"ఇలా ఆలోచించండి: మీ దగ్గర {sales} ఉంది, మీరు {goodsCost} చెల్లిస్తారు. మీ దగ్గర {left} మిగులుతుంది."
+lesson.revenue_vs_profit,fb.response.last,Let’s remember this together: profit = sales − costs. We’ll practise more next.,चलिए इसे साथ में याद रखें: मुनाफ़ा = बिक्री − खर्च। आगे हम और अभ्यास करेंगे।,దీన్ని కలిసి గుర్తుంచుకుందాం: లాభం = అమ్మకాలు − ఖర్చులు. తర్వాత ఇంకా అభ్యాసం చేద్దాం.
+lesson.revenue_vs_profit,h.practice,Second scenario,दूसरा उदाहरण,రెండో ఉదాహరణ
+lesson.revenue_vs_profit,practice.q.vegetable,New day. Sales: {sales}. Vegetables from the mandi: {goodsCost}. Spoiled vegetables: {spoilage}. Auto fare: {transport}. What is your profit?,नया दिन। बिक्री: {sales}। मंडी की सब्ज़ी: {goodsCost}। खराब सब्ज़ी: {spoilage}। ऑटो किराया: {transport}। आपका मुनाफ़ा कितना है?,కొత్త రోజు. అమ్మకాలు: {sales}. మండీ కూరగాయలు: {goodsCost}. పాడైన కూరగాయలు: {spoilage}. ఆటో కిరాయి: {transport}. మీ లాభం ఎంత?
+lesson.revenue_vs_profit,practice.q.tea,"New day. Tea sales: {sales}. Milk, tea leaves and sugar: {goodsCost}. Gas: {fuel}. What is your profit?","नया दिन। चाय की बिक्री: {sales}। दूध, चाय पत्ती और चीनी: {goodsCost}। गैस: {fuel}। आपका मुनाफ़ा कितना है?","కొత్త రోజు. టీ అమ్మకాలు: {sales}. పాలు, టీ పొడి, చక్కెర: {goodsCost}. గ్యాస్: {fuel}. మీ లాభం ఎంత?"
+lesson.revenue_vs_profit,practice.q.grocery,New day. Sales: {sales}. Stock you sold: {goodsCost}. Bags and transport: {bags}. What is your profit?,नया दिन। बिक्री: {sales}। बेचा गया माल: {goodsCost}। थैलियाँ और ढुलाई: {bags}। आपका मुनाफ़ा कितना है?,"కొత్త రోజు. అమ్మకాలు: {sales}. అమ్మిన సరుకు: {goodsCost}. సంచులు, రవాణా: {bags}. మీ లాభం ఎంత?"
+lesson.revenue_vs_profit,fb.practice.correct,Well done! You took away every cost. Your profit is {profit}.,शाबाश! आपने हर खर्च घटाया। आपका मुनाफ़ा {profit} है।,చాలా బాగుంది! ప్రతి ఖర్చూ తీసేశారు. మీ లాభం {profit}.
+lesson.revenue_vs_profit,fb.practice.hidden,Nearly there! You took away the cost of goods. Other costs ({otherTotal}) come out too. Profit is {profit}.,बस थोड़ा बाकी! माल का खर्च आपने घटाया। दूसरे खर्च ({otherTotal}) भी घटते हैं। मुनाफ़ा {profit} है।,దాదాపు వచ్చేశారు! సరుకు ఖర్చు తీసేశారు. ఇతర ఖర్చులు ({otherTotal}) కూడా తీసేయాలి. లాభం {profit}.
+lesson.revenue_vs_profit,fb.practice.revenue,Sales is not profit yet. Take away all the costs: {sales} − {allCosts} = {profit}.,बिक्री अभी मुनाफ़ा नहीं है। सारे खर्च घटाइए: {sales} − {allCosts} = {profit}।,అమ్మకాలు ఇంకా లాభం కాదు. ఖర్చులన్నీ తీసేయండి: {sales} − {allCosts} = {profit}.
+lesson.revenue_vs_profit,fb.practice.unsure,That’s okay. Start with sales and take away each cost: {sales} − {allCosts} = {profit}.,कोई बात नहीं। बिक्री से हर खर्च घटाइए: {sales} − {allCosts} = {profit}।,పర్వాలేదు. అమ్మకాల నుంచి ప్రతి ఖర్చూ తీసేయండి: {sales} − {allCosts} = {profit}.
+lesson.revenue_vs_profit,h.check,Quick check,छोटी जाँच,చిన్న ఆలోచన
+lesson.revenue_vs_profit,check.q,"Last week, sales were {salesBefore} and costs were {costBefore}. This week, sales are {salesAfter} and costs are {costAfter}. Did profit go up?",पिछले हफ़्ते बिक्री {salesBefore} और खर्च {costBefore} था। इस हफ़्ते बिक्री {salesAfter} और खर्च {costAfter} है। क्या मुनाफ़ा बढ़ा?,"గత వారం అమ్మకాలు {salesBefore}, ఖర్చులు {costBefore}. ఈ వారం అమ్మకాలు {salesAfter}, ఖర్చులు {costAfter}. లాభం పెరిగిందా?"
+lesson.revenue_vs_profit,opt.up,"Yes, because sales went up","हाँ, क्योंकि बिक्री बढ़ी","అవును, అమ్మకాలు పెరిగాయి కాబట్టి"
+lesson.revenue_vs_profit,opt.down,"No, profit went down","नहीं, मुनाफ़ा घटा","లేదు, లాభం తగ్గింది"
+lesson.revenue_vs_profit,opt.unsure,I’m not sure,पता नहीं,తెలియదు
+lesson.revenue_vs_profit,fb.check.correct,"Exactly. Sales went up, but costs went up more. Profit went from {profitBefore} to {profitAfter}.","बिल्कुल सही। बिक्री बढ़ी, पर खर्च उससे ज़्यादा बढ़ा। मुनाफ़ा {profitBefore} से घटकर {profitAfter} हो गया।","సరిగ్గా చెప్పారు. అమ్మకాలు పెరిగాయి, కానీ ఖర్చులు ఇంకా ఎక్కువ పెరిగాయి. లాభం {profitBefore} నుంచి {profitAfter}కి తగ్గింది."
+lesson.revenue_vs_profit,fb.check.revenue,"Sales went up, but costs went up even more. Profit went from {profitBefore} to {profitAfter}. Always look at what is left after costs.","बिक्री बढ़ी, पर खर्च उससे भी ज़्यादा बढ़ा। मुनाफ़ा {profitBefore} से घटकर {profitAfter} हो गया। हमेशा देखिए कि खर्च के बाद कितना बचा।","అమ్మకాలు పెరిగాయి, కానీ ఖర్చులు ఇంకా ఎక్కువ పెరిగాయి. లాభం {profitBefore} నుంచి {profitAfter}కి తగ్గింది. ఖర్చుల తర్వాత ఎంత మిగిలిందో ఎప్పుడూ చూడండి."
+lesson.revenue_vs_profit,fb.check.unsure,"That’s okay. Profit went from {profitBefore} to {profitAfter}, because costs grew more than sales.","कोई बात नहीं। मुनाफ़ा {profitBefore} से घटकर {profitAfter} हो गया, क्योंकि खर्च बिक्री से ज़्यादा बढ़ा।",పర్వాలేదు. ఖర్చులు అమ్మకాల కంటే ఎక్కువ పెరిగాయి కాబట్టి లాభం {profitBefore} నుంచి {profitAfter}కి తగ్గింది.
+lesson.revenue_vs_profit,challenge.title,This week’s activity,इस हफ़्ते का काम,ఈ వారం పని
+lesson.revenue_vs_profit,challenge.vegetable,"On 3 evenings this week: count your sales money, then take away what you paid at the mandi that morning. Notice what is really left.","इस हफ़्ते 3 शामों को: अपनी बिक्री का पैसा गिनें, फिर उस सुबह मंडी में दिया पैसा घटाएँ। देखें कि असल में कितना बचा।","ఈ వారం 3 సాయంత్రాలు: మీ అమ్మకాల డబ్బు లెక్కపెట్టండి, ఆ ఉదయం మండీలో ఇచ్చిన డబ్బు తీసేయండి. నిజంగా ఎంత మిగిలిందో చూడండి."
+lesson.revenue_vs_profit,challenge.tea,"On 3 evenings this week: count your tea sales, then take away what you spent on milk, tea leaves, sugar and gas that day. Notice what is really left.","इस हफ़्ते 3 शामों को: चाय की बिक्री गिनें, फिर उस दिन दूध, चाय पत्ती, चीनी और गैस पर लगा पैसा घटाएँ। देखें कि असल में कितना बचा।","ఈ వారం 3 సాయంత్రాలు: టీ అమ్మకాలు లెక్కపెట్టండి, ఆ రోజు పాలు, టీ పొడి, చక్కెర, గ్యాస్‌కు అయిన డబ్బు తీసేయండి. నిజంగా ఎంత మిగిలిందో చూడండి."
+lesson.revenue_vs_profit,challenge.grocery,"On 3 evenings this week: count your sales, take away the cost of the stock you sold, and note how much was given on udhaar.","इस हफ़्ते 3 शामों को: अपनी बिक्री गिनें, बेचे गए माल की कीमत घटाएँ, और देखें कि कितना उधार पर दिया गया।","ఈ వారం 3 సాయంత్రాలు: మీ అమ్మకాలు లెక్కపెట్టండి, అమ్మిన సరుకు ఖరీదు తీసేయండి, ఎంత అప్పుగా ఇచ్చారో గమనించండి."
+lesson.revenue_vs_profit,complete.title,Lesson complete,पाठ पूरा हुआ,పాఠం పూర్తయింది
+lesson.revenue_vs_profit,complete.understood,You found profit correctly. Well done!,आपने मुनाफ़ा सही निकाला। बहुत बढ़िया!,మీరు లాభం సరిగ్గా కనుక్కున్నారు. చాలా బాగుంది!
+lesson.revenue_vs_profit,complete.developing,You’re getting there. We’ll practise again at the next visit.,आप सही रास्ते पर हैं। अगली मुलाक़ात में फिर अभ्यास करेंगे।,మీరు సరైన దారిలో ఉన్నారు. తర్వాతి సందర్శనలో మళ్లీ అభ్యాసం చేద్దాం.
+lesson.revenue_vs_profit,complete.needs_review,This takes practice. Your coach will go over it with you.,इसमें अभ्यास लगता है। आपकी कोच इसे आपके साथ दोहराएँगी।,దీనికి అభ్యాసం కావాలి. మీ కోచ్ దీన్ని మీతో మళ్లీ చూస్తారు.
+lesson.revenue_vs_profit,complete.rule,Remember: Profit = Sales − all costs,याद रखें: मुनाफ़ा = बिक्री − सारे खर्च,గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు
+lesson.revenue_vs_profit,complete.accepted,Your activity for this week is saved.,इस हफ़्ते का काम सेव हो गया।,ఈ వారం పని సేవ్ అయింది.
+lesson.revenue_vs_profit,complete.later,You can start the activity any time.,आप यह काम कभी भी शुरू कर सकती हैं।,ఈ పని ఎప్పుడైనా మొదలుపెట్టవచ్చు.

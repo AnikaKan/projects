@@ -1,0 +1,2053 @@
+{
+ "schemaVersion": 1,
+ "name": "hisaab-saathi-language-consistency",
+ "version": "1.1",
+ "createdAt": "2026-10-30",
+ "description": "Equivalent learner utterances in English, Hindi (script / romanised / Hindi-English) and Telugu (script / romanised / Telugu-English). Every variant in a group must get the same result. Written by the developer BEFORE the multilingual changes; all Hindi and Telugu inputs need native-speaker review. Assessment screens, vegetable stall. v1.1 (2026-10-30, multilingual round 2): +11 groups written BEFORE that round's code changes: 10 on the lesson screens (response / practice / check) and 1 hedged-uncertainty group.",
+ "varieties": [
+  "en",
+  "hi",
+  "hi_rom",
+  "hi_mix",
+  "te",
+  "te_rom",
+  "te_mix"
+ ],
+ "groups": [
+  {
+   "id": "rvp-correct-yesno",
+   "concept": "revenue_vs_profit",
+   "itemId": "rvp_a_is_sales_profit",
+   "category": "correct",
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "no"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "No, 500 is only the sales"
+    },
+    {
+     "variety": "hi",
+     "text": "नहीं, पाँच सौ तो बिक्री है"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "nahi, paanch sau to bikri hai"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "nahi, 500 to sales hai, profit nahi"
+    },
+    {
+     "variety": "te",
+     "text": "లేదు, ఐదు వందలు అమ్మకాలు మాత్రమే"
+    },
+    {
+     "variety": "te_rom",
+     "text": "ledu, aidu vandalu ammakalu matrame"
+    },
+    {
+     "variety": "te_mix",
+     "text": "ledu, 500 sales matrame, profit kaadu"
+    }
+   ]
+  },
+  {
+   "id": "rvp-correct-amount",
+   "concept": "revenue_vs_profit",
+   "itemId": "rvp_b_find_profit",
+   "category": "correct",
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "profit"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "three hundred rupees profit"
+    },
+    {
+     "variety": "hi",
+     "text": "तीन सौ रुपये मुनाफ़ा"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "teen sau rupaye munafa"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "profit teen sau hua"
+    },
+    {
+     "variety": "te",
+     "text": "మూడు వందల రూపాయలు లాభం"
+    },
+    {
+     "variety": "te_rom",
+     "text": "moodu vandala rupayalu labham"
+    },
+    {
+     "variety": "te_mix",
+     "text": "naaku 300 profit vachindi"
+    }
+   ]
+  },
+  {
+   "id": "rvp-incorrect",
+   "concept": "revenue_vs_profit",
+   "itemId": "rvp_a_is_sales_profit",
+   "category": "incorrect",
+   "expected": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "yes"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Yes, the whole 500 is profit"
+    },
+    {
+     "variety": "hi",
+     "text": "हाँ, पूरा पाँच सौ मुनाफ़ा है"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "haan, poora paanch sau munafa hai"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "haan, pura 500 profit hai"
+    },
+    {
+     "variety": "te",
+     "text": "అవును, మొత్తం ఐదు వందలు లాభమే"
+    },
+    {
+     "variety": "te_rom",
+     "text": "avunu, motham aidu vandalu labhame"
+    },
+    {
+     "variety": "te_mix",
+     "text": "avunu, 500 antha profit e"
+    }
+   ]
+  },
+  {
+   "id": "rvp-unsure",
+   "concept": "revenue_vs_profit",
+   "itemId": "rvp_a_is_sales_profit",
+   "category": "unsure",
+   "expected": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "unsure"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "I don't know"
+    },
+    {
+     "variety": "hi",
+     "text": "मुझे नहीं पता"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "mujhe nahi pata"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "mujhe sure nahi hai"
+    },
+    {
+     "variety": "te",
+     "text": "నాకు తెలియదు"
+    },
+    {
+     "variety": "te_rom",
+     "text": "naaku teliyadu"
+    },
+    {
+     "variety": "te_mix",
+     "text": "naaku sure ga teliyadu"
+    }
+   ],
+   "notes": "'मुझे नहीं पता' contains नहीं, which is the CORRECT answer 'No' on this item: a false-correct risk"
+  },
+  {
+   "id": "rvp-repeat",
+   "concept": "revenue_vs_profit",
+   "itemId": "rvp_a_is_sales_profit",
+   "category": "repeat",
+   "expected": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "routes": [
+     "replay"
+    ],
+    "clarifyMode": "repeat"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Please say the question once more"
+    },
+    {
+     "variety": "hi",
+     "text": "सवाल एक बार और बोलिए"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "sawal ek baar aur boliye"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "question repeat kariye"
+    },
+    {
+     "variety": "te",
+     "text": "ప్రశ్న ఇంకోసారి చెప్పండి"
+    },
+    {
+     "variety": "te_rom",
+     "text": "prashna inkosari cheppandi"
+    },
+    {
+     "variety": "te_mix",
+     "text": "question malli repeat cheyyandi"
+    }
+   ]
+  },
+  {
+   "id": "rvp-simplify",
+   "concept": "revenue_vs_profit",
+   "itemId": "rvp_a_is_sales_profit",
+   "category": "simplify",
+   "expected": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "routes": [
+     "replay"
+    ],
+    "clarifyMode": "simplify"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Can you explain it in simpler words?"
+    },
+    {
+     "variety": "hi",
+     "text": "थोड़ा आसान भाषा में समझाइए"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "thoda aasaan bhasha mein samjhaiye"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "simple words mein samjhao"
+    },
+    {
+     "variety": "te",
+     "text": "కొంచెం సులభంగా చెప్పండి"
+    },
+    {
+     "variety": "te_rom",
+     "text": "konchem sulabhamga cheppandi"
+    },
+    {
+     "variety": "te_mix",
+     "text": "simple ga explain cheyyandi"
+    }
+   ]
+  },
+  {
+   "id": "rvp-unrelated",
+   "concept": "revenue_vs_profit",
+   "itemId": "rvp_a_is_sales_profit",
+   "category": "unrelated",
+   "expected": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "routes": [
+     "no_match_prompt"
+    ]
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Play a film song for me"
+    },
+    {
+     "variety": "hi",
+     "text": "मुझे एक गाना सुनाओ"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "mujhe ek gaana sunao"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "koi song play karo"
+    },
+    {
+     "variety": "te",
+     "text": "ఒక పాట పాడండి"
+    },
+    {
+     "variety": "te_rom",
+     "text": "oka paata paadandi"
+    },
+    {
+     "variety": "te_mix",
+     "text": "oka song play cheyyandi"
+    }
+   ]
+  },
+  {
+   "id": "exp-correct-choice",
+   "concept": "business_expenses",
+   "itemId": "exp_a_which_is_expense",
+   "category": "correct",
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "stock"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Buying the vegetables I sell"
+    },
+    {
+     "variety": "hi",
+     "text": "बेचने के लिए सब्ज़ी खरीदना"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "bechne ke liye sabzi kharidna"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "dukaan ka stock kharidna"
+    },
+    {
+     "variety": "te",
+     "text": "అమ్మడానికి కూరగాయలు కొనడం"
+    },
+    {
+     "variety": "te_rom",
+     "text": "ammadaniki kooragayalu konadam"
+    },
+    {
+     "variety": "te_mix",
+     "text": "shop kosam stock konadam"
+    }
+   ]
+  },
+  {
+   "id": "exp-correct-amount",
+   "concept": "business_expenses",
+   "itemId": "exp_b_total_stock_cost",
+   "category": "correct",
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "total"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "six hundred and fifty rupees in total"
+    },
+    {
+     "variety": "hi",
+     "text": "कुल साढ़े छह सौ रुपये"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "kul saadhe chhe sau rupaye"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "total 650 rupaye"
+    },
+    {
+     "variety": "te",
+     "text": "మొత్తం ఆరు వందల యాభై రూపాయలు"
+    },
+    {
+     "variety": "te_rom",
+     "text": "motham aaru vandala yaabhai rupayalu"
+    },
+    {
+     "variety": "te_mix",
+     "text": "total six hundred fifty ayyindi"
+    }
+   ]
+  },
+  {
+   "id": "exp-incorrect",
+   "concept": "business_expenses",
+   "itemId": "exp_a_which_is_expense",
+   "category": "incorrect",
+   "expected": {
+    "classification": "misconception_household_as_business_expense",
+    "correctness": "incorrect",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "school"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "the school fees for my children"
+    },
+    {
+     "variety": "hi",
+     "text": "बच्चों की स्कूल फ़ीस"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "bachchon ki school fees"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "bachche ki school fees bhi business kharcha hai"
+    },
+    {
+     "variety": "te",
+     "text": "మా పిల్లల స్కూల్ ఫీజు"
+    },
+    {
+     "variety": "te_rom",
+     "text": "maa pillala school feeju"
+    },
+    {
+     "variety": "te_mix",
+     "text": "pillala school fees"
+    }
+   ]
+  },
+  {
+   "id": "exp-unsure",
+   "concept": "business_expenses",
+   "itemId": "exp_b_total_stock_cost",
+   "category": "unsure",
+   "expected": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "unsure"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "No idea"
+    },
+    {
+     "variety": "hi",
+     "text": "मालूम नहीं"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "maloom nahi"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "idea nahi hai"
+    },
+    {
+     "variety": "te",
+     "text": "తెలీదు అండి"
+    },
+    {
+     "variety": "te_rom",
+     "text": "teledu andi"
+    },
+    {
+     "variety": "te_mix",
+     "text": "idea ledu"
+    }
+   ]
+  },
+  {
+   "id": "exp-repeat",
+   "concept": "business_expenses",
+   "itemId": "exp_b_total_stock_cost",
+   "category": "repeat",
+   "expected": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "routes": [
+     "replay"
+    ],
+    "clarifyMode": "repeat"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Sorry, I didn't hear, please repeat"
+    },
+    {
+     "variety": "hi",
+     "text": "दोबारा पढ़कर सुनाइए"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "dobara padh ke sunaiye"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "ek baar phir se bolo please"
+    },
+    {
+     "variety": "te",
+     "text": "మళ్ళీ చదివి వినిపించండి"
+    },
+    {
+     "variety": "te_rom",
+     "text": "malli chadivi vinipinchandi"
+    },
+    {
+     "variety": "te_mix",
+     "text": "please malli cheppandi"
+    }
+   ]
+  },
+  {
+   "id": "exp-concept-question",
+   "concept": "business_expenses",
+   "itemId": "exp_a_which_is_expense",
+   "category": "simplify",
+   "expected": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "routes": [
+     "replay"
+    ],
+    "clarifyMode": "simplify"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "What does business expense mean?"
+    },
+    {
+     "variety": "hi",
+     "text": "व्यापार का खर्च मतलब क्या होता है?"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "vyapar ka kharcha matlab kya hota hai?"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "business expense ka matlab kya hai?"
+    },
+    {
+     "variety": "te",
+     "text": "వ్యాపార ఖర్చు అంటే ఏమిటి?"
+    },
+    {
+     "variety": "te_rom",
+     "text": "vyapara kharchu ante emiti?"
+    },
+    {
+     "variety": "te_mix",
+     "text": "business expense ante enti?"
+    }
+   ],
+   "notes": "A question about the concept is a request for explanation, not an unrelated question"
+  },
+  {
+   "id": "exp-simplify",
+   "concept": "business_expenses",
+   "itemId": "exp_b_total_stock_cost",
+   "category": "simplify",
+   "expected": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "routes": [
+     "replay"
+    ],
+    "clarifyMode": "simplify"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Explain it more simply please"
+    },
+    {
+     "variety": "hi",
+     "text": "आसान करके बताइए"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "aasaan karke batao"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "easy way mein batao"
+    },
+    {
+     "variety": "te",
+     "text": "ఇంకా సులువుగా చెప్పండి"
+    },
+    {
+     "variety": "te_rom",
+     "text": "inka suluvuga cheppandi"
+    },
+    {
+     "variety": "te_mix",
+     "text": "easy ga cheppandi"
+    }
+   ]
+  },
+  {
+   "id": "exp-unrelated",
+   "concept": "business_expenses",
+   "itemId": "exp_a_which_is_expense",
+   "category": "unrelated",
+   "expected": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "routes": [
+     "no_match_prompt"
+    ]
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Who won the cricket match?"
+    },
+    {
+     "variety": "hi",
+     "text": "कल मैच कौन जीता?"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "kal match kaun jeeta?"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "cricket match ka score batao"
+    },
+    {
+     "variety": "te",
+     "text": "నిన్న మ్యాచ్ ఎవరు గెలిచారు?"
+    },
+    {
+     "variety": "te_rom",
+     "text": "ninna match evaru gelicharu?"
+    },
+    {
+     "variety": "te_mix",
+     "text": "cricket score cheppu"
+    }
+   ]
+  },
+  {
+   "id": "crd-correct-yesno",
+   "concept": "customer_credit",
+   "itemId": "crd_a_credit_is_cash",
+   "category": "correct",
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "no"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Not yet, she will pay tomorrow"
+    },
+    {
+     "variety": "hi",
+     "text": "अभी नहीं मिले, कल देगी"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "abhi nahi mile, kal degi"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "abhi cash nahi aaya, kal payment karegi"
+    },
+    {
+     "variety": "te",
+     "text": "ఇంకా రాలేదు, రేపు ఇస్తారు"
+    },
+    {
+     "variety": "te_rom",
+     "text": "inka raledu, repu istaru"
+    },
+    {
+     "variety": "te_mix",
+     "text": "inka cash raledu, repu pay chestaru"
+    }
+   ]
+  },
+  {
+   "id": "crd-correct-amount",
+   "concept": "customer_credit",
+   "itemId": "crd_b_cash_in_box",
+   "category": "correct",
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "cash"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "seven hundred only"
+    },
+    {
+     "variety": "hi",
+     "text": "सिर्फ़ सात सौ"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "sirf saat sau"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "cash sirf 700 aaya"
+    },
+    {
+     "variety": "te",
+     "text": "ఏడు వందలే"
+    },
+    {
+     "variety": "te_rom",
+     "text": "edu vandale"
+    },
+    {
+     "variety": "te_mix",
+     "text": "cash seven hundred matrame"
+    }
+   ]
+  },
+  {
+   "id": "crd-incorrect",
+   "concept": "customer_credit",
+   "itemId": "crd_a_credit_is_cash",
+   "category": "incorrect",
+   "expected": {
+    "classification": "misconception_credit_as_cash",
+    "correctness": "incorrect",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "yes"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Yes, it counts as cash already"
+    },
+    {
+     "variety": "hi",
+     "text": "हाँ, वो तो मिल ही गया समझो"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "haan, mil gaya samjho"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "haan, woh cash hi hai"
+    },
+    {
+     "variety": "te",
+     "text": "అవును, అది వచ్చినట్టే"
+    },
+    {
+     "variety": "te_rom",
+     "text": "avunu, adi vachinatte"
+    },
+    {
+     "variety": "te_mix",
+     "text": "avunu, adi cash e"
+    }
+   ]
+  },
+  {
+   "id": "crd-unsure",
+   "concept": "customer_credit",
+   "itemId": "crd_a_credit_is_cash",
+   "category": "unsure",
+   "expected": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "unsure"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Not sure about this one"
+    },
+    {
+     "variety": "hi",
+     "text": "पक्का नहीं पता"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "pakka nahi pata"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "sure nahi hoon"
+    },
+    {
+     "variety": "te",
+     "text": "ఖచ్చితంగా తెలియదు"
+    },
+    {
+     "variety": "te_rom",
+     "text": "khachitamga teliyadu"
+    },
+    {
+     "variety": "te_mix",
+     "text": "sure ga cheppalenu"
+    }
+   ],
+   "notes": "'No' is the correct answer; unsure phrasings containing नहीं/nahi must not be read as 'No'"
+  },
+  {
+   "id": "crd-repeat",
+   "concept": "customer_credit",
+   "itemId": "crd_b_cash_in_box",
+   "category": "repeat",
+   "expected": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "routes": [
+     "replay"
+    ],
+    "clarifyMode": "repeat"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Say that again please"
+    },
+    {
+     "variety": "hi",
+     "text": "एक बार फिर से बताइए"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "ek baar phir se batao"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "please phir se bolo"
+    },
+    {
+     "variety": "te",
+     "text": "ఇంకొకసారి చెప్పండి"
+    },
+    {
+     "variety": "te_rom",
+     "text": "inkokasari cheppandi"
+    },
+    {
+     "variety": "te_mix",
+     "text": "once more cheppandi"
+    }
+   ]
+  },
+  {
+   "id": "crd-simplify",
+   "concept": "customer_credit",
+   "itemId": "crd_b_cash_in_box",
+   "category": "simplify",
+   "expected": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "routes": [
+     "replay"
+    ],
+    "clarifyMode": "simplify"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "What is udhaar? Explain in easy words"
+    },
+    {
+     "variety": "hi",
+     "text": "उधार क्या होता है, सीधे शब्दों में बताइए"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "udhaar kya hota hai, seedhe shabdon mein batao"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "credit ka matlab simple mein batao"
+    },
+    {
+     "variety": "te",
+     "text": "అప్పు అంటే ఏమిటి, సులభంగా చెప్పండి"
+    },
+    {
+     "variety": "te_rom",
+     "text": "appu ante emiti, sulabhamga cheppandi"
+    },
+    {
+     "variety": "te_mix",
+     "text": "credit ante enti, simple ga cheppandi"
+    }
+   ]
+  },
+  {
+   "id": "crd-unrelated",
+   "concept": "customer_credit",
+   "itemId": "crd_a_credit_is_cash",
+   "category": "unrelated",
+   "expected": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "routes": [
+     "no_match_prompt"
+    ]
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Will it rain today?"
+    },
+    {
+     "variety": "hi",
+     "text": "आज बारिश होगी क्या?"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "aaj baarish hogi kya?"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "aaj weather kaisa hai?"
+    },
+    {
+     "variety": "te",
+     "text": "ఈ రోజు వర్షం పడుతుందా?"
+    },
+    {
+     "variety": "te_rom",
+     "text": "ee roju varsham padutunda?"
+    },
+    {
+     "variety": "te_mix",
+     "text": "ee roju weather ela undi?"
+    }
+   ]
+  },
+  {
+   "id": "sep-correct-yesno",
+   "concept": "business_household_separation",
+   "itemId": "sep_a_record_home_money",
+   "category": "correct",
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "yes"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Yes, write it down separately"
+    },
+    {
+     "variety": "hi",
+     "text": "हाँ, घर का खर्च अलग लिखना चाहिए"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "haan, ghar ka kharcha alag likhna chahiye"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "haan, separate likhna chahiye"
+    },
+    {
+     "variety": "te",
+     "text": "అవును, విడిగా రాసుకోవాలి"
+    },
+    {
+     "variety": "te_rom",
+     "text": "avunu, vidiga rasukovali"
+    },
+    {
+     "variety": "te_mix",
+     "text": "avunu, separate ga rasukovali"
+    }
+   ]
+  },
+  {
+   "id": "sep-correct-choice",
+   "concept": "business_household_separation",
+   "itemId": "sep_b_home_money_source",
+   "category": "correct",
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "fixed"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "From a fixed amount kept aside for home"
+    },
+    {
+     "variety": "hi",
+     "text": "घर के लिए तय पैसे से"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "ghar ke liye tay paise se"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "ghar ke liye fixed amount se"
+    },
+    {
+     "variety": "te",
+     "text": "ఇంటి కోసం పక్కన పెట్టిన నిర్ణీత మొత్తం"
+    },
+    {
+     "variety": "te_rom",
+     "text": "inti kosam pakkana pettina dabbu nunchi"
+    },
+    {
+     "variety": "te_mix",
+     "text": "inti kosam fixed amount nunchi"
+    }
+   ]
+  },
+  {
+   "id": "sep-incorrect",
+   "concept": "business_household_separation",
+   "itemId": "sep_b_home_money_source",
+   "category": "incorrect",
+   "expected": {
+    "classification": "misconception_mixes_business_household",
+    "correctness": "incorrect",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "cashbox"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Just take it from the shop cash box when needed"
+    },
+    {
+     "variety": "hi",
+     "text": "जब चाहिए तब गल्ले से ले लेती हूँ"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "jab chahiye tab galle se le leti hoon"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "zarurat ho to shop ke galle se"
+    },
+    {
+     "variety": "te",
+     "text": "అవసరమైనప్పుడు గల్లా నుంచి తీసుకుంటాను"
+    },
+    {
+     "variety": "te_rom",
+     "text": "avasaram ainappudu galla nunchi teesukuntanu"
+    },
+    {
+     "variety": "te_mix",
+     "text": "need unnappudu galla nunchi"
+    }
+   ]
+  },
+  {
+   "id": "sep-unsure",
+   "concept": "business_household_separation",
+   "itemId": "sep_a_record_home_money",
+   "category": "unsure",
+   "expected": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "unsure"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "I really don't know"
+    },
+    {
+     "variety": "hi",
+     "text": "पता नहीं जी"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "pata nahi ji"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "mujhe idea nahi"
+    },
+    {
+     "variety": "te",
+     "text": "ఏమో, తెలియదు"
+    },
+    {
+     "variety": "te_rom",
+     "text": "emo, teliyadu"
+    },
+    {
+     "variety": "te_mix",
+     "text": "naaku idea ledu"
+    }
+   ],
+   "notes": "'idea ledu' contains ledu = 'No' (the misconception on this item)"
+  },
+  {
+   "id": "sep-repeat",
+   "concept": "business_household_separation",
+   "itemId": "sep_a_record_home_money",
+   "category": "repeat",
+   "expected": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "routes": [
+     "replay"
+    ],
+    "clarifyMode": "repeat"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Can you repeat that?"
+    },
+    {
+     "variety": "hi",
+     "text": "फिर से सुनाइए"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "phir se sunaiye"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "ek baar aur repeat karo"
+    },
+    {
+     "variety": "te",
+     "text": "మళ్ళీ వినిపించండి"
+    },
+    {
+     "variety": "te_rom",
+     "text": "malli vinipinchandi"
+    },
+    {
+     "variety": "te_mix",
+     "text": "inkosari repeat cheyyandi"
+    }
+   ]
+  },
+  {
+   "id": "sep-simplify",
+   "concept": "business_household_separation",
+   "itemId": "sep_a_record_home_money",
+   "category": "simplify",
+   "expected": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "routes": [
+     "replay"
+    ],
+    "clarifyMode": "simplify"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Say it in a simpler way"
+    },
+    {
+     "variety": "hi",
+     "text": "थोड़ा सरल करके समझाइए"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "thoda saral karke samjhaiye"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "isko simple tarike se samjhao"
+    },
+    {
+     "variety": "te",
+     "text": "కొంచెం తేలికగా వివరించండి"
+    },
+    {
+     "variety": "te_rom",
+     "text": "konchem telikaga vivarinchandi"
+    },
+    {
+     "variety": "te_mix",
+     "text": "konchem easy ga explain cheyyandi"
+    }
+   ]
+  },
+  {
+   "id": "sav-correct-yesno",
+   "concept": "savings_cash_management",
+   "itemId": "sav_a_keep_stock_money",
+   "category": "correct",
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "no"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "No, I must keep 600 for stock"
+    },
+    {
+     "variety": "hi",
+     "text": "नहीं, छह सौ माल के लिए रखने होंगे"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "nahi, chhe sau maal ke liye rakhne honge"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "nahi, 600 stock ke liye rakhna hai"
+    },
+    {
+     "variety": "te",
+     "text": "లేదు, ఆరు వందలు సరుకు కోసం ఉంచాలి"
+    },
+    {
+     "variety": "te_rom",
+     "text": "ledu, aaru vandalu saruku kosam unchali"
+    },
+    {
+     "variety": "te_mix",
+     "text": "ledu, 600 stock kosam unchali"
+    }
+   ]
+  },
+  {
+   "id": "sav-correct-choice",
+   "concept": "savings_cash_management",
+   "itemId": "sav_b_where_to_save",
+   "category": "correct",
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "separate"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Keep it apart in a savings box"
+    },
+    {
+     "variety": "hi",
+     "text": "बचत अलग डिब्बे में रखनी चाहिए"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "bachat alag dabbe mein rakhni chahiye"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "savings alag box mein"
+    },
+    {
+     "variety": "te",
+     "text": "పొదుపు డబ్బు వేరేగా దాచాలి"
+    },
+    {
+     "variety": "te_rom",
+     "text": "podupu dabbu verega dachali"
+    },
+    {
+     "variety": "te_mix",
+     "text": "savings ni separate box lo"
+    }
+   ]
+  },
+  {
+   "id": "sav-incorrect",
+   "concept": "savings_cash_management",
+   "itemId": "sav_b_where_to_save",
+   "category": "incorrect",
+   "expected": {
+    "classification": "misconception_savings_mixed_with_cash",
+    "correctness": "incorrect",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "mixed"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Mixed in with the shop money"
+    },
+    {
+     "variety": "hi",
+     "text": "दुकान के पैसों में ही मिला देती हूँ"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "dukaan ke paison mein hi mila deti hoon"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "shop cash ke saath mix kar deti hoon"
+    },
+    {
+     "variety": "te",
+     "text": "దుకాణం డబ్బుతోనే కలిపేస్తాను"
+    },
+    {
+     "variety": "te_rom",
+     "text": "dukanam dabbutho kalipestanu"
+    },
+    {
+     "variety": "te_mix",
+     "text": "shop cash tho mix chestanu"
+    }
+   ]
+  },
+  {
+   "id": "sav-unsure",
+   "concept": "savings_cash_management",
+   "itemId": "sav_a_keep_stock_money",
+   "category": "unsure",
+   "expected": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "unsure"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Hmm, I am not sure"
+    },
+    {
+     "variety": "hi",
+     "text": "पता नहीं, सोचना पड़ेगा"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "pata nahi, sochna padega"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "not sure, sochna padega"
+    },
+    {
+     "variety": "te",
+     "text": "తెలియదు, ఆలోచించాలి"
+    },
+    {
+     "variety": "te_rom",
+     "text": "teliyadu, alochinchali"
+    },
+    {
+     "variety": "te_mix",
+     "text": "not sure andi"
+    }
+   ]
+  },
+  {
+   "id": "sav-repeat",
+   "concept": "savings_cash_management",
+   "itemId": "sav_b_where_to_save",
+   "category": "repeat",
+   "expected": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "routes": [
+     "replay"
+    ],
+    "clarifyMode": "repeat"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "One more time please"
+    },
+    {
+     "variety": "hi",
+     "text": "एक बार और सुनाइए"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "ek baar aur sunaiye"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "one more time boliye"
+    },
+    {
+     "variety": "te",
+     "text": "ఇంకోసారి చెప్పండి"
+    },
+    {
+     "variety": "te_rom",
+     "text": "inkosari cheppandi"
+    },
+    {
+     "variety": "te_mix",
+     "text": "one more time cheppandi"
+    }
+   ]
+  },
+  {
+   "id": "sav-simplify",
+   "concept": "savings_cash_management",
+   "itemId": "sav_a_keep_stock_money",
+   "category": "simplify",
+   "expected": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "routes": [
+     "replay"
+    ],
+    "clarifyMode": "simplify"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Explain in simple words"
+    },
+    {
+     "variety": "hi",
+     "text": "सीधी भाषा में बताइए"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "seedhi bhasha mein batao"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "simple language mein bataiye"
+    },
+    {
+     "variety": "te",
+     "text": "సాధారణ మాటల్లో చెప్పండి"
+    },
+    {
+     "variety": "te_rom",
+     "text": "sadharana matallo cheppandi"
+    },
+    {
+     "variety": "te_mix",
+     "text": "simple words lo cheppandi"
+    }
+   ]
+  },
+  {
+   "id": "sav-unrelated",
+   "concept": "savings_cash_management",
+   "itemId": "sav_b_where_to_save",
+   "category": "unrelated",
+   "expected": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "routes": [
+     "no_match_prompt"
+    ]
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Tell me a story"
+    },
+    {
+     "variety": "hi",
+     "text": "एक कहानी सुनाओ"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "ek kahani sunao"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "koi story sunao"
+    },
+    {
+     "variety": "te",
+     "text": "ఒక కథ చెప్పండి"
+    },
+    {
+     "variety": "te_rom",
+     "text": "oka katha cheppandi"
+    },
+    {
+     "variety": "te_mix",
+     "text": "oka story cheppandi"
+    }
+   ]
+  },
+  {
+   "id": "lsn-response-correct",
+   "concept": "revenue_vs_profit",
+   "category": "correct",
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "left"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "two hundred left"
+    },
+    {
+     "variety": "hi",
+     "text": "दो सौ बचते हैं"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "do sau bachte hain"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "200 bacha"
+    },
+    {
+     "variety": "te",
+     "text": "రెండు వందలు మిగులుతాయి"
+    },
+    {
+     "variety": "te_rom",
+     "text": "rendu vandalu migulutayi"
+    },
+    {
+     "variety": "te_mix",
+     "text": "200 migilindi"
+    }
+   ],
+   "round": 2,
+   "lessonQuestion": "response"
+  },
+  {
+   "id": "lsn-response-incorrect",
+   "concept": "revenue_vs_profit",
+   "category": "incorrect",
+   "expected": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "sales"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "five hundred"
+    },
+    {
+     "variety": "hi",
+     "text": "पाँच सौ"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "paanch sau"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "pura 500"
+    },
+    {
+     "variety": "te",
+     "text": "ఐదు వందలు"
+    },
+    {
+     "variety": "te_rom",
+     "text": "aidu vandalu"
+    },
+    {
+     "variety": "te_mix",
+     "text": "motham 500"
+    }
+   ],
+   "round": 2,
+   "lessonQuestion": "response"
+  },
+  {
+   "id": "lsn-practice-correct",
+   "concept": "revenue_vs_profit",
+   "category": "correct",
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "profit"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "two hundred and seventy"
+    },
+    {
+     "variety": "hi",
+     "text": "दो सौ सत्तर"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "do sau sattar"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "profit 270 hai"
+    },
+    {
+     "variety": "te",
+     "text": "రెండు వందల డెబ్బై"
+    },
+    {
+     "variety": "te_rom",
+     "text": "rendu vandala debbai"
+    },
+    {
+     "variety": "te_mix",
+     "text": "profit 270 vachindi"
+    }
+   ],
+   "round": 2,
+   "lessonQuestion": "practice"
+  },
+  {
+   "id": "lsn-practice-incorrect",
+   "concept": "revenue_vs_profit",
+   "category": "incorrect",
+   "expected": {
+    "classification": "misconception_ignores_hidden_costs",
+    "correctness": "incorrect",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "goods_only"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "three hundred fifty"
+    },
+    {
+     "variety": "hi",
+     "text": "साढ़े तीन सौ"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "saadhe teen sau"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "350 bacha"
+    },
+    {
+     "variety": "te",
+     "text": "మూడు వందల యాభై"
+    },
+    {
+     "variety": "te_rom",
+     "text": "moodu vandala yabai"
+    },
+    {
+     "variety": "te_mix",
+     "text": "350 migilindi"
+    }
+   ],
+   "round": 2,
+   "lessonQuestion": "practice"
+  },
+  {
+   "id": "lsn-check-correct",
+   "concept": "revenue_vs_profit",
+   "category": "correct",
+   "expected": {
+    "classification": "correct",
+    "correctness": "correct",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "down"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "it went down"
+    },
+    {
+     "variety": "hi",
+     "text": "मुनाफ़ा घट गया"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "munafa ghat gaya"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "profit kam ho gaya"
+    },
+    {
+     "variety": "te",
+     "text": "లాభం తగ్గింది"
+    },
+    {
+     "variety": "te_rom",
+     "text": "labham taggindi"
+    },
+    {
+     "variety": "te_mix",
+     "text": "profit taggindi"
+    }
+   ],
+   "round": 2,
+   "lessonQuestion": "check"
+  },
+  {
+   "id": "lsn-check-incorrect",
+   "concept": "revenue_vs_profit",
+   "category": "incorrect",
+   "expected": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "up"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "yes, it went up"
+    },
+    {
+     "variety": "hi",
+     "text": "हाँ, बढ़ गया"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "haan badh gaya"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "haan profit badha"
+    },
+    {
+     "variety": "te",
+     "text": "అవును, పెరిగింది"
+    },
+    {
+     "variety": "te_rom",
+     "text": "avunu perigindi"
+    },
+    {
+     "variety": "te_mix",
+     "text": "avunu profit perigindi"
+    }
+   ],
+   "round": 2,
+   "lessonQuestion": "check"
+  },
+  {
+   "id": "lsn-check-unsure",
+   "concept": "revenue_vs_profit",
+   "category": "unsure",
+   "expected": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "unsure"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "not really sure"
+    },
+    {
+     "variety": "hi",
+     "text": "कह नहीं सकती"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "keh nahi sakti"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "sure nahi hoon"
+    },
+    {
+     "variety": "te",
+     "text": "చెప్పలేను"
+    },
+    {
+     "variety": "te_rom",
+     "text": "cheppalenu"
+    },
+    {
+     "variety": "te_mix",
+     "text": "not sure andi"
+    }
+   ],
+   "round": 2,
+   "lessonQuestion": "check"
+  },
+  {
+   "id": "lsn-response-simplify",
+   "concept": "revenue_vs_profit",
+   "category": "simplify",
+   "expected": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "routes": [
+     "ai_interpret"
+    ],
+    "clarifyMode": "simplify"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "too difficult, explain simply"
+    },
+    {
+     "variety": "hi",
+     "text": "बहुत मुश्किल है, आसान करके बताओ"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "bahut mushkil hai, aasaan karke batao"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "simple tareeke se explain karo"
+    },
+    {
+     "variety": "te",
+     "text": "చాలా కష్టంగా ఉంది, సులభంగా చెప్పండి"
+    },
+    {
+     "variety": "te_rom",
+     "text": "chala kashtamga undi, sulabhamga cheppandi"
+    },
+    {
+     "variety": "te_mix",
+     "text": "simple ga explain cheyyi"
+    }
+   ],
+   "round": 2,
+   "lessonQuestion": "response"
+  },
+  {
+   "id": "lsn-response-repeat",
+   "concept": "revenue_vs_profit",
+   "category": "repeat",
+   "expected": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "routes": [
+     "ai_interpret"
+    ],
+    "clarifyMode": "repeat"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "what did you say?"
+    },
+    {
+     "variety": "hi",
+     "text": "आपने क्या कहा?"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "aapne kya kaha?"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "kya bola, repeat karo"
+    },
+    {
+     "variety": "te",
+     "text": "మీరు ఏమన్నారు?"
+    },
+    {
+     "variety": "te_rom",
+     "text": "meeru emannaru?"
+    },
+    {
+     "variety": "te_mix",
+     "text": "emannaru, repeat cheyyandi"
+    }
+   ],
+   "round": 2,
+   "lessonQuestion": "response"
+  },
+  {
+   "id": "lsn-response-unrelated",
+   "concept": "revenue_vs_profit",
+   "category": "unrelated",
+   "expected": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "routes": [
+     "ai_interpret"
+    ]
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "Is the bus coming?"
+    },
+    {
+     "variety": "hi",
+     "text": "बस कब आएगी?"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "bus kab aayegi?"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "bus ka time kya hai?"
+    },
+    {
+     "variety": "te",
+     "text": "బస్సు ఎప్పుడు వస్తుంది?"
+    },
+    {
+     "variety": "te_rom",
+     "text": "bus eppudu vastundi?"
+    },
+    {
+     "variety": "te_mix",
+     "text": "bus time enti?"
+    }
+   ],
+   "round": 2,
+   "lessonQuestion": "response"
+  },
+  {
+   "id": "crd-unsure-hedged",
+   "concept": "customer_credit",
+   "category": "unsure",
+   "expected": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "routes": [
+     "propose_confirm"
+    ],
+    "optionId": "unsure"
+   },
+   "variants": [
+    {
+     "variety": "en",
+     "text": "I'm not too sure"
+    },
+    {
+     "variety": "hi",
+     "text": "मुझे ठीक से नहीं पता"
+    },
+    {
+     "variety": "hi_rom",
+     "text": "theek se nahi pata"
+    },
+    {
+     "variety": "hi_mix",
+     "text": "pakka sure nahi"
+    },
+    {
+     "variety": "te",
+     "text": "సరిగ్గా తెలియదు"
+    },
+    {
+     "variety": "te_rom",
+     "text": "sariga teliyadu"
+    },
+    {
+     "variety": "te_mix",
+     "text": "exact ga teliyadu"
+    }
+   ],
+   "round": 2,
+   "itemId": "crd_a_credit_is_cash",
+   "notes": "English 'not' is a synonym of 'No' (the correct answer): false-correct risk"
+  }
+ ]
+}

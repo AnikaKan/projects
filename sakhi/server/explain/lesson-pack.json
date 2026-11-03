@@ -1,0 +1,2080 @@
+{
+ "revenue_vs_profit": {
+  "schemaVersion": 1,
+  "lessonId": "revenue_vs_profit",
+  "contentVersion": "1.0",
+  "contentStatus": "approved",
+  "conceptId": "revenue_vs_profit",
+  "conceptName": {
+   "en": "Sales and profit",
+   "hi": "बिक्री और मुनाफ़ा",
+   "te": "అమ్మకాలు, లాభం"
+  },
+  "misconceptions": {
+   "misconception_revenue_vs_profit": "Counts all the sales money as profit.",
+   "misconception_profit_adds_costs": "Adds costs to sales instead of taking them away.",
+   "misconception_ignores_hidden_costs": "Takes away the cost of goods but forgets small costs like spoilage, transport, gas or bags.",
+   "misconception_credit_as_cash": "Treats sales given on udhaar (credit) as cash already in the box."
+  },
+  "misconceptionCodes": [
+   "misconception_revenue_vs_profit",
+   "misconception_profit_adds_costs",
+   "misconception_household_as_business_expense",
+   "misconception_ignores_hidden_costs",
+   "misconception_credit_as_cash",
+   "misconception_spends_working_capital",
+   "misconception_savings_mixed_with_cash",
+   "misconception_mixes_business_household"
+  ],
+  "questions": {
+   "response": {
+    "maxAttempts": 2,
+    "options": [
+     {
+      "id": "left",
+      "outcome": "correct",
+      "misconception": null
+     },
+     {
+      "id": "sales",
+      "outcome": "misconception",
+      "misconception": "misconception_revenue_vs_profit"
+     },
+     {
+      "id": "added",
+      "outcome": "misconception",
+      "misconception": "misconception_profit_adds_costs"
+     },
+     {
+      "id": "unsure",
+      "outcome": "unsure",
+      "misconception": null
+     }
+    ]
+   },
+   "practice": {
+    "maxAttempts": 2,
+    "options": [
+     {
+      "id": "goods_only",
+      "outcome": "misconception",
+      "misconception": "misconception_ignores_hidden_costs"
+     },
+     {
+      "id": "profit",
+      "outcome": "correct",
+      "misconception": null
+     },
+     {
+      "id": "sales",
+      "outcome": "misconception",
+      "misconception": "misconception_revenue_vs_profit"
+     },
+     {
+      "id": "unsure",
+      "outcome": "unsure",
+      "misconception": null
+     }
+    ]
+   },
+   "check": {
+    "maxAttempts": 1,
+    "options": [
+     {
+      "id": "up",
+      "outcome": "misconception",
+      "misconception": "misconception_revenue_vs_profit"
+     },
+     {
+      "id": "down",
+      "outcome": "correct",
+      "misconception": null
+     },
+     {
+      "id": "unsure",
+      "outcome": "unsure",
+      "misconception": null
+     }
+    ]
+   }
+  },
+  "stages": {
+   "vegetable": {
+    "assessment_result": {
+     "allowed": [
+      30,
+      40,
+      70,
+      130,
+      200,
+      300,
+      370,
+      500
+     ],
+     "example": {
+      "spoilage": 40,
+      "transport": 30,
+      "sales": 500,
+      "goodsCost": 300,
+      "left": 200,
+      "otherTotal": 70,
+      "profit": 130,
+      "allCosts": 370
+     },
+     "approved": {
+      "en": [
+       "From your answers, it looked like all the sales money was counted as profit. Many sellers think this way. Today we’ll see the difference.",
+       "Sales is all the money customers pay you. Profit is what is left for you after you pay your costs.",
+       "Think of your cash box at night. Part of that money already went to the mandi for vegetables. Only what is left is your profit.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "आपके जवाबों से लगा कि बिक्री का पूरा पैसा मुनाफ़ा माना गया। बहुत-से दुकानदार ऐसा ही सोचते हैं। आज हम दोनों का फ़र्क देखेंगे।",
+       "बिक्री (sales) वह सारा पैसा है जो ग्राहक आपको देते हैं। मुनाफ़ा (profit) वह है जो सारे खर्च चुकाने के बाद आपके लिए बचता है।",
+       "रात को अपने गल्ले के बारे में सोचिए। उसमें से कुछ पैसा मंडी में सब्ज़ी खरीदने में जा चुका है। जो बचता है, वही आपका मुनाफ़ा है।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "మీ జవాబులను బట్టి అమ్మకాల డబ్బంతా లాభంగా లెక్కించినట్లు అనిపించింది. చాలామంది దుకాణదారులు ఇలాగే అనుకుంటారు. ఈ రోజు రెండింటి మధ్య తేడా చూద్దాం.",
+       "కస్టమర్లు మీకు ఇచ్చే మొత్తం డబ్బే అమ్మకాలు (sales). ఖర్చులన్నీ చెల్లించాక మీకు మిగిలేదే లాభం (profit).",
+       "రాత్రి మీ గల్లా పెట్టె గురించి ఆలోచించండి. అందులో కొంత డబ్బు మండీలో కూరగాయలకు ఇప్పటికే పోయింది. మిగిలేదే మీ లాభం.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": null
+    },
+    "intro": {
+     "allowed": [
+      30,
+      40,
+      70,
+      130,
+      200,
+      300,
+      370,
+      500
+     ],
+     "example": {
+      "spoilage": 40,
+      "transport": 30,
+      "sales": 500,
+      "goodsCost": 300,
+      "left": 200,
+      "otherTotal": 70,
+      "profit": 130,
+      "allCosts": 370
+     },
+     "approved": {
+      "en": [
+       "Sales is all the money customers pay you. Profit is what is left for you after you pay your costs.",
+       "Think of your cash box at night. Part of that money already went to the mandi for vegetables. Only what is left is your profit.",
+       "Sales is the full basket. Profit is what stays in the basket after you take out what you paid.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "बिक्री (sales) वह सारा पैसा है जो ग्राहक आपको देते हैं। मुनाफ़ा (profit) वह है जो सारे खर्च चुकाने के बाद आपके लिए बचता है।",
+       "रात को अपने गल्ले के बारे में सोचिए। उसमें से कुछ पैसा मंडी में सब्ज़ी खरीदने में जा चुका है। जो बचता है, वही आपका मुनाफ़ा है।",
+       "बिक्री पूरी टोकरी है। जो खरीदने में दिया, वह निकालने के बाद टोकरी में जो बचे, वही मुनाफ़ा है।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "కస్టమర్లు మీకు ఇచ్చే మొత్తం డబ్బే అమ్మకాలు (sales). ఖర్చులన్నీ చెల్లించాక మీకు మిగిలేదే లాభం (profit).",
+       "రాత్రి మీ గల్లా పెట్టె గురించి ఆలోచించండి. అందులో కొంత డబ్బు మండీలో కూరగాయలకు ఇప్పటికే పోయింది. మిగిలేదే మీ లాభం.",
+       "అమ్మకాలు అంటే నిండు బుట్ట. కొనడానికి పెట్టింది తీసేశాక బుట్టలో మిగిలేదే లాభం.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": null
+    },
+    "example": {
+     "allowed": [
+      30,
+      40,
+      70,
+      130,
+      200,
+      300,
+      370,
+      500
+     ],
+     "example": {
+      "spoilage": 40,
+      "transport": 30,
+      "sales": 500,
+      "goodsCost": 300,
+      "left": 200,
+      "otherTotal": 70,
+      "profit": 130,
+      "allCosts": 370
+     },
+     "approved": {
+      "en": [
+       "You sold vegetables for ₹500. Those vegetables cost you ₹300 at the mandi. After paying for them, ₹200 is left.",
+       "Hold ₹500 in your hand. Give back ₹300 for the vegetables. What stays in your hand is ₹200.",
+       "Other costs make the final profit smaller. Spoiled vegetables cost ₹40 and the auto cost ₹30. So your final profit is ₹130.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "आपने ₹500 की सब्ज़ी बेची। मंडी में उन सब्ज़ियों की कीमत ₹300 थी। उसे चुकाने के बाद ₹200 बचते हैं।",
+       "अपने हाथ में ₹500 रखिए। सब्ज़ी के ₹300 वापस दीजिए। हाथ में जो बचा, वह ₹200 है।",
+       "दूसरे खर्च आख़िरी मुनाफ़े को और कम करते हैं। खराब हुई सब्ज़ी ₹40 की थी और ऑटो का किराया ₹30 था। इसलिए आपका असली मुनाफ़ा ₹130 है।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "మీరు ₹500కి కూరగాయలు అమ్మారు. మండీలో ఆ కూరగాయల ఖరీదు ₹300. అది చెల్లించాక ₹200 మిగులుతుంది.",
+       "మీ చేతిలో ₹500 పట్టుకోండి. కూరగాయల కోసం ₹300 తిరిగి ఇవ్వండి. చేతిలో మిగిలింది ₹200.",
+       "ఇతర ఖర్చులు చివరి లాభాన్ని ఇంకా తగ్గిస్తాయి. పాడైన కూరగాయల విలువ ₹40, ఆటో కిరాయి ₹30. కాబట్టి మీ నిజమైన లాభం ₹130.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": null
+    },
+    "response:asking": {
+     "allowed": [
+      30,
+      40,
+      200,
+      300,
+      500,
+      800
+     ],
+     "example": {
+      "sales": 500,
+      "goodsCost": 300,
+      "spoilage": 40,
+      "transport": 30
+     },
+     "approved": {
+      "en": [
+       "Your sales today were ₹500. The vegetables you sold cost ₹300. How much is left after paying for the vegetables?",
+       "Sales is all the money customers pay you. Profit is what is left for you after you pay your costs.",
+       "Sales is the full basket. Profit is what stays in the basket after you take out what you paid.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "आज आपकी बिक्री ₹500 हुई। बेची गई सब्ज़ी की कीमत ₹300 थी। सब्ज़ी के पैसे चुकाने के बाद कितना बचता है?",
+       "बिक्री (sales) वह सारा पैसा है जो ग्राहक आपको देते हैं। मुनाफ़ा (profit) वह है जो सारे खर्च चुकाने के बाद आपके लिए बचता है।",
+       "बिक्री पूरी टोकरी है। जो खरीदने में दिया, वह निकालने के बाद टोकरी में जो बचे, वही मुनाफ़ा है।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "ఈ రోజు మీ అమ్మకాలు ₹500. అమ్మిన కూరగాయల ఖరీదు ₹300. కూరగాయల డబ్బు చెల్లించాక ఎంత మిగులుతుంది?",
+       "కస్టమర్లు మీకు ఇచ్చే మొత్తం డబ్బే అమ్మకాలు (sales). ఖర్చులన్నీ చెల్లించాక మీకు మిగిలేదే లాభం (profit).",
+       "అమ్మకాలు అంటే నిండు బుట్ట. కొనడానికి పెట్టింది తీసేశాక బుట్టలో మిగిలేదే లాభం.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": {
+      "correct": 200,
+      "others": [
+       500,
+       800
+      ]
+     },
+     "question": {
+      "id": "response",
+      "stem": {
+       "en": "Your sales today were ₹500. The vegetables you sold cost ₹300. How much is left after paying for the vegetables?",
+       "hi": "आज आपकी बिक्री ₹500 हुई। बेची गई सब्ज़ी की कीमत ₹300 थी। सब्ज़ी के पैसे चुकाने के बाद कितना बचता है?",
+       "te": "ఈ రోజు మీ అమ్మకాలు ₹500. అమ్మిన కూరగాయల ఖరీదు ₹300. కూరగాయల డబ్బు చెల్లించాక ఎంత మిగులుతుంది?"
+      },
+      "options": [
+       {
+        "id": "left",
+        "label": {
+         "en": "₹200",
+         "hi": "₹200",
+         "te": "₹200"
+        }
+       },
+       {
+        "id": "sales",
+        "label": {
+         "en": "₹500",
+         "hi": "₹500",
+         "te": "₹500"
+        }
+       },
+       {
+        "id": "added",
+        "label": {
+         "en": "₹800",
+         "hi": "₹800",
+         "te": "₹800"
+        }
+       },
+       {
+        "id": "unsure",
+        "label": {
+         "en": "I’m not sure",
+         "hi": "पता नहीं",
+         "te": "తెలియదు"
+        }
+       }
+      ],
+      "correctOptionId": null
+     }
+    },
+    "response:feedback": {
+     "allowed": [
+      30,
+      40,
+      70,
+      130,
+      200,
+      300,
+      370,
+      500,
+      800
+     ],
+     "example": {
+      "spoilage": 40,
+      "transport": 30,
+      "sales": 500,
+      "goodsCost": 300,
+      "left": 200,
+      "otherTotal": 70,
+      "profit": 130,
+      "allCosts": 370
+     },
+     "approved": {
+      "en": [
+       "Your sales today were ₹500. The vegetables you sold cost ₹300. How much is left after paying for the vegetables?",
+       "Yes! ₹500 − ₹300 = ₹200. That ₹200 is what is left after paying for the goods.",
+       "Many sellers think this. ₹500 is your sales, the money customers gave you. But ₹300 of it paid for the goods. So ₹200 is left.",
+       "Good try. Costs are taken away, not added: ₹500 − ₹300 = ₹200.",
+       "Think of it like this: you have ₹500 and you pay ₹300. You have ₹200 left.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "आज आपकी बिक्री ₹500 हुई। बेची गई सब्ज़ी की कीमत ₹300 थी। सब्ज़ी के पैसे चुकाने के बाद कितना बचता है?",
+       "हाँ, बिल्कुल! ₹500 − ₹300 = ₹200। माल का पैसा चुकाने के बाद यही ₹200 बचता है।",
+       "बहुत-से दुकानदार ऐसा सोचते हैं। ₹500 आपकी बिक्री है, यानी ग्राहकों से मिला पैसा। पर उसमें से ₹300 माल के लिए गए। इसलिए ₹200 बचता है।",
+       "अच्छी कोशिश। खर्च जोड़े नहीं, घटाए जाते हैं: ₹500 − ₹300 = ₹200।",
+       "ऐसे सोचिए: आपके पास ₹500 हैं और आप ₹300 चुकाती हैं। आपके पास ₹200 बचते हैं।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "ఈ రోజు మీ అమ్మకాలు ₹500. అమ్మిన కూరగాయల ఖరీదు ₹300. కూరగాయల డబ్బు చెల్లించాక ఎంత మిగులుతుంది?",
+       "అవును! ₹500 − ₹300 = ₹200. సరుకు డబ్బు చెల్లించాక మిగిలేది ఈ ₹200.",
+       "చాలామంది దుకాణదారులు ఇలాగే అనుకుంటారు. ₹500 మీ అమ్మకాలు, అంటే కస్టమర్లు ఇచ్చిన డబ్బు. కానీ అందులో ₹300 సరుకుకు పోయింది. కాబట్టి ₹200 మిగులుతుంది.",
+       "మంచి ప్రయత్నం. ఖర్చులు కలపకూడదు, తీసేయాలి: ₹500 − ₹300 = ₹200.",
+       "ఇలా ఆలోచించండి: మీ దగ్గర ₹500 ఉంది, మీరు ₹300 చెల్లిస్తారు. మీ దగ్గర ₹200 మిగులుతుంది.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": {
+      "id": "response",
+      "stem": {
+       "en": "Your sales today were ₹500. The vegetables you sold cost ₹300. How much is left after paying for the vegetables?",
+       "hi": "आज आपकी बिक्री ₹500 हुई। बेची गई सब्ज़ी की कीमत ₹300 थी। सब्ज़ी के पैसे चुकाने के बाद कितना बचता है?",
+       "te": "ఈ రోజు మీ అమ్మకాలు ₹500. అమ్మిన కూరగాయల ఖరీదు ₹300. కూరగాయల డబ్బు చెల్లించాక ఎంత మిగులుతుంది?"
+      },
+      "options": [
+       {
+        "id": "left",
+        "label": {
+         "en": "₹200",
+         "hi": "₹200",
+         "te": "₹200"
+        }
+       },
+       {
+        "id": "sales",
+        "label": {
+         "en": "₹500",
+         "hi": "₹500",
+         "te": "₹500"
+        }
+       },
+       {
+        "id": "added",
+        "label": {
+         "en": "₹800",
+         "hi": "₹800",
+         "te": "₹800"
+        }
+       },
+       {
+        "id": "unsure",
+        "label": {
+         "en": "I’m not sure",
+         "hi": "पता नहीं",
+         "te": "తెలియదు"
+        }
+       }
+      ],
+      "correctOptionId": "left"
+     }
+    },
+    "practice:asking": {
+     "allowed": [
+      30,
+      50,
+      270,
+      350,
+      450,
+      800
+     ],
+     "example": {
+      "sales": 800,
+      "goodsCost": 450,
+      "spoilage": 50,
+      "transport": 30
+     },
+     "approved": {
+      "en": [
+       "New day. Sales: ₹800. Vegetables from the mandi: ₹450. Spoiled vegetables: ₹50. Auto fare: ₹30. What is your profit?",
+       "Sales is all the money customers pay you. Profit is what is left for you after you pay your costs.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "नया दिन। बिक्री: ₹800। मंडी की सब्ज़ी: ₹450। खराब सब्ज़ी: ₹50। ऑटो किराया: ₹30। आपका मुनाफ़ा कितना है?",
+       "बिक्री (sales) वह सारा पैसा है जो ग्राहक आपको देते हैं। मुनाफ़ा (profit) वह है जो सारे खर्च चुकाने के बाद आपके लिए बचता है।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "కొత్త రోజు. అమ్మకాలు: ₹800. మండీ కూరగాయలు: ₹450. పాడైన కూరగాయలు: ₹50. ఆటో కిరాయి: ₹30. మీ లాభం ఎంత?",
+       "కస్టమర్లు మీకు ఇచ్చే మొత్తం డబ్బే అమ్మకాలు (sales). ఖర్చులన్నీ చెల్లించాక మీకు మిగిలేదే లాభం (profit).",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": {
+      "correct": 270,
+      "others": [
+       350,
+       800
+      ]
+     },
+     "question": {
+      "id": "practice",
+      "stem": {
+       "en": "New day. Sales: ₹800. Vegetables from the mandi: ₹450. Spoiled vegetables: ₹50. Auto fare: ₹30. What is your profit?",
+       "hi": "नया दिन। बिक्री: ₹800। मंडी की सब्ज़ी: ₹450। खराब सब्ज़ी: ₹50। ऑटो किराया: ₹30। आपका मुनाफ़ा कितना है?",
+       "te": "కొత్త రోజు. అమ్మకాలు: ₹800. మండీ కూరగాయలు: ₹450. పాడైన కూరగాయలు: ₹50. ఆటో కిరాయి: ₹30. మీ లాభం ఎంత?"
+      },
+      "options": [
+       {
+        "id": "goods_only",
+        "label": {
+         "en": "₹350",
+         "hi": "₹350",
+         "te": "₹350"
+        }
+       },
+       {
+        "id": "profit",
+        "label": {
+         "en": "₹270",
+         "hi": "₹270",
+         "te": "₹270"
+        }
+       },
+       {
+        "id": "sales",
+        "label": {
+         "en": "₹800",
+         "hi": "₹800",
+         "te": "₹800"
+        }
+       },
+       {
+        "id": "unsure",
+        "label": {
+         "en": "I’m not sure",
+         "hi": "पता नहीं",
+         "te": "తెలియదు"
+        }
+       }
+      ],
+      "correctOptionId": null
+     }
+    },
+    "practice:feedback": {
+     "allowed": [
+      30,
+      50,
+      80,
+      270,
+      350,
+      450,
+      530,
+      800
+     ],
+     "example": {
+      "spoilage": 50,
+      "transport": 30,
+      "sales": 800,
+      "goodsCost": 450,
+      "left": 350,
+      "otherTotal": 80,
+      "profit": 270,
+      "allCosts": 530
+     },
+     "approved": {
+      "en": [
+       "New day. Sales: ₹800. Vegetables from the mandi: ₹450. Spoiled vegetables: ₹50. Auto fare: ₹30. What is your profit?",
+       "Well done! You took away every cost. Your profit is ₹270.",
+       "Nearly there! You took away the cost of goods. Other costs (₹80) come out too. Profit is ₹270.",
+       "Sales is not profit yet. Take away all the costs: ₹800 − ₹530 = ₹270.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "नया दिन। बिक्री: ₹800। मंडी की सब्ज़ी: ₹450। खराब सब्ज़ी: ₹50। ऑटो किराया: ₹30। आपका मुनाफ़ा कितना है?",
+       "शाबाश! आपने हर खर्च घटाया। आपका मुनाफ़ा ₹270 है।",
+       "बस थोड़ा बाकी! माल का खर्च आपने घटाया। दूसरे खर्च (₹80) भी घटते हैं। मुनाफ़ा ₹270 है।",
+       "बिक्री अभी मुनाफ़ा नहीं है। सारे खर्च घटाइए: ₹800 − ₹530 = ₹270।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "కొత్త రోజు. అమ్మకాలు: ₹800. మండీ కూరగాయలు: ₹450. పాడైన కూరగాయలు: ₹50. ఆటో కిరాయి: ₹30. మీ లాభం ఎంత?",
+       "చాలా బాగుంది! ప్రతి ఖర్చూ తీసేశారు. మీ లాభం ₹270.",
+       "దాదాపు వచ్చేశారు! సరుకు ఖర్చు తీసేశారు. ఇతర ఖర్చులు (₹80) కూడా తీసేయాలి. లాభం ₹270.",
+       "అమ్మకాలు ఇంకా లాభం కాదు. ఖర్చులన్నీ తీసేయండి: ₹800 − ₹530 = ₹270.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": {
+      "id": "practice",
+      "stem": {
+       "en": "New day. Sales: ₹800. Vegetables from the mandi: ₹450. Spoiled vegetables: ₹50. Auto fare: ₹30. What is your profit?",
+       "hi": "नया दिन। बिक्री: ₹800। मंडी की सब्ज़ी: ₹450। खराब सब्ज़ी: ₹50। ऑटो किराया: ₹30। आपका मुनाफ़ा कितना है?",
+       "te": "కొత్త రోజు. అమ్మకాలు: ₹800. మండీ కూరగాయలు: ₹450. పాడైన కూరగాయలు: ₹50. ఆటో కిరాయి: ₹30. మీ లాభం ఎంత?"
+      },
+      "options": [
+       {
+        "id": "goods_only",
+        "label": {
+         "en": "₹350",
+         "hi": "₹350",
+         "te": "₹350"
+        }
+       },
+       {
+        "id": "profit",
+        "label": {
+         "en": "₹270",
+         "hi": "₹270",
+         "te": "₹270"
+        }
+       },
+       {
+        "id": "sales",
+        "label": {
+         "en": "₹800",
+         "hi": "₹800",
+         "te": "₹800"
+        }
+       },
+       {
+        "id": "unsure",
+        "label": {
+         "en": "I’m not sure",
+         "hi": "पता नहीं",
+         "te": "తెలియదు"
+        }
+       }
+      ],
+      "correctOptionId": "profit"
+     }
+    },
+    "check:asking": {
+     "allowed": [
+      300,
+      500,
+      550,
+      700
+     ],
+     "example": {
+      "salesBefore": 500,
+      "costBefore": 300,
+      "salesAfter": 700,
+      "costAfter": 550
+     },
+     "approved": {
+      "en": [
+       "Last week, sales were ₹500 and costs were ₹300. This week, sales are ₹700 and costs are ₹550. Did profit go up?",
+       "Sales is all the money customers pay you. Profit is what is left for you after you pay your costs.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "पिछले हफ़्ते बिक्री ₹500 और खर्च ₹300 था। इस हफ़्ते बिक्री ₹700 और खर्च ₹550 है। क्या मुनाफ़ा बढ़ा?",
+       "बिक्री (sales) वह सारा पैसा है जो ग्राहक आपको देते हैं। मुनाफ़ा (profit) वह है जो सारे खर्च चुकाने के बाद आपके लिए बचता है।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "గత వారం అమ్మకాలు ₹500, ఖర్చులు ₹300. ఈ వారం అమ్మకాలు ₹700, ఖర్చులు ₹550. లాభం పెరిగిందా?",
+       "కస్టమర్లు మీకు ఇచ్చే మొత్తం డబ్బే అమ్మకాలు (sales). ఖర్చులన్నీ చెల్లించాక మీకు మిగిలేదే లాభం (profit).",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": {
+      "id": "check",
+      "stem": {
+       "en": "Last week, sales were ₹500 and costs were ₹300. This week, sales are ₹700 and costs are ₹550. Did profit go up?",
+       "hi": "पिछले हफ़्ते बिक्री ₹500 और खर्च ₹300 था। इस हफ़्ते बिक्री ₹700 और खर्च ₹550 है। क्या मुनाफ़ा बढ़ा?",
+       "te": "గత వారం అమ్మకాలు ₹500, ఖర్చులు ₹300. ఈ వారం అమ్మకాలు ₹700, ఖర్చులు ₹550. లాభం పెరిగిందా?"
+      },
+      "options": [
+       {
+        "id": "up",
+        "label": {
+         "en": "Yes, because sales went up",
+         "hi": "हाँ, क्योंकि बिक्री बढ़ी",
+         "te": "అవును, అమ్మకాలు పెరిగాయి కాబట్టి"
+        }
+       },
+       {
+        "id": "down",
+        "label": {
+         "en": "No, profit went down",
+         "hi": "नहीं, मुनाफ़ा घटा",
+         "te": "లేదు, లాభం తగ్గింది"
+        }
+       },
+       {
+        "id": "unsure",
+        "label": {
+         "en": "I’m not sure",
+         "hi": "पता नहीं",
+         "te": "తెలియదు"
+        }
+       }
+      ],
+      "correctOptionId": null
+     }
+    },
+    "check:feedback": {
+     "allowed": [
+      -50,
+      50,
+      150,
+      200,
+      300,
+      500,
+      550,
+      700
+     ],
+     "example": {
+      "salesBefore": 500,
+      "salesAfter": 700,
+      "costBefore": 300,
+      "costAfter": 550,
+      "profitBefore": 200,
+      "profitAfter": 150,
+      "profitChange": -50
+     },
+     "approved": {
+      "en": [
+       "Last week, sales were ₹500 and costs were ₹300. This week, sales are ₹700 and costs are ₹550. Did profit go up?",
+       "Exactly. Sales went up, but costs went up more. Profit went from ₹200 to ₹150.",
+       "Sales went up, but costs went up even more. Profit went from ₹200 to ₹150. Always look at what is left after costs.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "पिछले हफ़्ते बिक्री ₹500 और खर्च ₹300 था। इस हफ़्ते बिक्री ₹700 और खर्च ₹550 है। क्या मुनाफ़ा बढ़ा?",
+       "बिल्कुल सही। बिक्री बढ़ी, पर खर्च उससे ज़्यादा बढ़ा। मुनाफ़ा ₹200 से घटकर ₹150 हो गया।",
+       "बिक्री बढ़ी, पर खर्च उससे भी ज़्यादा बढ़ा। मुनाफ़ा ₹200 से घटकर ₹150 हो गया। हमेशा देखिए कि खर्च के बाद कितना बचा।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "గత వారం అమ్మకాలు ₹500, ఖర్చులు ₹300. ఈ వారం అమ్మకాలు ₹700, ఖర్చులు ₹550. లాభం పెరిగిందా?",
+       "సరిగ్గా చెప్పారు. అమ్మకాలు పెరిగాయి, కానీ ఖర్చులు ఇంకా ఎక్కువ పెరిగాయి. లాభం ₹200 నుంచి ₹150కి తగ్గింది.",
+       "అమ్మకాలు పెరిగాయి, కానీ ఖర్చులు ఇంకా ఎక్కువ పెరిగాయి. లాభం ₹200 నుంచి ₹150కి తగ్గింది. ఖర్చుల తర్వాత ఎంత మిగిలిందో ఎప్పుడూ చూడండి.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": {
+      "id": "check",
+      "stem": {
+       "en": "Last week, sales were ₹500 and costs were ₹300. This week, sales are ₹700 and costs are ₹550. Did profit go up?",
+       "hi": "पिछले हफ़्ते बिक्री ₹500 और खर्च ₹300 था। इस हफ़्ते बिक्री ₹700 और खर्च ₹550 है। क्या मुनाफ़ा बढ़ा?",
+       "te": "గత వారం అమ్మకాలు ₹500, ఖర్చులు ₹300. ఈ వారం అమ్మకాలు ₹700, ఖర్చులు ₹550. లాభం పెరిగిందా?"
+      },
+      "options": [
+       {
+        "id": "up",
+        "label": {
+         "en": "Yes, because sales went up",
+         "hi": "हाँ, क्योंकि बिक्री बढ़ी",
+         "te": "అవును, అమ్మకాలు పెరిగాయి కాబట్టి"
+        }
+       },
+       {
+        "id": "down",
+        "label": {
+         "en": "No, profit went down",
+         "hi": "नहीं, मुनाफ़ा घटा",
+         "te": "లేదు, లాభం తగ్గింది"
+        }
+       },
+       {
+        "id": "unsure",
+        "label": {
+         "en": "I’m not sure",
+         "hi": "पता नहीं",
+         "te": "తెలియదు"
+        }
+       }
+      ],
+      "correctOptionId": "down"
+     }
+    },
+    "challenge": {
+     "allowed": [
+      30,
+      40,
+      70,
+      130,
+      200,
+      300,
+      370,
+      500
+     ],
+     "example": {
+      "spoilage": 40,
+      "transport": 30,
+      "sales": 500,
+      "goodsCost": 300,
+      "left": 200,
+      "otherTotal": 70,
+      "profit": 130,
+      "allCosts": 370
+     },
+     "approved": {
+      "en": [
+       "On 3 evenings this week: count your sales money, then take away what you paid at the mandi that morning. Notice what is really left.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "इस हफ़्ते 3 शामों को: अपनी बिक्री का पैसा गिनें, फिर उस सुबह मंडी में दिया पैसा घटाएँ। देखें कि असल में कितना बचा।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "ఈ వారం 3 సాయంత్రాలు: మీ అమ్మకాల డబ్బు లెక్కపెట్టండి, ఆ ఉదయం మండీలో ఇచ్చిన డబ్బు తీసేయండి. నిజంగా ఎంత మిగిలిందో చూడండి.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": null
+    }
+   },
+   "tea": {
+    "assessment_result": {
+     "allowed": [
+      60,
+      190,
+      250,
+      350,
+      410,
+      600
+     ],
+     "example": {
+      "fuel": 60,
+      "sales": 600,
+      "goodsCost": 350,
+      "left": 250,
+      "otherTotal": 60,
+      "profit": 190,
+      "allCosts": 410
+     },
+     "approved": {
+      "en": [
+       "From your answers, it looked like all the sales money was counted as profit. Many sellers think this way. Today we’ll see the difference.",
+       "Sales is all the money customers pay you. Profit is what is left for you after you pay your costs.",
+       "Think of your cash box at night. Part of that money paid for milk, tea leaves, sugar and gas. Only what is left is your profit.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "आपके जवाबों से लगा कि बिक्री का पूरा पैसा मुनाफ़ा माना गया। बहुत-से दुकानदार ऐसा ही सोचते हैं। आज हम दोनों का फ़र्क देखेंगे।",
+       "बिक्री (sales) वह सारा पैसा है जो ग्राहक आपको देते हैं। मुनाफ़ा (profit) वह है जो सारे खर्च चुकाने के बाद आपके लिए बचता है।",
+       "रात को अपने गल्ले के बारे में सोचिए। उसमें से कुछ पैसा दूध, चाय पत्ती, चीनी और गैस में जा चुका है। जो बचता है, वही आपका मुनाफ़ा है।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "మీ జవాబులను బట్టి అమ్మకాల డబ్బంతా లాభంగా లెక్కించినట్లు అనిపించింది. చాలామంది దుకాణదారులు ఇలాగే అనుకుంటారు. ఈ రోజు రెండింటి మధ్య తేడా చూద్దాం.",
+       "కస్టమర్లు మీకు ఇచ్చే మొత్తం డబ్బే అమ్మకాలు (sales). ఖర్చులన్నీ చెల్లించాక మీకు మిగిలేదే లాభం (profit).",
+       "రాత్రి మీ గల్లా పెట్టె గురించి ఆలోచించండి. అందులో కొంత డబ్బు పాలు, టీ పొడి, చక్కెర, గ్యాస్‌కు పోయింది. మిగిలేదే మీ లాభం.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": null
+    },
+    "intro": {
+     "allowed": [
+      60,
+      190,
+      250,
+      350,
+      410,
+      600
+     ],
+     "example": {
+      "fuel": 60,
+      "sales": 600,
+      "goodsCost": 350,
+      "left": 250,
+      "otherTotal": 60,
+      "profit": 190,
+      "allCosts": 410
+     },
+     "approved": {
+      "en": [
+       "Sales is all the money customers pay you. Profit is what is left for you after you pay your costs.",
+       "Think of your cash box at night. Part of that money paid for milk, tea leaves, sugar and gas. Only what is left is your profit.",
+       "Sales is the full basket. Profit is what stays in the basket after you take out what you paid.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "बिक्री (sales) वह सारा पैसा है जो ग्राहक आपको देते हैं। मुनाफ़ा (profit) वह है जो सारे खर्च चुकाने के बाद आपके लिए बचता है।",
+       "रात को अपने गल्ले के बारे में सोचिए। उसमें से कुछ पैसा दूध, चाय पत्ती, चीनी और गैस में जा चुका है। जो बचता है, वही आपका मुनाफ़ा है।",
+       "बिक्री पूरी टोकरी है। जो खरीदने में दिया, वह निकालने के बाद टोकरी में जो बचे, वही मुनाफ़ा है।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "కస్టమర్లు మీకు ఇచ్చే మొత్తం డబ్బే అమ్మకాలు (sales). ఖర్చులన్నీ చెల్లించాక మీకు మిగిలేదే లాభం (profit).",
+       "రాత్రి మీ గల్లా పెట్టె గురించి ఆలోచించండి. అందులో కొంత డబ్బు పాలు, టీ పొడి, చక్కెర, గ్యాస్‌కు పోయింది. మిగిలేదే మీ లాభం.",
+       "అమ్మకాలు అంటే నిండు బుట్ట. కొనడానికి పెట్టింది తీసేశాక బుట్టలో మిగిలేదే లాభం.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": null
+    },
+    "example": {
+     "allowed": [
+      60,
+      190,
+      250,
+      350,
+      410,
+      600
+     ],
+     "example": {
+      "fuel": 60,
+      "sales": 600,
+      "goodsCost": 350,
+      "left": 250,
+      "otherTotal": 60,
+      "profit": 190,
+      "allCosts": 410
+     },
+     "approved": {
+      "en": [
+       "You sold tea for ₹600. The milk, tea leaves and sugar for those cups cost ₹350. After paying for them, ₹250 is left.",
+       "Hold ₹600 in your hand. Give back ₹350 for milk, tea leaves and sugar. What stays in your hand is ₹250.",
+       "Other costs make the final profit smaller. Gas for the stove cost ₹60. So your final profit is ₹190.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "आपने ₹600 की चाय बेची। उन कपों के दूध, चाय पत्ती और चीनी पर ₹350 लगे। उसे चुकाने के बाद ₹250 बचते हैं।",
+       "अपने हाथ में ₹600 रखिए। दूध, चाय पत्ती और चीनी के ₹350 वापस दीजिए। हाथ में जो बचा, वह ₹250 है।",
+       "दूसरे खर्च आख़िरी मुनाफ़े को और कम करते हैं। चूल्हे की गैस पर ₹60 लगे। इसलिए आपका असली मुनाफ़ा ₹190 है।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "మీరు ₹600కి టీ అమ్మారు. ఆ కప్పుల పాలు, టీ పొడి, చక్కెరకు ₹350 అయింది. అది చెల్లించాక ₹250 మిగులుతుంది.",
+       "మీ చేతిలో ₹600 పట్టుకోండి. పాలు, టీ పొడి, చక్కెర కోసం ₹350 తిరిగి ఇవ్వండి. చేతిలో మిగిలింది ₹250.",
+       "ఇతర ఖర్చులు చివరి లాభాన్ని ఇంకా తగ్గిస్తాయి. పొయ్యి గ్యాస్‌కు ₹60 అయింది. కాబట్టి మీ నిజమైన లాభం ₹190.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": null
+    },
+    "response:asking": {
+     "allowed": [
+      60,
+      250,
+      350,
+      600,
+      950
+     ],
+     "example": {
+      "sales": 600,
+      "goodsCost": 350,
+      "fuel": 60
+     },
+     "approved": {
+      "en": [
+       "Your tea sales today were ₹600. Milk, tea leaves and sugar cost ₹350. How much is left after paying for them?",
+       "Sales is all the money customers pay you. Profit is what is left for you after you pay your costs.",
+       "Sales is the full basket. Profit is what stays in the basket after you take out what you paid.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "आज चाय की बिक्री ₹600 हुई। दूध, चाय पत्ती और चीनी पर ₹350 लगे। इन्हें चुकाने के बाद कितना बचता है?",
+       "बिक्री (sales) वह सारा पैसा है जो ग्राहक आपको देते हैं। मुनाफ़ा (profit) वह है जो सारे खर्च चुकाने के बाद आपके लिए बचता है।",
+       "बिक्री पूरी टोकरी है। जो खरीदने में दिया, वह निकालने के बाद टोकरी में जो बचे, वही मुनाफ़ा है।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "ఈ రోజు టీ అమ్మకాలు ₹600. పాలు, టీ పొడి, చక్కెరకు ₹350 అయింది. అవి చెల్లించాక ఎంత మిగులుతుంది?",
+       "కస్టమర్లు మీకు ఇచ్చే మొత్తం డబ్బే అమ్మకాలు (sales). ఖర్చులన్నీ చెల్లించాక మీకు మిగిలేదే లాభం (profit).",
+       "అమ్మకాలు అంటే నిండు బుట్ట. కొనడానికి పెట్టింది తీసేశాక బుట్టలో మిగిలేదే లాభం.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": {
+      "correct": 250,
+      "others": [
+       600,
+       950
+      ]
+     },
+     "question": {
+      "id": "response",
+      "stem": {
+       "en": "Your tea sales today were ₹600. Milk, tea leaves and sugar cost ₹350. How much is left after paying for them?",
+       "hi": "आज चाय की बिक्री ₹600 हुई। दूध, चाय पत्ती और चीनी पर ₹350 लगे। इन्हें चुकाने के बाद कितना बचता है?",
+       "te": "ఈ రోజు టీ అమ్మకాలు ₹600. పాలు, టీ పొడి, చక్కెరకు ₹350 అయింది. అవి చెల్లించాక ఎంత మిగులుతుంది?"
+      },
+      "options": [
+       {
+        "id": "left",
+        "label": {
+         "en": "₹250",
+         "hi": "₹250",
+         "te": "₹250"
+        }
+       },
+       {
+        "id": "sales",
+        "label": {
+         "en": "₹600",
+         "hi": "₹600",
+         "te": "₹600"
+        }
+       },
+       {
+        "id": "added",
+        "label": {
+         "en": "₹950",
+         "hi": "₹950",
+         "te": "₹950"
+        }
+       },
+       {
+        "id": "unsure",
+        "label": {
+         "en": "I’m not sure",
+         "hi": "पता नहीं",
+         "te": "తెలియదు"
+        }
+       }
+      ],
+      "correctOptionId": null
+     }
+    },
+    "response:feedback": {
+     "allowed": [
+      60,
+      190,
+      250,
+      350,
+      410,
+      600,
+      950
+     ],
+     "example": {
+      "fuel": 60,
+      "sales": 600,
+      "goodsCost": 350,
+      "left": 250,
+      "otherTotal": 60,
+      "profit": 190,
+      "allCosts": 410
+     },
+     "approved": {
+      "en": [
+       "Your tea sales today were ₹600. Milk, tea leaves and sugar cost ₹350. How much is left after paying for them?",
+       "Yes! ₹600 − ₹350 = ₹250. That ₹250 is what is left after paying for the goods.",
+       "Many sellers think this. ₹600 is your sales, the money customers gave you. But ₹350 of it paid for the goods. So ₹250 is left.",
+       "Good try. Costs are taken away, not added: ₹600 − ₹350 = ₹250.",
+       "Think of it like this: you have ₹600 and you pay ₹350. You have ₹250 left.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "आज चाय की बिक्री ₹600 हुई। दूध, चाय पत्ती और चीनी पर ₹350 लगे। इन्हें चुकाने के बाद कितना बचता है?",
+       "हाँ, बिल्कुल! ₹600 − ₹350 = ₹250। माल का पैसा चुकाने के बाद यही ₹250 बचता है।",
+       "बहुत-से दुकानदार ऐसा सोचते हैं। ₹600 आपकी बिक्री है, यानी ग्राहकों से मिला पैसा। पर उसमें से ₹350 माल के लिए गए। इसलिए ₹250 बचता है।",
+       "अच्छी कोशिश। खर्च जोड़े नहीं, घटाए जाते हैं: ₹600 − ₹350 = ₹250।",
+       "ऐसे सोचिए: आपके पास ₹600 हैं और आप ₹350 चुकाती हैं। आपके पास ₹250 बचते हैं।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "ఈ రోజు టీ అమ్మకాలు ₹600. పాలు, టీ పొడి, చక్కెరకు ₹350 అయింది. అవి చెల్లించాక ఎంత మిగులుతుంది?",
+       "అవును! ₹600 − ₹350 = ₹250. సరుకు డబ్బు చెల్లించాక మిగిలేది ఈ ₹250.",
+       "చాలామంది దుకాణదారులు ఇలాగే అనుకుంటారు. ₹600 మీ అమ్మకాలు, అంటే కస్టమర్లు ఇచ్చిన డబ్బు. కానీ అందులో ₹350 సరుకుకు పోయింది. కాబట్టి ₹250 మిగులుతుంది.",
+       "మంచి ప్రయత్నం. ఖర్చులు కలపకూడదు, తీసేయాలి: ₹600 − ₹350 = ₹250.",
+       "ఇలా ఆలోచించండి: మీ దగ్గర ₹600 ఉంది, మీరు ₹350 చెల్లిస్తారు. మీ దగ్గర ₹250 మిగులుతుంది.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": {
+      "id": "response",
+      "stem": {
+       "en": "Your tea sales today were ₹600. Milk, tea leaves and sugar cost ₹350. How much is left after paying for them?",
+       "hi": "आज चाय की बिक्री ₹600 हुई। दूध, चाय पत्ती और चीनी पर ₹350 लगे। इन्हें चुकाने के बाद कितना बचता है?",
+       "te": "ఈ రోజు టీ అమ్మకాలు ₹600. పాలు, టీ పొడి, చక్కెరకు ₹350 అయింది. అవి చెల్లించాక ఎంత మిగులుతుంది?"
+      },
+      "options": [
+       {
+        "id": "left",
+        "label": {
+         "en": "₹250",
+         "hi": "₹250",
+         "te": "₹250"
+        }
+       },
+       {
+        "id": "sales",
+        "label": {
+         "en": "₹600",
+         "hi": "₹600",
+         "te": "₹600"
+        }
+       },
+       {
+        "id": "added",
+        "label": {
+         "en": "₹950",
+         "hi": "₹950",
+         "te": "₹950"
+        }
+       },
+       {
+        "id": "unsure",
+        "label": {
+         "en": "I’m not sure",
+         "hi": "पता नहीं",
+         "te": "తెలియదు"
+        }
+       }
+      ],
+      "correctOptionId": "left"
+     }
+    },
+    "practice:asking": {
+     "allowed": [
+      80,
+      370,
+      450,
+      900
+     ],
+     "example": {
+      "sales": 900,
+      "goodsCost": 450,
+      "fuel": 80
+     },
+     "approved": {
+      "en": [
+       "New day. Tea sales: ₹900. Milk, tea leaves and sugar: ₹450. Gas: ₹80. What is your profit?",
+       "Sales is all the money customers pay you. Profit is what is left for you after you pay your costs.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "नया दिन। चाय की बिक्री: ₹900। दूध, चाय पत्ती और चीनी: ₹450। गैस: ₹80। आपका मुनाफ़ा कितना है?",
+       "बिक्री (sales) वह सारा पैसा है जो ग्राहक आपको देते हैं। मुनाफ़ा (profit) वह है जो सारे खर्च चुकाने के बाद आपके लिए बचता है।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "కొత్త రోజు. టీ అమ్మకాలు: ₹900. పాలు, టీ పొడి, చక్కెర: ₹450. గ్యాస్: ₹80. మీ లాభం ఎంత?",
+       "కస్టమర్లు మీకు ఇచ్చే మొత్తం డబ్బే అమ్మకాలు (sales). ఖర్చులన్నీ చెల్లించాక మీకు మిగిలేదే లాభం (profit).",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": {
+      "correct": 370,
+      "others": [
+       450,
+       900
+      ]
+     },
+     "question": {
+      "id": "practice",
+      "stem": {
+       "en": "New day. Tea sales: ₹900. Milk, tea leaves and sugar: ₹450. Gas: ₹80. What is your profit?",
+       "hi": "नया दिन। चाय की बिक्री: ₹900। दूध, चाय पत्ती और चीनी: ₹450। गैस: ₹80। आपका मुनाफ़ा कितना है?",
+       "te": "కొత్త రోజు. టీ అమ్మకాలు: ₹900. పాలు, టీ పొడి, చక్కెర: ₹450. గ్యాస్: ₹80. మీ లాభం ఎంత?"
+      },
+      "options": [
+       {
+        "id": "goods_only",
+        "label": {
+         "en": "₹450",
+         "hi": "₹450",
+         "te": "₹450"
+        }
+       },
+       {
+        "id": "profit",
+        "label": {
+         "en": "₹370",
+         "hi": "₹370",
+         "te": "₹370"
+        }
+       },
+       {
+        "id": "sales",
+        "label": {
+         "en": "₹900",
+         "hi": "₹900",
+         "te": "₹900"
+        }
+       },
+       {
+        "id": "unsure",
+        "label": {
+         "en": "I’m not sure",
+         "hi": "पता नहीं",
+         "te": "తెలియదు"
+        }
+       }
+      ],
+      "correctOptionId": null
+     }
+    },
+    "practice:feedback": {
+     "allowed": [
+      80,
+      370,
+      450,
+      530,
+      900
+     ],
+     "example": {
+      "fuel": 80,
+      "sales": 900,
+      "goodsCost": 450,
+      "left": 450,
+      "otherTotal": 80,
+      "profit": 370,
+      "allCosts": 530
+     },
+     "approved": {
+      "en": [
+       "New day. Tea sales: ₹900. Milk, tea leaves and sugar: ₹450. Gas: ₹80. What is your profit?",
+       "Well done! You took away every cost. Your profit is ₹370.",
+       "Nearly there! You took away the cost of goods. Other costs (₹80) come out too. Profit is ₹370.",
+       "Sales is not profit yet. Take away all the costs: ₹900 − ₹530 = ₹370.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "नया दिन। चाय की बिक्री: ₹900। दूध, चाय पत्ती और चीनी: ₹450। गैस: ₹80। आपका मुनाफ़ा कितना है?",
+       "शाबाश! आपने हर खर्च घटाया। आपका मुनाफ़ा ₹370 है।",
+       "बस थोड़ा बाकी! माल का खर्च आपने घटाया। दूसरे खर्च (₹80) भी घटते हैं। मुनाफ़ा ₹370 है।",
+       "बिक्री अभी मुनाफ़ा नहीं है। सारे खर्च घटाइए: ₹900 − ₹530 = ₹370।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "కొత్త రోజు. టీ అమ్మకాలు: ₹900. పాలు, టీ పొడి, చక్కెర: ₹450. గ్యాస్: ₹80. మీ లాభం ఎంత?",
+       "చాలా బాగుంది! ప్రతి ఖర్చూ తీసేశారు. మీ లాభం ₹370.",
+       "దాదాపు వచ్చేశారు! సరుకు ఖర్చు తీసేశారు. ఇతర ఖర్చులు (₹80) కూడా తీసేయాలి. లాభం ₹370.",
+       "అమ్మకాలు ఇంకా లాభం కాదు. ఖర్చులన్నీ తీసేయండి: ₹900 − ₹530 = ₹370.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": {
+      "id": "practice",
+      "stem": {
+       "en": "New day. Tea sales: ₹900. Milk, tea leaves and sugar: ₹450. Gas: ₹80. What is your profit?",
+       "hi": "नया दिन। चाय की बिक्री: ₹900। दूध, चाय पत्ती और चीनी: ₹450। गैस: ₹80। आपका मुनाफ़ा कितना है?",
+       "te": "కొత్త రోజు. టీ అమ్మకాలు: ₹900. పాలు, టీ పొడి, చక్కెర: ₹450. గ్యాస్: ₹80. మీ లాభం ఎంత?"
+      },
+      "options": [
+       {
+        "id": "goods_only",
+        "label": {
+         "en": "₹450",
+         "hi": "₹450",
+         "te": "₹450"
+        }
+       },
+       {
+        "id": "profit",
+        "label": {
+         "en": "₹370",
+         "hi": "₹370",
+         "te": "₹370"
+        }
+       },
+       {
+        "id": "sales",
+        "label": {
+         "en": "₹900",
+         "hi": "₹900",
+         "te": "₹900"
+        }
+       },
+       {
+        "id": "unsure",
+        "label": {
+         "en": "I’m not sure",
+         "hi": "पता नहीं",
+         "te": "తెలియదు"
+        }
+       }
+      ],
+      "correctOptionId": "profit"
+     }
+    },
+    "check:asking": {
+     "allowed": [
+      350,
+      600,
+      800
+     ],
+     "example": {
+      "salesBefore": 600,
+      "costBefore": 350,
+      "salesAfter": 800,
+      "costAfter": 600
+     },
+     "approved": {
+      "en": [
+       "Last week, sales were ₹600 and costs were ₹350. This week, sales are ₹800 and costs are ₹600. Did profit go up?",
+       "Sales is all the money customers pay you. Profit is what is left for you after you pay your costs.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "पिछले हफ़्ते बिक्री ₹600 और खर्च ₹350 था। इस हफ़्ते बिक्री ₹800 और खर्च ₹600 है। क्या मुनाफ़ा बढ़ा?",
+       "बिक्री (sales) वह सारा पैसा है जो ग्राहक आपको देते हैं। मुनाफ़ा (profit) वह है जो सारे खर्च चुकाने के बाद आपके लिए बचता है।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "గత వారం అమ్మకాలు ₹600, ఖర్చులు ₹350. ఈ వారం అమ్మకాలు ₹800, ఖర్చులు ₹600. లాభం పెరిగిందా?",
+       "కస్టమర్లు మీకు ఇచ్చే మొత్తం డబ్బే అమ్మకాలు (sales). ఖర్చులన్నీ చెల్లించాక మీకు మిగిలేదే లాభం (profit).",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": {
+      "id": "check",
+      "stem": {
+       "en": "Last week, sales were ₹600 and costs were ₹350. This week, sales are ₹800 and costs are ₹600. Did profit go up?",
+       "hi": "पिछले हफ़्ते बिक्री ₹600 और खर्च ₹350 था। इस हफ़्ते बिक्री ₹800 और खर्च ₹600 है। क्या मुनाफ़ा बढ़ा?",
+       "te": "గత వారం అమ్మకాలు ₹600, ఖర్చులు ₹350. ఈ వారం అమ్మకాలు ₹800, ఖర్చులు ₹600. లాభం పెరిగిందా?"
+      },
+      "options": [
+       {
+        "id": "up",
+        "label": {
+         "en": "Yes, because sales went up",
+         "hi": "हाँ, क्योंकि बिक्री बढ़ी",
+         "te": "అవును, అమ్మకాలు పెరిగాయి కాబట్టి"
+        }
+       },
+       {
+        "id": "down",
+        "label": {
+         "en": "No, profit went down",
+         "hi": "नहीं, मुनाफ़ा घटा",
+         "te": "లేదు, లాభం తగ్గింది"
+        }
+       },
+       {
+        "id": "unsure",
+        "label": {
+         "en": "I’m not sure",
+         "hi": "पता नहीं",
+         "te": "తెలియదు"
+        }
+       }
+      ],
+      "correctOptionId": null
+     }
+    },
+    "check:feedback": {
+     "allowed": [
+      -50,
+      50,
+      200,
+      250,
+      350,
+      600,
+      800
+     ],
+     "example": {
+      "salesBefore": 600,
+      "salesAfter": 800,
+      "costBefore": 350,
+      "costAfter": 600,
+      "profitBefore": 250,
+      "profitAfter": 200,
+      "profitChange": -50
+     },
+     "approved": {
+      "en": [
+       "Last week, sales were ₹600 and costs were ₹350. This week, sales are ₹800 and costs are ₹600. Did profit go up?",
+       "Exactly. Sales went up, but costs went up more. Profit went from ₹250 to ₹200.",
+       "Sales went up, but costs went up even more. Profit went from ₹250 to ₹200. Always look at what is left after costs.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "पिछले हफ़्ते बिक्री ₹600 और खर्च ₹350 था। इस हफ़्ते बिक्री ₹800 और खर्च ₹600 है। क्या मुनाफ़ा बढ़ा?",
+       "बिल्कुल सही। बिक्री बढ़ी, पर खर्च उससे ज़्यादा बढ़ा। मुनाफ़ा ₹250 से घटकर ₹200 हो गया।",
+       "बिक्री बढ़ी, पर खर्च उससे भी ज़्यादा बढ़ा। मुनाफ़ा ₹250 से घटकर ₹200 हो गया। हमेशा देखिए कि खर्च के बाद कितना बचा।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "గత వారం అమ్మకాలు ₹600, ఖర్చులు ₹350. ఈ వారం అమ్మకాలు ₹800, ఖర్చులు ₹600. లాభం పెరిగిందా?",
+       "సరిగ్గా చెప్పారు. అమ్మకాలు పెరిగాయి, కానీ ఖర్చులు ఇంకా ఎక్కువ పెరిగాయి. లాభం ₹250 నుంచి ₹200కి తగ్గింది.",
+       "అమ్మకాలు పెరిగాయి, కానీ ఖర్చులు ఇంకా ఎక్కువ పెరిగాయి. లాభం ₹250 నుంచి ₹200కి తగ్గింది. ఖర్చుల తర్వాత ఎంత మిగిలిందో ఎప్పుడూ చూడండి.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": {
+      "id": "check",
+      "stem": {
+       "en": "Last week, sales were ₹600 and costs were ₹350. This week, sales are ₹800 and costs are ₹600. Did profit go up?",
+       "hi": "पिछले हफ़्ते बिक्री ₹600 और खर्च ₹350 था। इस हफ़्ते बिक्री ₹800 और खर्च ₹600 है। क्या मुनाफ़ा बढ़ा?",
+       "te": "గత వారం అమ్మకాలు ₹600, ఖర్చులు ₹350. ఈ వారం అమ్మకాలు ₹800, ఖర్చులు ₹600. లాభం పెరిగిందా?"
+      },
+      "options": [
+       {
+        "id": "up",
+        "label": {
+         "en": "Yes, because sales went up",
+         "hi": "हाँ, क्योंकि बिक्री बढ़ी",
+         "te": "అవును, అమ్మకాలు పెరిగాయి కాబట్టి"
+        }
+       },
+       {
+        "id": "down",
+        "label": {
+         "en": "No, profit went down",
+         "hi": "नहीं, मुनाफ़ा घटा",
+         "te": "లేదు, లాభం తగ్గింది"
+        }
+       },
+       {
+        "id": "unsure",
+        "label": {
+         "en": "I’m not sure",
+         "hi": "पता नहीं",
+         "te": "తెలియదు"
+        }
+       }
+      ],
+      "correctOptionId": "down"
+     }
+    },
+    "challenge": {
+     "allowed": [
+      60,
+      190,
+      250,
+      350,
+      410,
+      600
+     ],
+     "example": {
+      "fuel": 60,
+      "sales": 600,
+      "goodsCost": 350,
+      "left": 250,
+      "otherTotal": 60,
+      "profit": 190,
+      "allCosts": 410
+     },
+     "approved": {
+      "en": [
+       "On 3 evenings this week: count your tea sales, then take away what you spent on milk, tea leaves, sugar and gas that day. Notice what is really left.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "इस हफ़्ते 3 शामों को: चाय की बिक्री गिनें, फिर उस दिन दूध, चाय पत्ती, चीनी और गैस पर लगा पैसा घटाएँ। देखें कि असल में कितना बचा।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "ఈ వారం 3 సాయంత్రాలు: టీ అమ్మకాలు లెక్కపెట్టండి, ఆ రోజు పాలు, టీ పొడి, చక్కెర, గ్యాస్‌కు అయిన డబ్బు తీసేయండి. నిజంగా ఎంత మిగిలిందో చూడండి.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": null
+    }
+   },
+   "grocery": {
+    "assessment_result": {
+     "allowed": [
+      50,
+      200,
+      250,
+      300,
+      1200,
+      1250,
+      1300,
+      1500
+     ],
+     "example": {
+      "bags": 50,
+      "sales": 1500,
+      "goodsCost": 1200,
+      "left": 300,
+      "otherTotal": 50,
+      "profit": 250,
+      "allCosts": 1250,
+      "credit": 200,
+      "cashInBox": 1300
+     },
+     "approved": {
+      "en": [
+       "From your answers, it looked like all the sales money was counted as profit. Many sellers think this way. Today we’ll see the difference.",
+       "Sales is all the money customers pay you. Profit is what is left for you after you pay your costs.",
+       "Think of your cash box at night. Part of that money pays for the stock you sold. Only what is left is your profit.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "आपके जवाबों से लगा कि बिक्री का पूरा पैसा मुनाफ़ा माना गया। बहुत-से दुकानदार ऐसा ही सोचते हैं। आज हम दोनों का फ़र्क देखेंगे।",
+       "बिक्री (sales) वह सारा पैसा है जो ग्राहक आपको देते हैं। मुनाफ़ा (profit) वह है जो सारे खर्च चुकाने के बाद आपके लिए बचता है।",
+       "रात को अपने गल्ले के बारे में सोचिए। उसमें से कुछ पैसा बेचे गए माल की कीमत का है। जो बचता है, वही आपका मुनाफ़ा है।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "మీ జవాబులను బట్టి అమ్మకాల డబ్బంతా లాభంగా లెక్కించినట్లు అనిపించింది. చాలామంది దుకాణదారులు ఇలాగే అనుకుంటారు. ఈ రోజు రెండింటి మధ్య తేడా చూద్దాం.",
+       "కస్టమర్లు మీకు ఇచ్చే మొత్తం డబ్బే అమ్మకాలు (sales). ఖర్చులన్నీ చెల్లించాక మీకు మిగిలేదే లాభం (profit).",
+       "రాత్రి మీ గల్లా పెట్టె గురించి ఆలోచించండి. అందులో కొంత డబ్బు అమ్మిన సరుకు ఖరీదు. మిగిలేదే మీ లాభం.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": null
+    },
+    "intro": {
+     "allowed": [
+      50,
+      200,
+      250,
+      300,
+      1200,
+      1250,
+      1300,
+      1500
+     ],
+     "example": {
+      "bags": 50,
+      "sales": 1500,
+      "goodsCost": 1200,
+      "left": 300,
+      "otherTotal": 50,
+      "profit": 250,
+      "allCosts": 1250,
+      "credit": 200,
+      "cashInBox": 1300
+     },
+     "approved": {
+      "en": [
+       "Sales is all the money customers pay you. Profit is what is left for you after you pay your costs.",
+       "Think of your cash box at night. Part of that money pays for the stock you sold. Only what is left is your profit.",
+       "Sales is the full basket. Profit is what stays in the basket after you take out what you paid.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "बिक्री (sales) वह सारा पैसा है जो ग्राहक आपको देते हैं। मुनाफ़ा (profit) वह है जो सारे खर्च चुकाने के बाद आपके लिए बचता है।",
+       "रात को अपने गल्ले के बारे में सोचिए। उसमें से कुछ पैसा बेचे गए माल की कीमत का है। जो बचता है, वही आपका मुनाफ़ा है।",
+       "बिक्री पूरी टोकरी है। जो खरीदने में दिया, वह निकालने के बाद टोकरी में जो बचे, वही मुनाफ़ा है।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "కస్టమర్లు మీకు ఇచ్చే మొత్తం డబ్బే అమ్మకాలు (sales). ఖర్చులన్నీ చెల్లించాక మీకు మిగిలేదే లాభం (profit).",
+       "రాత్రి మీ గల్లా పెట్టె గురించి ఆలోచించండి. అందులో కొంత డబ్బు అమ్మిన సరుకు ఖరీదు. మిగిలేదే మీ లాభం.",
+       "అమ్మకాలు అంటే నిండు బుట్ట. కొనడానికి పెట్టింది తీసేశాక బుట్టలో మిగిలేదే లాభం.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": null
+    },
+    "example": {
+     "allowed": [
+      50,
+      200,
+      250,
+      300,
+      1200,
+      1250,
+      1300,
+      1500
+     ],
+     "example": {
+      "bags": 50,
+      "sales": 1500,
+      "goodsCost": 1200,
+      "left": 300,
+      "otherTotal": 50,
+      "profit": 250,
+      "allCosts": 1250,
+      "credit": 200,
+      "cashInBox": 1300
+     },
+     "approved": {
+      "en": [
+       "Today’s sales were ₹1,500. The stock you sold had cost you ₹1,200. After paying for that stock, ₹300 is left.",
+       "Hold ₹1,500 in your hand. Give back ₹1,200 for the stock you sold. What stays in your hand is ₹300.",
+       "Other costs make the final profit smaller. Bags and transport cost ₹50. So your final profit is ₹250.",
+       "Also remember: ₹200 of today’s sales were on udhaar. That money is not in your box until the customer pays.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "आज की बिक्री ₹1,500 हुई। बेचे गए माल की कीमत ₹1,200 थी। उसे चुकाने के बाद ₹300 बचते हैं।",
+       "अपने हाथ में ₹1,500 रखिए। बेचे गए माल के ₹1,200 वापस दीजिए। हाथ में जो बचा, वह ₹300 है।",
+       "दूसरे खर्च आख़िरी मुनाफ़े को और कम करते हैं। थैलियों और ढुलाई पर ₹50 लगे। इसलिए आपका असली मुनाफ़ा ₹250 है।",
+       "यह भी याद रखें: आज की बिक्री में से ₹200 उधार पर था। ग्राहक के पैसे देने तक वह पैसा गल्ले में नहीं है।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "ఈ రోజు అమ్మకాలు ₹1,500. అమ్మిన సరుకు ఖరీదు ₹1,200. అది చెల్లించాక ₹300 మిగులుతుంది.",
+       "మీ చేతిలో ₹1,500 పట్టుకోండి. అమ్మిన సరుకు కోసం ₹1,200 తిరిగి ఇవ్వండి. చేతిలో మిగిలింది ₹300.",
+       "ఇతర ఖర్చులు చివరి లాభాన్ని ఇంకా తగ్గిస్తాయి. సంచులు, రవాణాకు ₹50 అయింది. కాబట్టి మీ నిజమైన లాభం ₹250.",
+       "ఇది కూడా గుర్తుంచుకోండి: ఈ రోజు అమ్మకాల్లో ₹200 అప్పుగా ఇచ్చారు. కస్టమర్ చెల్లించే వరకు ఆ డబ్బు గల్లాలో ఉండదు.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": null
+    },
+    "response:asking": {
+     "allowed": [
+      50,
+      300,
+      1200,
+      1500,
+      2700
+     ],
+     "example": {
+      "sales": 1500,
+      "goodsCost": 1200,
+      "bags": 50
+     },
+     "approved": {
+      "en": [
+       "Your sales today were ₹1,500. The stock you sold cost ₹1,200. How much is left after paying for that stock?",
+       "Sales is all the money customers pay you. Profit is what is left for you after you pay your costs.",
+       "Sales is the full basket. Profit is what stays in the basket after you take out what you paid.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "आज आपकी बिक्री ₹1,500 हुई। बेचे गए माल की कीमत ₹1,200 थी। माल के पैसे चुकाने के बाद कितना बचता है?",
+       "बिक्री (sales) वह सारा पैसा है जो ग्राहक आपको देते हैं। मुनाफ़ा (profit) वह है जो सारे खर्च चुकाने के बाद आपके लिए बचता है।",
+       "बिक्री पूरी टोकरी है। जो खरीदने में दिया, वह निकालने के बाद टोकरी में जो बचे, वही मुनाफ़ा है।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "ఈ రోజు మీ అమ్మకాలు ₹1,500. అమ్మిన సరుకు ఖరీదు ₹1,200. సరుకు డబ్బు చెల్లించాక ఎంత మిగులుతుంది?",
+       "కస్టమర్లు మీకు ఇచ్చే మొత్తం డబ్బే అమ్మకాలు (sales). ఖర్చులన్నీ చెల్లించాక మీకు మిగిలేదే లాభం (profit).",
+       "అమ్మకాలు అంటే నిండు బుట్ట. కొనడానికి పెట్టింది తీసేశాక బుట్టలో మిగిలేదే లాభం.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": {
+      "correct": 300,
+      "others": [
+       1500,
+       2700
+      ]
+     },
+     "question": {
+      "id": "response",
+      "stem": {
+       "en": "Your sales today were ₹1,500. The stock you sold cost ₹1,200. How much is left after paying for that stock?",
+       "hi": "आज आपकी बिक्री ₹1,500 हुई। बेचे गए माल की कीमत ₹1,200 थी। माल के पैसे चुकाने के बाद कितना बचता है?",
+       "te": "ఈ రోజు మీ అమ్మకాలు ₹1,500. అమ్మిన సరుకు ఖరీదు ₹1,200. సరుకు డబ్బు చెల్లించాక ఎంత మిగులుతుంది?"
+      },
+      "options": [
+       {
+        "id": "left",
+        "label": {
+         "en": "₹300",
+         "hi": "₹300",
+         "te": "₹300"
+        }
+       },
+       {
+        "id": "sales",
+        "label": {
+         "en": "₹1,500",
+         "hi": "₹1,500",
+         "te": "₹1,500"
+        }
+       },
+       {
+        "id": "added",
+        "label": {
+         "en": "₹2,700",
+         "hi": "₹2,700",
+         "te": "₹2,700"
+        }
+       },
+       {
+        "id": "unsure",
+        "label": {
+         "en": "I’m not sure",
+         "hi": "पता नहीं",
+         "te": "తెలియదు"
+        }
+       }
+      ],
+      "correctOptionId": null
+     }
+    },
+    "response:feedback": {
+     "allowed": [
+      50,
+      200,
+      250,
+      300,
+      1200,
+      1250,
+      1300,
+      1500,
+      2700
+     ],
+     "example": {
+      "bags": 50,
+      "sales": 1500,
+      "goodsCost": 1200,
+      "left": 300,
+      "otherTotal": 50,
+      "profit": 250,
+      "allCosts": 1250,
+      "credit": 200,
+      "cashInBox": 1300
+     },
+     "approved": {
+      "en": [
+       "Your sales today were ₹1,500. The stock you sold cost ₹1,200. How much is left after paying for that stock?",
+       "Yes! ₹1,500 − ₹1,200 = ₹300. That ₹300 is what is left after paying for the goods.",
+       "Many sellers think this. ₹1,500 is your sales, the money customers gave you. But ₹1,200 of it paid for the goods. So ₹300 is left.",
+       "Good try. Costs are taken away, not added: ₹1,500 − ₹1,200 = ₹300.",
+       "Think of it like this: you have ₹1,500 and you pay ₹1,200. You have ₹300 left.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "आज आपकी बिक्री ₹1,500 हुई। बेचे गए माल की कीमत ₹1,200 थी। माल के पैसे चुकाने के बाद कितना बचता है?",
+       "हाँ, बिल्कुल! ₹1,500 − ₹1,200 = ₹300। माल का पैसा चुकाने के बाद यही ₹300 बचता है।",
+       "बहुत-से दुकानदार ऐसा सोचते हैं। ₹1,500 आपकी बिक्री है, यानी ग्राहकों से मिला पैसा। पर उसमें से ₹1,200 माल के लिए गए। इसलिए ₹300 बचता है।",
+       "अच्छी कोशिश। खर्च जोड़े नहीं, घटाए जाते हैं: ₹1,500 − ₹1,200 = ₹300।",
+       "ऐसे सोचिए: आपके पास ₹1,500 हैं और आप ₹1,200 चुकाती हैं। आपके पास ₹300 बचते हैं।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "ఈ రోజు మీ అమ్మకాలు ₹1,500. అమ్మిన సరుకు ఖరీదు ₹1,200. సరుకు డబ్బు చెల్లించాక ఎంత మిగులుతుంది?",
+       "అవును! ₹1,500 − ₹1,200 = ₹300. సరుకు డబ్బు చెల్లించాక మిగిలేది ఈ ₹300.",
+       "చాలామంది దుకాణదారులు ఇలాగే అనుకుంటారు. ₹1,500 మీ అమ్మకాలు, అంటే కస్టమర్లు ఇచ్చిన డబ్బు. కానీ అందులో ₹1,200 సరుకుకు పోయింది. కాబట్టి ₹300 మిగులుతుంది.",
+       "మంచి ప్రయత్నం. ఖర్చులు కలపకూడదు, తీసేయాలి: ₹1,500 − ₹1,200 = ₹300.",
+       "ఇలా ఆలోచించండి: మీ దగ్గర ₹1,500 ఉంది, మీరు ₹1,200 చెల్లిస్తారు. మీ దగ్గర ₹300 మిగులుతుంది.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": {
+      "id": "response",
+      "stem": {
+       "en": "Your sales today were ₹1,500. The stock you sold cost ₹1,200. How much is left after paying for that stock?",
+       "hi": "आज आपकी बिक्री ₹1,500 हुई। बेचे गए माल की कीमत ₹1,200 थी। माल के पैसे चुकाने के बाद कितना बचता है?",
+       "te": "ఈ రోజు మీ అమ్మకాలు ₹1,500. అమ్మిన సరుకు ఖరీదు ₹1,200. సరుకు డబ్బు చెల్లించాక ఎంత మిగులుతుంది?"
+      },
+      "options": [
+       {
+        "id": "left",
+        "label": {
+         "en": "₹300",
+         "hi": "₹300",
+         "te": "₹300"
+        }
+       },
+       {
+        "id": "sales",
+        "label": {
+         "en": "₹1,500",
+         "hi": "₹1,500",
+         "te": "₹1,500"
+        }
+       },
+       {
+        "id": "added",
+        "label": {
+         "en": "₹2,700",
+         "hi": "₹2,700",
+         "te": "₹2,700"
+        }
+       },
+       {
+        "id": "unsure",
+        "label": {
+         "en": "I’m not sure",
+         "hi": "पता नहीं",
+         "te": "తెలియదు"
+        }
+       }
+      ],
+      "correctOptionId": "left"
+     }
+    },
+    "practice:asking": {
+     "allowed": [
+      100,
+      400,
+      500,
+      1500,
+      2000
+     ],
+     "example": {
+      "sales": 2000,
+      "goodsCost": 1500,
+      "bags": 100
+     },
+     "approved": {
+      "en": [
+       "New day. Sales: ₹2,000. Stock you sold: ₹1,500. Bags and transport: ₹100. What is your profit?",
+       "Sales is all the money customers pay you. Profit is what is left for you after you pay your costs.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "नया दिन। बिक्री: ₹2,000। बेचा गया माल: ₹1,500। थैलियाँ और ढुलाई: ₹100। आपका मुनाफ़ा कितना है?",
+       "बिक्री (sales) वह सारा पैसा है जो ग्राहक आपको देते हैं। मुनाफ़ा (profit) वह है जो सारे खर्च चुकाने के बाद आपके लिए बचता है।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "కొత్త రోజు. అమ్మకాలు: ₹2,000. అమ్మిన సరుకు: ₹1,500. సంచులు, రవాణా: ₹100. మీ లాభం ఎంత?",
+       "కస్టమర్లు మీకు ఇచ్చే మొత్తం డబ్బే అమ్మకాలు (sales). ఖర్చులన్నీ చెల్లించాక మీకు మిగిలేదే లాభం (profit).",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": {
+      "correct": 400,
+      "others": [
+       500,
+       2000
+      ]
+     },
+     "question": {
+      "id": "practice",
+      "stem": {
+       "en": "New day. Sales: ₹2,000. Stock you sold: ₹1,500. Bags and transport: ₹100. What is your profit?",
+       "hi": "नया दिन। बिक्री: ₹2,000। बेचा गया माल: ₹1,500। थैलियाँ और ढुलाई: ₹100। आपका मुनाफ़ा कितना है?",
+       "te": "కొత్త రోజు. అమ్మకాలు: ₹2,000. అమ్మిన సరుకు: ₹1,500. సంచులు, రవాణా: ₹100. మీ లాభం ఎంత?"
+      },
+      "options": [
+       {
+        "id": "goods_only",
+        "label": {
+         "en": "₹500",
+         "hi": "₹500",
+         "te": "₹500"
+        }
+       },
+       {
+        "id": "profit",
+        "label": {
+         "en": "₹400",
+         "hi": "₹400",
+         "te": "₹400"
+        }
+       },
+       {
+        "id": "sales",
+        "label": {
+         "en": "₹2,000",
+         "hi": "₹2,000",
+         "te": "₹2,000"
+        }
+       },
+       {
+        "id": "unsure",
+        "label": {
+         "en": "I’m not sure",
+         "hi": "पता नहीं",
+         "te": "తెలియదు"
+        }
+       }
+      ],
+      "correctOptionId": null
+     }
+    },
+    "practice:feedback": {
+     "allowed": [
+      100,
+      400,
+      500,
+      1500,
+      1600,
+      2000
+     ],
+     "example": {
+      "bags": 100,
+      "sales": 2000,
+      "goodsCost": 1500,
+      "left": 500,
+      "otherTotal": 100,
+      "profit": 400,
+      "allCosts": 1600
+     },
+     "approved": {
+      "en": [
+       "New day. Sales: ₹2,000. Stock you sold: ₹1,500. Bags and transport: ₹100. What is your profit?",
+       "Well done! You took away every cost. Your profit is ₹400.",
+       "Nearly there! You took away the cost of goods. Other costs (₹100) come out too. Profit is ₹400.",
+       "Sales is not profit yet. Take away all the costs: ₹2,000 − ₹1,600 = ₹400.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "नया दिन। बिक्री: ₹2,000। बेचा गया माल: ₹1,500। थैलियाँ और ढुलाई: ₹100। आपका मुनाफ़ा कितना है?",
+       "शाबाश! आपने हर खर्च घटाया। आपका मुनाफ़ा ₹400 है।",
+       "बस थोड़ा बाकी! माल का खर्च आपने घटाया। दूसरे खर्च (₹100) भी घटते हैं। मुनाफ़ा ₹400 है।",
+       "बिक्री अभी मुनाफ़ा नहीं है। सारे खर्च घटाइए: ₹2,000 − ₹1,600 = ₹400।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "కొత్త రోజు. అమ్మకాలు: ₹2,000. అమ్మిన సరుకు: ₹1,500. సంచులు, రవాణా: ₹100. మీ లాభం ఎంత?",
+       "చాలా బాగుంది! ప్రతి ఖర్చూ తీసేశారు. మీ లాభం ₹400.",
+       "దాదాపు వచ్చేశారు! సరుకు ఖర్చు తీసేశారు. ఇతర ఖర్చులు (₹100) కూడా తీసేయాలి. లాభం ₹400.",
+       "అమ్మకాలు ఇంకా లాభం కాదు. ఖర్చులన్నీ తీసేయండి: ₹2,000 − ₹1,600 = ₹400.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": {
+      "id": "practice",
+      "stem": {
+       "en": "New day. Sales: ₹2,000. Stock you sold: ₹1,500. Bags and transport: ₹100. What is your profit?",
+       "hi": "नया दिन। बिक्री: ₹2,000। बेचा गया माल: ₹1,500। थैलियाँ और ढुलाई: ₹100। आपका मुनाफ़ा कितना है?",
+       "te": "కొత్త రోజు. అమ్మకాలు: ₹2,000. అమ్మిన సరుకు: ₹1,500. సంచులు, రవాణా: ₹100. మీ లాభం ఎంత?"
+      },
+      "options": [
+       {
+        "id": "goods_only",
+        "label": {
+         "en": "₹500",
+         "hi": "₹500",
+         "te": "₹500"
+        }
+       },
+       {
+        "id": "profit",
+        "label": {
+         "en": "₹400",
+         "hi": "₹400",
+         "te": "₹400"
+        }
+       },
+       {
+        "id": "sales",
+        "label": {
+         "en": "₹2,000",
+         "hi": "₹2,000",
+         "te": "₹2,000"
+        }
+       },
+       {
+        "id": "unsure",
+        "label": {
+         "en": "I’m not sure",
+         "hi": "पता नहीं",
+         "te": "తెలియదు"
+        }
+       }
+      ],
+      "correctOptionId": "profit"
+     }
+    },
+    "check:asking": {
+     "allowed": [
+      1200,
+      1500,
+      1550,
+      1800
+     ],
+     "example": {
+      "salesBefore": 1500,
+      "costBefore": 1200,
+      "salesAfter": 1800,
+      "costAfter": 1550
+     },
+     "approved": {
+      "en": [
+       "Last week, sales were ₹1,500 and costs were ₹1,200. This week, sales are ₹1,800 and costs are ₹1,550. Did profit go up?",
+       "Sales is all the money customers pay you. Profit is what is left for you after you pay your costs.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "पिछले हफ़्ते बिक्री ₹1,500 और खर्च ₹1,200 था। इस हफ़्ते बिक्री ₹1,800 और खर्च ₹1,550 है। क्या मुनाफ़ा बढ़ा?",
+       "बिक्री (sales) वह सारा पैसा है जो ग्राहक आपको देते हैं। मुनाफ़ा (profit) वह है जो सारे खर्च चुकाने के बाद आपके लिए बचता है।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "గత వారం అమ్మకాలు ₹1,500, ఖర్చులు ₹1,200. ఈ వారం అమ్మకాలు ₹1,800, ఖర్చులు ₹1,550. లాభం పెరిగిందా?",
+       "కస్టమర్లు మీకు ఇచ్చే మొత్తం డబ్బే అమ్మకాలు (sales). ఖర్చులన్నీ చెల్లించాక మీకు మిగిలేదే లాభం (profit).",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": {
+      "id": "check",
+      "stem": {
+       "en": "Last week, sales were ₹1,500 and costs were ₹1,200. This week, sales are ₹1,800 and costs are ₹1,550. Did profit go up?",
+       "hi": "पिछले हफ़्ते बिक्री ₹1,500 और खर्च ₹1,200 था। इस हफ़्ते बिक्री ₹1,800 और खर्च ₹1,550 है। क्या मुनाफ़ा बढ़ा?",
+       "te": "గత వారం అమ్మకాలు ₹1,500, ఖర్చులు ₹1,200. ఈ వారం అమ్మకాలు ₹1,800, ఖర్చులు ₹1,550. లాభం పెరిగిందా?"
+      },
+      "options": [
+       {
+        "id": "up",
+        "label": {
+         "en": "Yes, because sales went up",
+         "hi": "हाँ, क्योंकि बिक्री बढ़ी",
+         "te": "అవును, అమ్మకాలు పెరిగాయి కాబట్టి"
+        }
+       },
+       {
+        "id": "down",
+        "label": {
+         "en": "No, profit went down",
+         "hi": "नहीं, मुनाफ़ा घटा",
+         "te": "లేదు, లాభం తగ్గింది"
+        }
+       },
+       {
+        "id": "unsure",
+        "label": {
+         "en": "I’m not sure",
+         "hi": "पता नहीं",
+         "te": "తెలియదు"
+        }
+       }
+      ],
+      "correctOptionId": null
+     }
+    },
+    "check:feedback": {
+     "allowed": [
+      -50,
+      50,
+      250,
+      300,
+      1200,
+      1500,
+      1550,
+      1800
+     ],
+     "example": {
+      "salesBefore": 1500,
+      "salesAfter": 1800,
+      "costBefore": 1200,
+      "costAfter": 1550,
+      "profitBefore": 300,
+      "profitAfter": 250,
+      "profitChange": -50
+     },
+     "approved": {
+      "en": [
+       "Last week, sales were ₹1,500 and costs were ₹1,200. This week, sales are ₹1,800 and costs are ₹1,550. Did profit go up?",
+       "Exactly. Sales went up, but costs went up more. Profit went from ₹300 to ₹250.",
+       "Sales went up, but costs went up even more. Profit went from ₹300 to ₹250. Always look at what is left after costs.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "पिछले हफ़्ते बिक्री ₹1,500 और खर्च ₹1,200 था। इस हफ़्ते बिक्री ₹1,800 और खर्च ₹1,550 है। क्या मुनाफ़ा बढ़ा?",
+       "बिल्कुल सही। बिक्री बढ़ी, पर खर्च उससे ज़्यादा बढ़ा। मुनाफ़ा ₹300 से घटकर ₹250 हो गया।",
+       "बिक्री बढ़ी, पर खर्च उससे भी ज़्यादा बढ़ा। मुनाफ़ा ₹300 से घटकर ₹250 हो गया। हमेशा देखिए कि खर्च के बाद कितना बचा।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "గత వారం అమ్మకాలు ₹1,500, ఖర్చులు ₹1,200. ఈ వారం అమ్మకాలు ₹1,800, ఖర్చులు ₹1,550. లాభం పెరిగిందా?",
+       "సరిగ్గా చెప్పారు. అమ్మకాలు పెరిగాయి, కానీ ఖర్చులు ఇంకా ఎక్కువ పెరిగాయి. లాభం ₹300 నుంచి ₹250కి తగ్గింది.",
+       "అమ్మకాలు పెరిగాయి, కానీ ఖర్చులు ఇంకా ఎక్కువ పెరిగాయి. లాభం ₹300 నుంచి ₹250కి తగ్గింది. ఖర్చుల తర్వాత ఎంత మిగిలిందో ఎప్పుడూ చూడండి.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": {
+      "id": "check",
+      "stem": {
+       "en": "Last week, sales were ₹1,500 and costs were ₹1,200. This week, sales are ₹1,800 and costs are ₹1,550. Did profit go up?",
+       "hi": "पिछले हफ़्ते बिक्री ₹1,500 और खर्च ₹1,200 था। इस हफ़्ते बिक्री ₹1,800 और खर्च ₹1,550 है। क्या मुनाफ़ा बढ़ा?",
+       "te": "గత వారం అమ్మకాలు ₹1,500, ఖర్చులు ₹1,200. ఈ వారం అమ్మకాలు ₹1,800, ఖర్చులు ₹1,550. లాభం పెరిగిందా?"
+      },
+      "options": [
+       {
+        "id": "up",
+        "label": {
+         "en": "Yes, because sales went up",
+         "hi": "हाँ, क्योंकि बिक्री बढ़ी",
+         "te": "అవును, అమ్మకాలు పెరిగాయి కాబట్టి"
+        }
+       },
+       {
+        "id": "down",
+        "label": {
+         "en": "No, profit went down",
+         "hi": "नहीं, मुनाफ़ा घटा",
+         "te": "లేదు, లాభం తగ్గింది"
+        }
+       },
+       {
+        "id": "unsure",
+        "label": {
+         "en": "I’m not sure",
+         "hi": "पता नहीं",
+         "te": "తెలియదు"
+        }
+       }
+      ],
+      "correctOptionId": "down"
+     }
+    },
+    "challenge": {
+     "allowed": [
+      50,
+      200,
+      250,
+      300,
+      1200,
+      1250,
+      1300,
+      1500
+     ],
+     "example": {
+      "bags": 50,
+      "sales": 1500,
+      "goodsCost": 1200,
+      "left": 300,
+      "otherTotal": 50,
+      "profit": 250,
+      "allCosts": 1250,
+      "credit": 200,
+      "cashInBox": 1300
+     },
+     "approved": {
+      "en": [
+       "On 3 evenings this week: count your sales, take away the cost of the stock you sold, and note how much was given on udhaar.",
+       "Remember: Profit = Sales − all costs"
+      ],
+      "hi": [
+       "इस हफ़्ते 3 शामों को: अपनी बिक्री गिनें, बेचे गए माल की कीमत घटाएँ, और देखें कि कितना उधार पर दिया गया।",
+       "याद रखें: मुनाफ़ा = बिक्री − सारे खर्च"
+      ],
+      "te": [
+       "ఈ వారం 3 సాయంత్రాలు: మీ అమ్మకాలు లెక్కపెట్టండి, అమ్మిన సరుకు ఖరీదు తీసేయండి, ఎంత అప్పుగా ఇచ్చారో గమనించండి.",
+       "గుర్తుంచుకోండి: లాభం = అమ్మకాలు − అన్ని ఖర్చులు"
+      ]
+     },
+     "reveal": null,
+     "question": null
+    }
+   }
+  }
+ }
+}

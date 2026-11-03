@@ -1,0 +1,126 @@
+// Business Helper in a real Chromium against the production build.
+// Part A uses the real browser engines (tap path). Part B uses SIMULATED speech engines (fake-speech.cjs)
+// to drive spoken requests and amounts: it checks the app's handling, not real speech recognition.
+const { chromium } = require('playwright')
+const { INJECT } = require('./fake-speech.cjs')
+const SP = process.env.SHOTS_DIR || require('os').tmpdir()
+const BASE = process.env.BASE || 'http://localhost:4176/'
+const problems = []
+const log = []
+const ok = (c, m) => { log.push(`${c ? 'PASS' : 'FAIL'}  ${m}`); if (!c) problems.push(m) }
+require('fs').mkdirSync(`${SP}/shots`, { recursive: true })
+;(async () => {
+  const b = await chromium.launch()
+  // ── A. Tap path, navigation, lessons, isolation
+  {
+    const ctx = await b.newContext({ viewport: { width: 360, height: 780 } })
+    const p = await ctx.newPage()
+    p.on('pageerror', (e) => problems.push('A pageerror ' + e.message))
+    const tid = (t) => p.getByTestId(t)
+    const keys = async (d) => { for (const c of d) await tid(`bh-key-${c}`).click() }
+    const overflow = async (l) => ok(!(await p.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1)), `${l}: no horizontal overflow at 360 px`)
+    await p.goto(BASE + '#/home')
+    await p.waitForSelector('[data-testid=nav-helper]')
+    ok((await p.locator('header').first().innerText()).includes('Sakhi'), 'Header shows the Sakhi brand')
+    const progressBefore = await p.evaluate(() => Object.keys(localStorage).filter((k) => k.startsWith('hisaab.progress')).sort().map((k) => `${k}=${localStorage.getItem(k)}`).join('|'))
+    ok((await p.locator('nav[aria-label=Primary] a').count()) === 3, 'Three learner tabs: Today · My Learning · Business')
+    await tid('nav-helper').click()
+    await p.waitForSelector('[data-testid=helper-home]')
+    // Branding and tab labels: one line each at 360 px; header says Sakhi
+    ok((await p.locator('header h1').first().innerText()).trim() === 'Business', 'Business screen title reads "Business"')
+    const navLines = await p.locator('nav[aria-label=Primary] a span:last-child').evaluateAll((els) => els.map((e) => [e.textContent, Math.round(e.getBoundingClientRect().height / parseFloat(getComputedStyle(e).lineHeight))]))
+    ok(navLines.map((x) => x[0]).join('|') === 'Today|My Learning|Business' && navLines.every((x) => x[1] === 1), `Tabs read Today · My Learning · Business, each on one line (${JSON.stringify(navLines)})`)
+    const targets = await p.evaluate(() => ['bh-mic', 'tts-play', 'lang-button'].map((t) => { const e = document.querySelector(`[data-testid=${t}]`); const r = e.getBoundingClientRect(); return [t, Math.round(r.width), Math.round(r.height)] }))
+    ok(targets.every(([, w, h]) => w >= 44 && h >= 44), `Key controls stay ≥ 44 px (${JSON.stringify(targets)})`)
+    await overflow('helper home (en)')
+    await p.screenshot({ path: `${SP}/shots/BH-1-home.png` })
+    // Check My Price
+    await tid('bh-tool-price').click()
+    await tid('bh-item-vegBasket').click()
+    await keys('300'); await tid('bh-amount-confirm').click()
+    await keys('50'); await tid('bh-amount-confirm').click()
+    await keys('450'); await tid('bh-amount-confirm').click()
+    ok((await tid('bh-price-result').getAttribute('data-remaining')) === '100', 'Check My Price: ₹450 − ₹300 − ₹50 = ₹100 left')
+    await overflow('price result')
+    await p.screenshot({ path: `${SP}/shots/BH-2-price-result.png`, fullPage: true })
+    await tid('bh-why-link').click()
+    await p.waitForSelector('[data-testid=lesson]')
+    ok((await p.evaluate(() => location.hash)) === '#/lessons/m1', 'Price → "Want to understand why?" opens the Sales and profit lesson')
+    // Understand My Money (credit)
+    await p.goto(BASE + '#/helper/money')
+    await tid('bh-scenario-credit').click()
+    await keys('500'); await tid('bh-amount-confirm').click()
+    await keys('400'); await tid('bh-amount-confirm').click()
+    ok((await tid('bh-money-message').innerText()).includes('still owed ₹100. That does not mean your profit is ₹500'), 'Money: sales ₹500 · received ₹400 · owed ₹100, not profit')
+    await p.screenshot({ path: `${SP}/shots/BH-3-money-credit.png`, fullPage: true })
+    await tid('bh-why-link').click()
+    await p.waitForSelector('[data-testid=module-not-ready]')
+    ok((await p.evaluate(() => location.hash)) === '#/lessons/m3', 'Credit → Customer credit module (shown honestly as "with your coach")')
+    // Coming soon
+    await p.goto(BASE + '#/helper')
+    await tid('bh-tool-loan').click()
+    ok((await tid('bh-soon').innerText()).includes('will not tell you whether to take a loan'), 'Loan card: coming soon, no advice')
+    await tid('bh-soon-ok').click()
+    // Hindi and Telugu
+    for (const [code, native, word] of [['hi', 'हिन्दी', 'व्यापार'], ['te', 'తెలుగు', 'వ్యాపార']]) {
+      await tid('lang-button').click()
+      await p.getByRole('dialog').getByText(native).click()
+      await p.waitForTimeout(150)
+      ok((await tid('bh-welcome').innerText()).includes(word), `Helper home in ${code}`)
+      await overflow(`helper home (${code})`)
+      await tid('bh-tool-money').click()
+      await tid('bh-scenario-expenses').click()
+      await overflow(`money question (${code})`)
+      await p.screenshot({ path: `${SP}/shots/BH-4-${code}.png` })
+      await tid('bh-step-back').click()
+      await tid('bh-step-back').click()
+    }
+    const progressAfter = await p.evaluate(() => Object.keys(localStorage).filter((k) => k.startsWith('hisaab.progress')).sort().map((k) => `${k}=${localStorage.getItem(k)}`).join('|'))
+    // Only the language change (a normal learner action) may differ; no helper amounts in storage.
+    ok(!/"received"|"takenHome"|bh\./.test(progressAfter), 'No helper amounts written to learner records')
+    ok(progressBefore.split('|').length === progressAfter.split('|').length, 'No new learner records created')
+    // Demo route still works
+    await p.goto(BASE + '#/demo')
+    await p.waitForSelector('[data-testid=demo-language]')
+    ok(true, 'Presentation demo route still loads')
+    await ctx.close()
+  }
+  // ── B. Simulated speech engines
+  {
+    const ctx = await b.newContext({ viewport: { width: 390, height: 844 } })
+    await ctx.addInitScript(INJECT)
+    const p = await ctx.newPage()
+    p.on('pageerror', (e) => problems.push('B pageerror ' + e.message))
+    const tid = (t) => p.getByTestId(t)
+    const speak = async (mic, words) => {
+      await p.evaluate((x) => (window.__stt = { kind: 'result', transcript: x }), words)
+      await tid(mic).click()
+      await p.waitForTimeout(250)
+    }
+    await p.goto(BASE + '#/helper')
+    await p.waitForSelector('[data-testid=helper-home]')
+    await speak('bh-mic', 'I want to check my selling price')
+    ok((await p.evaluate(() => location.hash)) === '#/helper/price', 'Spoken "check my selling price" opens Check My Price')
+    await tid('bh-item-onions').click()
+    const before = await p.evaluate(() => window.__spoken.length)
+    await speak('bh-amount-mic', 'two hundred and fifty')
+    ok((await tid('bh-heard').getAttribute('data-amount')) === '250', 'Spoken amount "two hundred and fifty" → ₹250')
+    const confirmSpoken = await p.evaluate((n) => window.__spoken.slice(n).map((u) => u.text).join(' | '), before)
+    ok(/250|two hundred/i.test(confirmSpoken), `Amount read back for confirmation ("${confirmSpoken.slice(0, 60)}")`)
+    await p.screenshot({ path: `${SP}/shots/BH-5-heard-amount.png` })
+    await tid('bh-amount-confirm').click()
+    await speak('bh-amount-mic', 'no other costs')
+    ok((await tid('bh-heard').getAttribute('data-amount')) === '', '"No other costs" is not misread as an amount (button offered instead)')
+    await tid('bh-amount-extra').click()
+    await speak('bh-amount-mic', '300')
+    await tid('bh-amount-confirm').click()
+    ok((await tid('bh-price-result').getAttribute('data-remaining')) === '50', 'Voice path result: ₹300 − ₹250 − ₹0 = ₹50')
+    await p.goto(BASE + '#/helper')
+    await speak('bh-mic', 'what is the weather')
+    ok(await tid('bh-not-understood').isVisible(), 'Unsupported request: explains the options (no chatbot answer)')
+    await ctx.close()
+  }
+  await b.close()
+  console.log(log.join('\n'))
+  console.log(problems.length ? `PROBLEMS:\n${problems.join('\n')}` : `BUSINESS HELPER: ALL ${log.filter((l) => l.startsWith('PASS')).length} CHECKS PASSED`)
+})()

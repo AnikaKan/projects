@@ -1,0 +1,5613 @@
+{
+ "ranAt": "2026-10-31T00:04:41.141Z",
+ "dataset": {
+  "name": "hisaab-saathi-language-consistency",
+  "version": "1.1",
+  "groups": 46,
+  "variants": 322
+ },
+ "summary": {
+  "variants": {
+   "pass": 315,
+   "total": 322
+  },
+  "groupsAllPass": {
+   "pass": 42,
+   "total": 46
+  },
+  "groupsEquivalentScoring": {
+   "pass": 42,
+   "total": 46
+  },
+  "critical": [
+   {
+    "group": "crd-unsure-hedged",
+    "variety": "en",
+    "text": "I'm not too sure",
+    "critical": [
+     "FALSE_CORRECT"
+    ]
+   }
+  ],
+  "byVariety": {
+   "en": {
+    "pass": 43,
+    "total": 46
+   },
+   "hi": {
+    "pass": 44,
+    "total": 46
+   },
+   "hi_rom": {
+    "pass": 44,
+    "total": 46
+   },
+   "hi_mix": {
+    "pass": 46,
+    "total": 46
+   },
+   "te": {
+    "pass": 46,
+    "total": 46
+   },
+   "te_rom": {
+    "pass": 46,
+    "total": 46
+   },
+   "te_mix": {
+    "pass": 46,
+    "total": 46
+   }
+  },
+  "byCategory": {
+   "correct": {
+    "pass": 89,
+    "total": 91
+   },
+   "incorrect": {
+    "pass": 56,
+    "total": 56
+   },
+   "unsure": {
+    "pass": 47,
+    "total": 49
+   },
+   "repeat": {
+    "pass": 39,
+    "total": 42
+   },
+   "simplify": {
+    "pass": 49,
+    "total": 49
+   },
+   "unrelated": {
+    "pass": 35,
+    "total": 35
+   }
+  }
+ },
+ "groups": [
+  {
+   "id": "rvp-correct-yesno",
+   "category": "correct",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "rvp-correct-amount",
+   "category": "correct",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "rvp-incorrect",
+   "category": "incorrect",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "rvp-unsure",
+   "category": "unsure",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "rvp-repeat",
+   "category": "repeat",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "rvp-simplify",
+   "category": "simplify",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "rvp-unrelated",
+   "category": "unrelated",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "exp-correct-choice",
+   "category": "correct",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "exp-correct-amount",
+   "category": "correct",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "exp-incorrect",
+   "category": "incorrect",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "exp-unsure",
+   "category": "unsure",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "exp-repeat",
+   "category": "repeat",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "exp-concept-question",
+   "category": "simplify",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "exp-simplify",
+   "category": "simplify",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "exp-unrelated",
+   "category": "unrelated",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "crd-correct-yesno",
+   "category": "correct",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "crd-correct-amount",
+   "category": "correct",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "crd-incorrect",
+   "category": "incorrect",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "crd-unsure",
+   "category": "unsure",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "crd-repeat",
+   "category": "repeat",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "crd-simplify",
+   "category": "simplify",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "crd-unrelated",
+   "category": "unrelated",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "sep-correct-yesno",
+   "category": "correct",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "sep-correct-choice",
+   "category": "correct",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "sep-incorrect",
+   "category": "incorrect",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "sep-unsure",
+   "category": "unsure",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "sep-repeat",
+   "category": "repeat",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "sep-simplify",
+   "category": "simplify",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "sav-correct-yesno",
+   "category": "correct",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "sav-correct-choice",
+   "category": "correct",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "sav-incorrect",
+   "category": "incorrect",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "sav-unsure",
+   "category": "unsure",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "sav-repeat",
+   "category": "repeat",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "sav-simplify",
+   "category": "simplify",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "sav-unrelated",
+   "category": "unrelated",
+   "surface": "assessment",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "lsn-response-correct",
+   "category": "correct",
+   "surface": "lesson",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "lsn-response-incorrect",
+   "category": "incorrect",
+   "surface": "lesson",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "lsn-practice-correct",
+   "category": "correct",
+   "surface": "lesson",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "lsn-practice-incorrect",
+   "category": "incorrect",
+   "surface": "lesson",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "lsn-check-correct",
+   "category": "correct",
+   "surface": "lesson",
+   "allPass": false,
+   "sameResult": false,
+   "failing": [
+    "hi",
+    "hi_rom"
+   ]
+  },
+  {
+   "id": "lsn-check-incorrect",
+   "category": "incorrect",
+   "surface": "lesson",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "lsn-check-unsure",
+   "category": "unsure",
+   "surface": "lesson",
+   "allPass": false,
+   "sameResult": false,
+   "failing": [
+    "en"
+   ]
+  },
+  {
+   "id": "lsn-response-simplify",
+   "category": "simplify",
+   "surface": "lesson",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "lsn-response-repeat",
+   "category": "repeat",
+   "surface": "lesson",
+   "allPass": false,
+   "sameResult": false,
+   "failing": [
+    "en",
+    "hi",
+    "hi_rom"
+   ]
+  },
+  {
+   "id": "lsn-response-unrelated",
+   "category": "unrelated",
+   "surface": "lesson",
+   "allPass": true,
+   "sameResult": true,
+   "failing": []
+  },
+  {
+   "id": "crd-unsure-hedged",
+   "category": "unsure",
+   "surface": "assessment",
+   "allPass": false,
+   "sameResult": false,
+   "failing": [
+    "en"
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "group": "rvp-correct-yesno",
+   "category": "correct",
+   "variety": "en",
+   "text": "No, 500 is only the sales",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-correct-yesno",
+   "category": "correct",
+   "variety": "hi",
+   "text": "नहीं, पाँच सौ तो बिक्री है",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-correct-yesno",
+   "category": "correct",
+   "variety": "hi_rom",
+   "text": "nahi, paanch sau to bikri hai",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-correct-yesno",
+   "category": "correct",
+   "variety": "hi_mix",
+   "text": "nahi, 500 to sales hai, profit nahi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-correct-yesno",
+   "category": "correct",
+   "variety": "te",
+   "text": "లేదు, ఐదు వందలు అమ్మకాలు మాత్రమే",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-correct-yesno",
+   "category": "correct",
+   "variety": "te_rom",
+   "text": "ledu, aidu vandalu ammakalu matrame",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-correct-yesno",
+   "category": "correct",
+   "variety": "te_mix",
+   "text": "ledu, 500 sales matrame, profit kaadu",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-correct-amount",
+   "category": "correct",
+   "variety": "en",
+   "text": "three hundred rupees profit",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "profit",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-correct-amount",
+   "category": "correct",
+   "variety": "hi",
+   "text": "तीन सौ रुपये मुनाफ़ा",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "profit",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-correct-amount",
+   "category": "correct",
+   "variety": "hi_rom",
+   "text": "teen sau rupaye munafa",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "profit",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-correct-amount",
+   "category": "correct",
+   "variety": "hi_mix",
+   "text": "profit teen sau hua",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "profit",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-correct-amount",
+   "category": "correct",
+   "variety": "te",
+   "text": "మూడు వందల రూపాయలు లాభం",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "profit",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-correct-amount",
+   "category": "correct",
+   "variety": "te_rom",
+   "text": "moodu vandala rupayalu labham",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "profit",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-correct-amount",
+   "category": "correct",
+   "variety": "te_mix",
+   "text": "naaku 300 profit vachindi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "profit",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-incorrect",
+   "category": "incorrect",
+   "variety": "en",
+   "text": "Yes, the whole 500 is profit",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-incorrect",
+   "category": "incorrect",
+   "variety": "hi",
+   "text": "हाँ, पूरा पाँच सौ मुनाफ़ा है",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-incorrect",
+   "category": "incorrect",
+   "variety": "hi_rom",
+   "text": "haan, poora paanch sau munafa hai",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-incorrect",
+   "category": "incorrect",
+   "variety": "hi_mix",
+   "text": "haan, pura 500 profit hai",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-incorrect",
+   "category": "incorrect",
+   "variety": "te",
+   "text": "అవును, మొత్తం ఐదు వందలు లాభమే",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-incorrect",
+   "category": "incorrect",
+   "variety": "te_rom",
+   "text": "avunu, motham aidu vandalu labhame",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-incorrect",
+   "category": "incorrect",
+   "variety": "te_mix",
+   "text": "avunu, 500 antha profit e",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-unsure",
+   "category": "unsure",
+   "variety": "en",
+   "text": "I don't know",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-unsure",
+   "category": "unsure",
+   "variety": "hi",
+   "text": "मुझे नहीं पता",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-unsure",
+   "category": "unsure",
+   "variety": "hi_rom",
+   "text": "mujhe nahi pata",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-unsure",
+   "category": "unsure",
+   "variety": "hi_mix",
+   "text": "mujhe sure nahi hai",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-unsure",
+   "category": "unsure",
+   "variety": "te",
+   "text": "నాకు తెలియదు",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-unsure",
+   "category": "unsure",
+   "variety": "te_rom",
+   "text": "naaku teliyadu",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-unsure",
+   "category": "unsure",
+   "variety": "te_mix",
+   "text": "naaku sure ga teliyadu",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-repeat",
+   "category": "repeat",
+   "variety": "en",
+   "text": "Please say the question once more",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-repeat",
+   "category": "repeat",
+   "variety": "hi",
+   "text": "सवाल एक बार और बोलिए",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-repeat",
+   "category": "repeat",
+   "variety": "hi_rom",
+   "text": "sawal ek baar aur boliye",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-repeat",
+   "category": "repeat",
+   "variety": "hi_mix",
+   "text": "question repeat kariye",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-repeat",
+   "category": "repeat",
+   "variety": "te",
+   "text": "ప్రశ్న ఇంకోసారి చెప్పండి",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-repeat",
+   "category": "repeat",
+   "variety": "te_rom",
+   "text": "prashna inkosari cheppandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-repeat",
+   "category": "repeat",
+   "variety": "te_mix",
+   "text": "question malli repeat cheyyandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-simplify",
+   "category": "simplify",
+   "variety": "en",
+   "text": "Can you explain it in simpler words?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-simplify",
+   "category": "simplify",
+   "variety": "hi",
+   "text": "थोड़ा आसान भाषा में समझाइए",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-simplify",
+   "category": "simplify",
+   "variety": "hi_rom",
+   "text": "thoda aasaan bhasha mein samjhaiye",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-simplify",
+   "category": "simplify",
+   "variety": "hi_mix",
+   "text": "simple words mein samjhao",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-simplify",
+   "category": "simplify",
+   "variety": "te",
+   "text": "కొంచెం సులభంగా చెప్పండి",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-simplify",
+   "category": "simplify",
+   "variety": "te_rom",
+   "text": "konchem sulabhamga cheppandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-simplify",
+   "category": "simplify",
+   "variety": "te_mix",
+   "text": "simple ga explain cheyyandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-unrelated",
+   "category": "unrelated",
+   "variety": "en",
+   "text": "Play a film song for me",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-unrelated",
+   "category": "unrelated",
+   "variety": "hi",
+   "text": "मुझे एक गाना सुनाओ",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-unrelated",
+   "category": "unrelated",
+   "variety": "hi_rom",
+   "text": "mujhe ek gaana sunao",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-unrelated",
+   "category": "unrelated",
+   "variety": "hi_mix",
+   "text": "koi song play karo",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-unrelated",
+   "category": "unrelated",
+   "variety": "te",
+   "text": "ఒక పాట పాడండి",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-unrelated",
+   "category": "unrelated",
+   "variety": "te_rom",
+   "text": "oka paata paadandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "rvp-unrelated",
+   "category": "unrelated",
+   "variety": "te_mix",
+   "text": "oka song play cheyyandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-correct-choice",
+   "category": "correct",
+   "variety": "en",
+   "text": "Buying the vegetables I sell",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "stock",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-correct-choice",
+   "category": "correct",
+   "variety": "hi",
+   "text": "बेचने के लिए सब्ज़ी खरीदना",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "stock",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-correct-choice",
+   "category": "correct",
+   "variety": "hi_rom",
+   "text": "bechne ke liye sabzi kharidna",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "stock",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-correct-choice",
+   "category": "correct",
+   "variety": "hi_mix",
+   "text": "dukaan ka stock kharidna",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "stock",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-correct-choice",
+   "category": "correct",
+   "variety": "te",
+   "text": "అమ్మడానికి కూరగాయలు కొనడం",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "stock",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-correct-choice",
+   "category": "correct",
+   "variety": "te_rom",
+   "text": "ammadaniki kooragayalu konadam",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "stock",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-correct-choice",
+   "category": "correct",
+   "variety": "te_mix",
+   "text": "shop kosam stock konadam",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "stock",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-correct-amount",
+   "category": "correct",
+   "variety": "en",
+   "text": "six hundred and fifty rupees in total",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "total",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-correct-amount",
+   "category": "correct",
+   "variety": "hi",
+   "text": "कुल साढ़े छह सौ रुपये",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "total",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-correct-amount",
+   "category": "correct",
+   "variety": "hi_rom",
+   "text": "kul saadhe chhe sau rupaye",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "total",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-correct-amount",
+   "category": "correct",
+   "variety": "hi_mix",
+   "text": "total 650 rupaye",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "total",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-correct-amount",
+   "category": "correct",
+   "variety": "te",
+   "text": "మొత్తం ఆరు వందల యాభై రూపాయలు",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "total",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-correct-amount",
+   "category": "correct",
+   "variety": "te_rom",
+   "text": "motham aaru vandala yaabhai rupayalu",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "total",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-correct-amount",
+   "category": "correct",
+   "variety": "te_mix",
+   "text": "total six hundred fifty ayyindi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "total",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-incorrect",
+   "category": "incorrect",
+   "variety": "en",
+   "text": "the school fees for my children",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_household_as_business_expense",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "school",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-incorrect",
+   "category": "incorrect",
+   "variety": "hi",
+   "text": "बच्चों की स्कूल फ़ीस",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_household_as_business_expense",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "school",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-incorrect",
+   "category": "incorrect",
+   "variety": "hi_rom",
+   "text": "bachchon ki school fees",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_household_as_business_expense",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "school",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-incorrect",
+   "category": "incorrect",
+   "variety": "hi_mix",
+   "text": "bachche ki school fees bhi business kharcha hai",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_household_as_business_expense",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "school",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-incorrect",
+   "category": "incorrect",
+   "variety": "te",
+   "text": "మా పిల్లల స్కూల్ ఫీజు",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_household_as_business_expense",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "school",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-incorrect",
+   "category": "incorrect",
+   "variety": "te_rom",
+   "text": "maa pillala school feeju",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_household_as_business_expense",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "school",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-incorrect",
+   "category": "incorrect",
+   "variety": "te_mix",
+   "text": "pillala school fees",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_household_as_business_expense",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "school",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-unsure",
+   "category": "unsure",
+   "variety": "en",
+   "text": "No idea",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-unsure",
+   "category": "unsure",
+   "variety": "hi",
+   "text": "मालूम नहीं",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-unsure",
+   "category": "unsure",
+   "variety": "hi_rom",
+   "text": "maloom nahi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-unsure",
+   "category": "unsure",
+   "variety": "hi_mix",
+   "text": "idea nahi hai",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-unsure",
+   "category": "unsure",
+   "variety": "te",
+   "text": "తెలీదు అండి",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-unsure",
+   "category": "unsure",
+   "variety": "te_rom",
+   "text": "teledu andi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-unsure",
+   "category": "unsure",
+   "variety": "te_mix",
+   "text": "idea ledu",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-repeat",
+   "category": "repeat",
+   "variety": "en",
+   "text": "Sorry, I didn't hear, please repeat",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-repeat",
+   "category": "repeat",
+   "variety": "hi",
+   "text": "दोबारा पढ़कर सुनाइए",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-repeat",
+   "category": "repeat",
+   "variety": "hi_rom",
+   "text": "dobara padh ke sunaiye",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-repeat",
+   "category": "repeat",
+   "variety": "hi_mix",
+   "text": "ek baar phir se bolo please",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-repeat",
+   "category": "repeat",
+   "variety": "te",
+   "text": "మళ్ళీ చదివి వినిపించండి",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-repeat",
+   "category": "repeat",
+   "variety": "te_rom",
+   "text": "malli chadivi vinipinchandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-repeat",
+   "category": "repeat",
+   "variety": "te_mix",
+   "text": "please malli cheppandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-concept-question",
+   "category": "simplify",
+   "variety": "en",
+   "text": "What does business expense mean?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-concept-question",
+   "category": "simplify",
+   "variety": "hi",
+   "text": "व्यापार का खर्च मतलब क्या होता है?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-concept-question",
+   "category": "simplify",
+   "variety": "hi_rom",
+   "text": "vyapar ka kharcha matlab kya hota hai?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-concept-question",
+   "category": "simplify",
+   "variety": "hi_mix",
+   "text": "business expense ka matlab kya hai?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-concept-question",
+   "category": "simplify",
+   "variety": "te",
+   "text": "వ్యాపార ఖర్చు అంటే ఏమిటి?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-concept-question",
+   "category": "simplify",
+   "variety": "te_rom",
+   "text": "vyapara kharchu ante emiti?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-concept-question",
+   "category": "simplify",
+   "variety": "te_mix",
+   "text": "business expense ante enti?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-simplify",
+   "category": "simplify",
+   "variety": "en",
+   "text": "Explain it more simply please",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-simplify",
+   "category": "simplify",
+   "variety": "hi",
+   "text": "आसान करके बताइए",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-simplify",
+   "category": "simplify",
+   "variety": "hi_rom",
+   "text": "aasaan karke batao",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-simplify",
+   "category": "simplify",
+   "variety": "hi_mix",
+   "text": "easy way mein batao",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-simplify",
+   "category": "simplify",
+   "variety": "te",
+   "text": "ఇంకా సులువుగా చెప్పండి",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-simplify",
+   "category": "simplify",
+   "variety": "te_rom",
+   "text": "inka suluvuga cheppandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-simplify",
+   "category": "simplify",
+   "variety": "te_mix",
+   "text": "easy ga cheppandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-unrelated",
+   "category": "unrelated",
+   "variety": "en",
+   "text": "Who won the cricket match?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-unrelated",
+   "category": "unrelated",
+   "variety": "hi",
+   "text": "कल मैच कौन जीता?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-unrelated",
+   "category": "unrelated",
+   "variety": "hi_rom",
+   "text": "kal match kaun jeeta?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-unrelated",
+   "category": "unrelated",
+   "variety": "hi_mix",
+   "text": "cricket match ka score batao",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-unrelated",
+   "category": "unrelated",
+   "variety": "te",
+   "text": "నిన్న మ్యాచ్ ఎవరు గెలిచారు?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-unrelated",
+   "category": "unrelated",
+   "variety": "te_rom",
+   "text": "ninna match evaru gelicharu?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "exp-unrelated",
+   "category": "unrelated",
+   "variety": "te_mix",
+   "text": "cricket score cheppu",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-correct-yesno",
+   "category": "correct",
+   "variety": "en",
+   "text": "Not yet, she will pay tomorrow",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-correct-yesno",
+   "category": "correct",
+   "variety": "hi",
+   "text": "अभी नहीं मिले, कल देगी",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-correct-yesno",
+   "category": "correct",
+   "variety": "hi_rom",
+   "text": "abhi nahi mile, kal degi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-correct-yesno",
+   "category": "correct",
+   "variety": "hi_mix",
+   "text": "abhi cash nahi aaya, kal payment karegi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-correct-yesno",
+   "category": "correct",
+   "variety": "te",
+   "text": "ఇంకా రాలేదు, రేపు ఇస్తారు",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-correct-yesno",
+   "category": "correct",
+   "variety": "te_rom",
+   "text": "inka raledu, repu istaru",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-correct-yesno",
+   "category": "correct",
+   "variety": "te_mix",
+   "text": "inka cash raledu, repu pay chestaru",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-correct-amount",
+   "category": "correct",
+   "variety": "en",
+   "text": "seven hundred only",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "cash",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-correct-amount",
+   "category": "correct",
+   "variety": "hi",
+   "text": "सिर्फ़ सात सौ",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "cash",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-correct-amount",
+   "category": "correct",
+   "variety": "hi_rom",
+   "text": "sirf saat sau",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "cash",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-correct-amount",
+   "category": "correct",
+   "variety": "hi_mix",
+   "text": "cash sirf 700 aaya",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "cash",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-correct-amount",
+   "category": "correct",
+   "variety": "te",
+   "text": "ఏడు వందలే",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "cash",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-correct-amount",
+   "category": "correct",
+   "variety": "te_rom",
+   "text": "edu vandale",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "cash",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-correct-amount",
+   "category": "correct",
+   "variety": "te_mix",
+   "text": "cash seven hundred matrame",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "cash",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-incorrect",
+   "category": "incorrect",
+   "variety": "en",
+   "text": "Yes, it counts as cash already",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_credit_as_cash",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-incorrect",
+   "category": "incorrect",
+   "variety": "hi",
+   "text": "हाँ, वो तो मिल ही गया समझो",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_credit_as_cash",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-incorrect",
+   "category": "incorrect",
+   "variety": "hi_rom",
+   "text": "haan, mil gaya samjho",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_credit_as_cash",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-incorrect",
+   "category": "incorrect",
+   "variety": "hi_mix",
+   "text": "haan, woh cash hi hai",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_credit_as_cash",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-incorrect",
+   "category": "incorrect",
+   "variety": "te",
+   "text": "అవును, అది వచ్చినట్టే",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_credit_as_cash",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-incorrect",
+   "category": "incorrect",
+   "variety": "te_rom",
+   "text": "avunu, adi vachinatte",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_credit_as_cash",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-incorrect",
+   "category": "incorrect",
+   "variety": "te_mix",
+   "text": "avunu, adi cash e",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_credit_as_cash",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unsure",
+   "category": "unsure",
+   "variety": "en",
+   "text": "Not sure about this one",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unsure",
+   "category": "unsure",
+   "variety": "hi",
+   "text": "पक्का नहीं पता",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unsure",
+   "category": "unsure",
+   "variety": "hi_rom",
+   "text": "pakka nahi pata",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unsure",
+   "category": "unsure",
+   "variety": "hi_mix",
+   "text": "sure nahi hoon",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unsure",
+   "category": "unsure",
+   "variety": "te",
+   "text": "ఖచ్చితంగా తెలియదు",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unsure",
+   "category": "unsure",
+   "variety": "te_rom",
+   "text": "khachitamga teliyadu",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unsure",
+   "category": "unsure",
+   "variety": "te_mix",
+   "text": "sure ga cheppalenu",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-repeat",
+   "category": "repeat",
+   "variety": "en",
+   "text": "Say that again please",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-repeat",
+   "category": "repeat",
+   "variety": "hi",
+   "text": "एक बार फिर से बताइए",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-repeat",
+   "category": "repeat",
+   "variety": "hi_rom",
+   "text": "ek baar phir se batao",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-repeat",
+   "category": "repeat",
+   "variety": "hi_mix",
+   "text": "please phir se bolo",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-repeat",
+   "category": "repeat",
+   "variety": "te",
+   "text": "ఇంకొకసారి చెప్పండి",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-repeat",
+   "category": "repeat",
+   "variety": "te_rom",
+   "text": "inkokasari cheppandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-repeat",
+   "category": "repeat",
+   "variety": "te_mix",
+   "text": "once more cheppandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-simplify",
+   "category": "simplify",
+   "variety": "en",
+   "text": "What is udhaar? Explain in easy words",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-simplify",
+   "category": "simplify",
+   "variety": "hi",
+   "text": "उधार क्या होता है, सीधे शब्दों में बताइए",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-simplify",
+   "category": "simplify",
+   "variety": "hi_rom",
+   "text": "udhaar kya hota hai, seedhe shabdon mein batao",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-simplify",
+   "category": "simplify",
+   "variety": "hi_mix",
+   "text": "credit ka matlab simple mein batao",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-simplify",
+   "category": "simplify",
+   "variety": "te",
+   "text": "అప్పు అంటే ఏమిటి, సులభంగా చెప్పండి",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-simplify",
+   "category": "simplify",
+   "variety": "te_rom",
+   "text": "appu ante emiti, sulabhamga cheppandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-simplify",
+   "category": "simplify",
+   "variety": "te_mix",
+   "text": "credit ante enti, simple ga cheppandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unrelated",
+   "category": "unrelated",
+   "variety": "en",
+   "text": "Will it rain today?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unrelated",
+   "category": "unrelated",
+   "variety": "hi",
+   "text": "आज बारिश होगी क्या?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unrelated",
+   "category": "unrelated",
+   "variety": "hi_rom",
+   "text": "aaj baarish hogi kya?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unrelated",
+   "category": "unrelated",
+   "variety": "hi_mix",
+   "text": "aaj weather kaisa hai?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unrelated",
+   "category": "unrelated",
+   "variety": "te",
+   "text": "ఈ రోజు వర్షం పడుతుందా?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unrelated",
+   "category": "unrelated",
+   "variety": "te_rom",
+   "text": "ee roju varsham padutunda?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unrelated",
+   "category": "unrelated",
+   "variety": "te_mix",
+   "text": "ee roju weather ela undi?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-correct-yesno",
+   "category": "correct",
+   "variety": "en",
+   "text": "Yes, write it down separately",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-correct-yesno",
+   "category": "correct",
+   "variety": "hi",
+   "text": "हाँ, घर का खर्च अलग लिखना चाहिए",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-correct-yesno",
+   "category": "correct",
+   "variety": "hi_rom",
+   "text": "haan, ghar ka kharcha alag likhna chahiye",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-correct-yesno",
+   "category": "correct",
+   "variety": "hi_mix",
+   "text": "haan, separate likhna chahiye",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-correct-yesno",
+   "category": "correct",
+   "variety": "te",
+   "text": "అవును, విడిగా రాసుకోవాలి",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-correct-yesno",
+   "category": "correct",
+   "variety": "te_rom",
+   "text": "avunu, vidiga rasukovali",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-correct-yesno",
+   "category": "correct",
+   "variety": "te_mix",
+   "text": "avunu, separate ga rasukovali",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "yes",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-correct-choice",
+   "category": "correct",
+   "variety": "en",
+   "text": "From a fixed amount kept aside for home",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "fixed",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-correct-choice",
+   "category": "correct",
+   "variety": "hi",
+   "text": "घर के लिए तय पैसे से",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "fixed",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-correct-choice",
+   "category": "correct",
+   "variety": "hi_rom",
+   "text": "ghar ke liye tay paise se",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "fixed",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-correct-choice",
+   "category": "correct",
+   "variety": "hi_mix",
+   "text": "ghar ke liye fixed amount se",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "fixed",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-correct-choice",
+   "category": "correct",
+   "variety": "te",
+   "text": "ఇంటి కోసం పక్కన పెట్టిన నిర్ణీత మొత్తం",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "fixed",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-correct-choice",
+   "category": "correct",
+   "variety": "te_rom",
+   "text": "inti kosam pakkana pettina dabbu nunchi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "fixed",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-correct-choice",
+   "category": "correct",
+   "variety": "te_mix",
+   "text": "inti kosam fixed amount nunchi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "fixed",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-incorrect",
+   "category": "incorrect",
+   "variety": "en",
+   "text": "Just take it from the shop cash box when needed",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_mixes_business_household",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "cashbox",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-incorrect",
+   "category": "incorrect",
+   "variety": "hi",
+   "text": "जब चाहिए तब गल्ले से ले लेती हूँ",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_mixes_business_household",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "cashbox",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-incorrect",
+   "category": "incorrect",
+   "variety": "hi_rom",
+   "text": "jab chahiye tab galle se le leti hoon",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_mixes_business_household",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "cashbox",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-incorrect",
+   "category": "incorrect",
+   "variety": "hi_mix",
+   "text": "zarurat ho to shop ke galle se",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_mixes_business_household",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "cashbox",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-incorrect",
+   "category": "incorrect",
+   "variety": "te",
+   "text": "అవసరమైనప్పుడు గల్లా నుంచి తీసుకుంటాను",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_mixes_business_household",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "cashbox",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-incorrect",
+   "category": "incorrect",
+   "variety": "te_rom",
+   "text": "avasaram ainappudu galla nunchi teesukuntanu",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_mixes_business_household",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "cashbox",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-incorrect",
+   "category": "incorrect",
+   "variety": "te_mix",
+   "text": "need unnappudu galla nunchi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_mixes_business_household",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "cashbox",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-unsure",
+   "category": "unsure",
+   "variety": "en",
+   "text": "I really don't know",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-unsure",
+   "category": "unsure",
+   "variety": "hi",
+   "text": "पता नहीं जी",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-unsure",
+   "category": "unsure",
+   "variety": "hi_rom",
+   "text": "pata nahi ji",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-unsure",
+   "category": "unsure",
+   "variety": "hi_mix",
+   "text": "mujhe idea nahi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-unsure",
+   "category": "unsure",
+   "variety": "te",
+   "text": "ఏమో, తెలియదు",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-unsure",
+   "category": "unsure",
+   "variety": "te_rom",
+   "text": "emo, teliyadu",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-unsure",
+   "category": "unsure",
+   "variety": "te_mix",
+   "text": "naaku idea ledu",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-repeat",
+   "category": "repeat",
+   "variety": "en",
+   "text": "Can you repeat that?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-repeat",
+   "category": "repeat",
+   "variety": "hi",
+   "text": "फिर से सुनाइए",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-repeat",
+   "category": "repeat",
+   "variety": "hi_rom",
+   "text": "phir se sunaiye",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-repeat",
+   "category": "repeat",
+   "variety": "hi_mix",
+   "text": "ek baar aur repeat karo",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-repeat",
+   "category": "repeat",
+   "variety": "te",
+   "text": "మళ్ళీ వినిపించండి",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-repeat",
+   "category": "repeat",
+   "variety": "te_rom",
+   "text": "malli vinipinchandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-repeat",
+   "category": "repeat",
+   "variety": "te_mix",
+   "text": "inkosari repeat cheyyandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-simplify",
+   "category": "simplify",
+   "variety": "en",
+   "text": "Say it in a simpler way",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-simplify",
+   "category": "simplify",
+   "variety": "hi",
+   "text": "थोड़ा सरल करके समझाइए",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-simplify",
+   "category": "simplify",
+   "variety": "hi_rom",
+   "text": "thoda saral karke samjhaiye",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-simplify",
+   "category": "simplify",
+   "variety": "hi_mix",
+   "text": "isko simple tarike se samjhao",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-simplify",
+   "category": "simplify",
+   "variety": "te",
+   "text": "కొంచెం తేలికగా వివరించండి",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-simplify",
+   "category": "simplify",
+   "variety": "te_rom",
+   "text": "konchem telikaga vivarinchandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sep-simplify",
+   "category": "simplify",
+   "variety": "te_mix",
+   "text": "konchem easy ga explain cheyyandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-correct-yesno",
+   "category": "correct",
+   "variety": "en",
+   "text": "No, I must keep 600 for stock",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-correct-yesno",
+   "category": "correct",
+   "variety": "hi",
+   "text": "नहीं, छह सौ माल के लिए रखने होंगे",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-correct-yesno",
+   "category": "correct",
+   "variety": "hi_rom",
+   "text": "nahi, chhe sau maal ke liye rakhne honge",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-correct-yesno",
+   "category": "correct",
+   "variety": "hi_mix",
+   "text": "nahi, 600 stock ke liye rakhna hai",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-correct-yesno",
+   "category": "correct",
+   "variety": "te",
+   "text": "లేదు, ఆరు వందలు సరుకు కోసం ఉంచాలి",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-correct-yesno",
+   "category": "correct",
+   "variety": "te_rom",
+   "text": "ledu, aaru vandalu saruku kosam unchali",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-correct-yesno",
+   "category": "correct",
+   "variety": "te_mix",
+   "text": "ledu, 600 stock kosam unchali",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-correct-choice",
+   "category": "correct",
+   "variety": "en",
+   "text": "Keep it apart in a savings box",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "separate",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-correct-choice",
+   "category": "correct",
+   "variety": "hi",
+   "text": "बचत अलग डिब्बे में रखनी चाहिए",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "separate",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-correct-choice",
+   "category": "correct",
+   "variety": "hi_rom",
+   "text": "bachat alag dabbe mein rakhni chahiye",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "separate",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-correct-choice",
+   "category": "correct",
+   "variety": "hi_mix",
+   "text": "savings alag box mein",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "separate",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-correct-choice",
+   "category": "correct",
+   "variety": "te",
+   "text": "పొదుపు డబ్బు వేరేగా దాచాలి",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "separate",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-correct-choice",
+   "category": "correct",
+   "variety": "te_rom",
+   "text": "podupu dabbu verega dachali",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "separate",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-correct-choice",
+   "category": "correct",
+   "variety": "te_mix",
+   "text": "savings ni separate box lo",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "separate",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-incorrect",
+   "category": "incorrect",
+   "variety": "en",
+   "text": "Mixed in with the shop money",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_savings_mixed_with_cash",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "mixed",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-incorrect",
+   "category": "incorrect",
+   "variety": "hi",
+   "text": "दुकान के पैसों में ही मिला देती हूँ",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_savings_mixed_with_cash",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "mixed",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-incorrect",
+   "category": "incorrect",
+   "variety": "hi_rom",
+   "text": "dukaan ke paison mein hi mila deti hoon",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_savings_mixed_with_cash",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "mixed",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-incorrect",
+   "category": "incorrect",
+   "variety": "hi_mix",
+   "text": "shop cash ke saath mix kar deti hoon",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_savings_mixed_with_cash",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "mixed",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-incorrect",
+   "category": "incorrect",
+   "variety": "te",
+   "text": "దుకాణం డబ్బుతోనే కలిపేస్తాను",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_savings_mixed_with_cash",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "mixed",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-incorrect",
+   "category": "incorrect",
+   "variety": "te_rom",
+   "text": "dukanam dabbutho kalipestanu",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_savings_mixed_with_cash",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "mixed",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-incorrect",
+   "category": "incorrect",
+   "variety": "te_mix",
+   "text": "shop cash tho mix chestanu",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_savings_mixed_with_cash",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "mixed",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-unsure",
+   "category": "unsure",
+   "variety": "en",
+   "text": "Hmm, I am not sure",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-unsure",
+   "category": "unsure",
+   "variety": "hi",
+   "text": "पता नहीं, सोचना पड़ेगा",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-unsure",
+   "category": "unsure",
+   "variety": "hi_rom",
+   "text": "pata nahi, sochna padega",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-unsure",
+   "category": "unsure",
+   "variety": "hi_mix",
+   "text": "not sure, sochna padega",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-unsure",
+   "category": "unsure",
+   "variety": "te",
+   "text": "తెలియదు, ఆలోచించాలి",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-unsure",
+   "category": "unsure",
+   "variety": "te_rom",
+   "text": "teliyadu, alochinchali",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-unsure",
+   "category": "unsure",
+   "variety": "te_mix",
+   "text": "not sure andi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-repeat",
+   "category": "repeat",
+   "variety": "en",
+   "text": "One more time please",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-repeat",
+   "category": "repeat",
+   "variety": "hi",
+   "text": "एक बार और सुनाइए",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-repeat",
+   "category": "repeat",
+   "variety": "hi_rom",
+   "text": "ek baar aur sunaiye",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-repeat",
+   "category": "repeat",
+   "variety": "hi_mix",
+   "text": "one more time boliye",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-repeat",
+   "category": "repeat",
+   "variety": "te",
+   "text": "ఇంకోసారి చెప్పండి",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-repeat",
+   "category": "repeat",
+   "variety": "te_rom",
+   "text": "inkosari cheppandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-repeat",
+   "category": "repeat",
+   "variety": "te_mix",
+   "text": "one more time cheppandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-simplify",
+   "category": "simplify",
+   "variety": "en",
+   "text": "Explain in simple words",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-simplify",
+   "category": "simplify",
+   "variety": "hi",
+   "text": "सीधी भाषा में बताइए",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-simplify",
+   "category": "simplify",
+   "variety": "hi_rom",
+   "text": "seedhi bhasha mein batao",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-simplify",
+   "category": "simplify",
+   "variety": "hi_mix",
+   "text": "simple language mein bataiye",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-simplify",
+   "category": "simplify",
+   "variety": "te",
+   "text": "సాధారణ మాటల్లో చెప్పండి",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-simplify",
+   "category": "simplify",
+   "variety": "te_rom",
+   "text": "sadharana matallo cheppandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-simplify",
+   "category": "simplify",
+   "variety": "te_mix",
+   "text": "simple words lo cheppandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "replay",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-unrelated",
+   "category": "unrelated",
+   "variety": "en",
+   "text": "Tell me a story",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-unrelated",
+   "category": "unrelated",
+   "variety": "hi",
+   "text": "एक कहानी सुनाओ",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-unrelated",
+   "category": "unrelated",
+   "variety": "hi_rom",
+   "text": "ek kahani sunao",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-unrelated",
+   "category": "unrelated",
+   "variety": "hi_mix",
+   "text": "koi story sunao",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-unrelated",
+   "category": "unrelated",
+   "variety": "te",
+   "text": "ఒక కథ చెప్పండి",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-unrelated",
+   "category": "unrelated",
+   "variety": "te_rom",
+   "text": "oka katha cheppandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "sav-unrelated",
+   "category": "unrelated",
+   "variety": "te_mix",
+   "text": "oka story cheppandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "no_match_prompt",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-correct",
+   "category": "correct",
+   "variety": "en",
+   "text": "two hundred left",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "left",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-correct",
+   "category": "correct",
+   "variety": "hi",
+   "text": "दो सौ बचते हैं",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "left",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-correct",
+   "category": "correct",
+   "variety": "hi_rom",
+   "text": "do sau bachte hain",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "left",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-correct",
+   "category": "correct",
+   "variety": "hi_mix",
+   "text": "200 bacha",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "left",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-correct",
+   "category": "correct",
+   "variety": "te",
+   "text": "రెండు వందలు మిగులుతాయి",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "left",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-correct",
+   "category": "correct",
+   "variety": "te_rom",
+   "text": "rendu vandalu migulutayi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "left",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-correct",
+   "category": "correct",
+   "variety": "te_mix",
+   "text": "200 migilindi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "left",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-incorrect",
+   "category": "incorrect",
+   "variety": "en",
+   "text": "five hundred",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "sales",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-incorrect",
+   "category": "incorrect",
+   "variety": "hi",
+   "text": "पाँच सौ",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "sales",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-incorrect",
+   "category": "incorrect",
+   "variety": "hi_rom",
+   "text": "paanch sau",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "sales",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-incorrect",
+   "category": "incorrect",
+   "variety": "hi_mix",
+   "text": "pura 500",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "sales",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-incorrect",
+   "category": "incorrect",
+   "variety": "te",
+   "text": "ఐదు వందలు",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "sales",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-incorrect",
+   "category": "incorrect",
+   "variety": "te_rom",
+   "text": "aidu vandalu",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "sales",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-incorrect",
+   "category": "incorrect",
+   "variety": "te_mix",
+   "text": "motham 500",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "sales",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-practice-correct",
+   "category": "correct",
+   "variety": "en",
+   "text": "two hundred and seventy",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "profit",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-practice-correct",
+   "category": "correct",
+   "variety": "hi",
+   "text": "दो सौ सत्तर",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "profit",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-practice-correct",
+   "category": "correct",
+   "variety": "hi_rom",
+   "text": "do sau sattar",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "profit",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-practice-correct",
+   "category": "correct",
+   "variety": "hi_mix",
+   "text": "profit 270 hai",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "profit",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-practice-correct",
+   "category": "correct",
+   "variety": "te",
+   "text": "రెండు వందల డెబ్బై",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "profit",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-practice-correct",
+   "category": "correct",
+   "variety": "te_rom",
+   "text": "rendu vandala debbai",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "profit",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-practice-correct",
+   "category": "correct",
+   "variety": "te_mix",
+   "text": "profit 270 vachindi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "profit",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-practice-incorrect",
+   "category": "incorrect",
+   "variety": "en",
+   "text": "three hundred fifty",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_ignores_hidden_costs",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "goods_only",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-practice-incorrect",
+   "category": "incorrect",
+   "variety": "hi",
+   "text": "साढ़े तीन सौ",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_ignores_hidden_costs",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "goods_only",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-practice-incorrect",
+   "category": "incorrect",
+   "variety": "hi_rom",
+   "text": "saadhe teen sau",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_ignores_hidden_costs",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "goods_only",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-practice-incorrect",
+   "category": "incorrect",
+   "variety": "hi_mix",
+   "text": "350 bacha",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_ignores_hidden_costs",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "goods_only",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-practice-incorrect",
+   "category": "incorrect",
+   "variety": "te",
+   "text": "మూడు వందల యాభై",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_ignores_hidden_costs",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "goods_only",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-practice-incorrect",
+   "category": "incorrect",
+   "variety": "te_rom",
+   "text": "moodu vandala yabai",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_ignores_hidden_costs",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "goods_only",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-practice-incorrect",
+   "category": "incorrect",
+   "variety": "te_mix",
+   "text": "350 migilindi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_ignores_hidden_costs",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "goods_only",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-check-correct",
+   "category": "correct",
+   "variety": "en",
+   "text": "it went down",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "down",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-check-correct",
+   "category": "correct",
+   "variety": "hi",
+   "text": "मुनाफ़ा घट गया",
+   "pass": false,
+   "critical": [],
+   "got": {
+    "classification": "not_understood",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "intent": "not_understood"
+   },
+   "failed": [
+    "classification not_understood ≠ correct",
+    "correctness not_scored ≠ correct",
+    "route ai_interpret ∉ propose_confirm",
+    "option — ≠ down"
+   ]
+  },
+  {
+   "group": "lsn-check-correct",
+   "category": "correct",
+   "variety": "hi_rom",
+   "text": "munafa ghat gaya",
+   "pass": false,
+   "critical": [],
+   "got": {
+    "classification": "not_understood",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "intent": "not_understood"
+   },
+   "failed": [
+    "classification not_understood ≠ correct",
+    "correctness not_scored ≠ correct",
+    "route ai_interpret ∉ propose_confirm",
+    "option — ≠ down"
+   ]
+  },
+  {
+   "group": "lsn-check-correct",
+   "category": "correct",
+   "variety": "hi_mix",
+   "text": "profit kam ho gaya",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "down",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-check-correct",
+   "category": "correct",
+   "variety": "te",
+   "text": "లాభం తగ్గింది",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "down",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-check-correct",
+   "category": "correct",
+   "variety": "te_rom",
+   "text": "labham taggindi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "down",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-check-correct",
+   "category": "correct",
+   "variety": "te_mix",
+   "text": "profit taggindi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "down",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-check-incorrect",
+   "category": "incorrect",
+   "variety": "en",
+   "text": "yes, it went up",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "up",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-check-incorrect",
+   "category": "incorrect",
+   "variety": "hi",
+   "text": "हाँ, बढ़ गया",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "up",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-check-incorrect",
+   "category": "incorrect",
+   "variety": "hi_rom",
+   "text": "haan badh gaya",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "up",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-check-incorrect",
+   "category": "incorrect",
+   "variety": "hi_mix",
+   "text": "haan profit badha",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "up",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-check-incorrect",
+   "category": "incorrect",
+   "variety": "te",
+   "text": "అవును, పెరిగింది",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "up",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-check-incorrect",
+   "category": "incorrect",
+   "variety": "te_rom",
+   "text": "avunu perigindi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "up",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-check-incorrect",
+   "category": "incorrect",
+   "variety": "te_mix",
+   "text": "avunu profit perigindi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "misconception_revenue_vs_profit",
+    "correctness": "incorrect",
+    "route": "propose_confirm",
+    "optionId": "up",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-check-unsure",
+   "category": "unsure",
+   "variety": "en",
+   "text": "not really sure",
+   "pass": false,
+   "critical": [],
+   "got": {
+    "classification": "not_understood",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "intent": "not_understood"
+   },
+   "failed": [
+    "classification not_understood ≠ unsure",
+    "correctness not_scored ≠ unsure",
+    "route ai_interpret ∉ propose_confirm",
+    "option — ≠ unsure"
+   ]
+  },
+  {
+   "group": "lsn-check-unsure",
+   "category": "unsure",
+   "variety": "hi",
+   "text": "कह नहीं सकती",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-check-unsure",
+   "category": "unsure",
+   "variety": "hi_rom",
+   "text": "keh nahi sakti",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-check-unsure",
+   "category": "unsure",
+   "variety": "hi_mix",
+   "text": "sure nahi hoon",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-check-unsure",
+   "category": "unsure",
+   "variety": "te",
+   "text": "చెప్పలేను",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-check-unsure",
+   "category": "unsure",
+   "variety": "te_rom",
+   "text": "cheppalenu",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-check-unsure",
+   "category": "unsure",
+   "variety": "te_mix",
+   "text": "not sure andi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-simplify",
+   "category": "simplify",
+   "variety": "en",
+   "text": "too difficult, explain simply",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-simplify",
+   "category": "simplify",
+   "variety": "hi",
+   "text": "बहुत मुश्किल है, आसान करके बताओ",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-simplify",
+   "category": "simplify",
+   "variety": "hi_rom",
+   "text": "bahut mushkil hai, aasaan karke batao",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-simplify",
+   "category": "simplify",
+   "variety": "hi_mix",
+   "text": "simple tareeke se explain karo",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-simplify",
+   "category": "simplify",
+   "variety": "te",
+   "text": "చాలా కష్టంగా ఉంది, సులభంగా చెప్పండి",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-simplify",
+   "category": "simplify",
+   "variety": "te_rom",
+   "text": "chala kashtamga undi, sulabhamga cheppandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-simplify",
+   "category": "simplify",
+   "variety": "te_mix",
+   "text": "simple ga explain cheyyi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "clarifyMode": "simplify",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-repeat",
+   "category": "repeat",
+   "variety": "en",
+   "text": "what did you say?",
+   "pass": false,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "intent": "unrelated"
+   },
+   "failed": [
+    "classification unrelated ≠ clarification_request",
+    "clarify mode — ≠ repeat"
+   ]
+  },
+  {
+   "group": "lsn-response-repeat",
+   "category": "repeat",
+   "variety": "hi",
+   "text": "आपने क्या कहा?",
+   "pass": false,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "intent": "unrelated"
+   },
+   "failed": [
+    "classification unrelated ≠ clarification_request",
+    "clarify mode — ≠ repeat"
+   ]
+  },
+  {
+   "group": "lsn-response-repeat",
+   "category": "repeat",
+   "variety": "hi_rom",
+   "text": "aapne kya kaha?",
+   "pass": false,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "intent": "unrelated"
+   },
+   "failed": [
+    "classification unrelated ≠ clarification_request",
+    "clarify mode — ≠ repeat"
+   ]
+  },
+  {
+   "group": "lsn-response-repeat",
+   "category": "repeat",
+   "variety": "hi_mix",
+   "text": "kya bola, repeat karo",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-repeat",
+   "category": "repeat",
+   "variety": "te",
+   "text": "మీరు ఏమన్నారు?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-repeat",
+   "category": "repeat",
+   "variety": "te_rom",
+   "text": "meeru emannaru?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-repeat",
+   "category": "repeat",
+   "variety": "te_mix",
+   "text": "emannaru, repeat cheyyandi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "clarification_request",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "clarifyMode": "repeat",
+    "intent": "clarification_request"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-unrelated",
+   "category": "unrelated",
+   "variety": "en",
+   "text": "Is the bus coming?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-unrelated",
+   "category": "unrelated",
+   "variety": "hi",
+   "text": "बस कब आएगी?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-unrelated",
+   "category": "unrelated",
+   "variety": "hi_rom",
+   "text": "bus kab aayegi?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-unrelated",
+   "category": "unrelated",
+   "variety": "hi_mix",
+   "text": "bus ka time kya hai?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-unrelated",
+   "category": "unrelated",
+   "variety": "te",
+   "text": "బస్సు ఎప్పుడు వస్తుంది?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-unrelated",
+   "category": "unrelated",
+   "variety": "te_rom",
+   "text": "bus eppudu vastundi?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "lsn-response-unrelated",
+   "category": "unrelated",
+   "variety": "te_mix",
+   "text": "bus time enti?",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unrelated",
+    "correctness": "not_scored",
+    "route": "ai_interpret",
+    "intent": "unrelated"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unsure-hedged",
+   "category": "unsure",
+   "variety": "en",
+   "text": "I'm not too sure",
+   "pass": false,
+   "critical": [
+    "FALSE_CORRECT"
+   ],
+   "got": {
+    "classification": "correct",
+    "correctness": "correct",
+    "route": "propose_confirm",
+    "optionId": "no",
+    "intent": "answer"
+   },
+   "failed": [
+    "classification correct ≠ unsure",
+    "correctness correct ≠ unsure",
+    "option no ≠ unsure"
+   ]
+  },
+  {
+   "group": "crd-unsure-hedged",
+   "category": "unsure",
+   "variety": "hi",
+   "text": "मुझे ठीक से नहीं पता",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unsure-hedged",
+   "category": "unsure",
+   "variety": "hi_rom",
+   "text": "theek se nahi pata",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unsure-hedged",
+   "category": "unsure",
+   "variety": "hi_mix",
+   "text": "pakka sure nahi",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unsure-hedged",
+   "category": "unsure",
+   "variety": "te",
+   "text": "సరిగ్గా తెలియదు",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unsure-hedged",
+   "category": "unsure",
+   "variety": "te_rom",
+   "text": "sariga teliyadu",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  },
+  {
+   "group": "crd-unsure-hedged",
+   "category": "unsure",
+   "variety": "te_mix",
+   "text": "exact ga teliyadu",
+   "pass": true,
+   "critical": [],
+   "got": {
+    "classification": "unsure",
+    "correctness": "unsure",
+    "route": "propose_confirm",
+    "optionId": "unsure",
+    "intent": "answer"
+   },
+   "failed": []
+  }
+ ]
+}
