@@ -1,0 +1,11 @@
+import type { SVGProps } from "react";
+type P = SVGProps<SVGSVGElement>;
+const base = { width: 20, height: 20, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 1.8 };
+export const ActivityIcon = (p:P) => <svg {...base} {...p}><path d="M3 12h4l2-7 4 14 2-7h6"/></svg>;
+export const ShieldIcon = (p:P) => <svg {...base} {...p}><path d="M12 3 5 6v5c0 4.9 2.9 8.5 7 10 4.1-1.5 7-5.1 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>;
+export const BagIcon = (p:P) => <svg {...base} {...p}><path d="M6 8h12l1 13H5L6 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>;
+export const CheckIcon = (p:P) => <svg {...base} {...p}><path d="m5 12 4 4L19 6"/></svg>;
+export const AlertIcon = (p:P) => <svg {...base} {...p}><path d="M12 9v4m0 4h.01"/><path d="M10.3 4.3 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 4.3a2 2 0 0 0-3.4 0Z"/></svg>;
+export const ClockIcon = (p:P) => <svg {...base} {...p}><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>;
+export const RefreshIcon = (p:P) => <svg {...base} {...p}><path d="M20 7v5h-5M4 17v-5h5M6 9a7 7 0 0 1 12-2l2 2M4 15l2 2a7 7 0 0 0 12-2"/></svg>;
+export const ChevronIcon = (p:P) => <svg {...base} {...p}><path d="m9 18 6-6-6-6"/></svg>;

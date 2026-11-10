@@ -1,0 +1,72 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Order {
+  id String @id @default(cuid())
+  orderNumber String @unique
+  currency String @default("USD")
+  subtotalCents Int
+  taxCents Int
+  totalCents Int
+  status String @default("CREATED")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  paymentAttempts PaymentAttempt[]
+  events PaymentEvent[]
+  simulatedCharge SimulatedCharge?
+  @@index([status, createdAt])
+}
+
+model PaymentAttempt {
+  id String @id @default(cuid())
+  orderId String
+  idempotencyKey String @unique
+  scenario String
+  status String @default("CREATED")
+  amountCents Int
+  processorReference String? @unique
+  processorOutcome String?
+  processorAvailableAt DateTime?
+  processorCompletedAt DateTime?
+  errorCode String?
+  errorCategory String?
+  errorMessage String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  events PaymentEvent[]
+  simulatedCharge SimulatedCharge?
+  @@index([orderId, createdAt])
+  @@index([status, createdAt])
+}
+
+model SimulatedCharge {
+  id String @id @default(cuid())
+  orderId String @unique
+  attemptId String @unique
+  processorReference String @unique
+  amountCents Int
+  createdAt DateTime @default(now())
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  attempt PaymentAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+}
+
+model PaymentEvent {
+  id String @id @default(cuid())
+  orderId String
+  attemptId String?
+  type String
+  message String
+  metadata String?
+  createdAt DateTime @default(now())
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  attempt PaymentAttempt? @relation(fields: [attemptId], references: [id], onDelete: SetNull)
+  @@index([orderId, createdAt])
+  @@index([attemptId, createdAt])
+}
