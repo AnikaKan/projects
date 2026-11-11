@@ -27,6 +27,7 @@ model PaymentAttempt {
   id String @id @default(cuid())
   orderId String
   idempotencyKey String @unique
+  requestFingerprint String?
   scenario String
   status String @default("CREATED")
   amountCents Int

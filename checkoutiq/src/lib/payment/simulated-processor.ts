@@ -1,6 +1,8 @@
 import { createHash } from "node:crypto";
 import type { PaymentScenario, ProcessorResult } from "./types";
 
+export const PROCESSOR_SIMULATION_DELAY_MS = 120;
+
 function referenceFor(idempotencyKey: string) {
   return `sim_${createHash("sha256").update(idempotencyKey).digest("hex").slice(0, 16)}`;
 }
@@ -9,6 +11,7 @@ export async function runSimulatedProcessor(
   scenario: PaymentScenario,
   idempotencyKey: string,
 ): Promise<ProcessorResult> {
+  await new Promise((resolve) => setTimeout(resolve, PROCESSOR_SIMULATION_DELAY_MS));
   const processorReference = referenceFor(idempotencyKey);
   const effectiveScenario =
     scenario === "DUPLICATE_REQUEST" || scenario === "CONCURRENT_DUPLICATE_REQUESTS"

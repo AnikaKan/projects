@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Link from "next/link";
 import { ActivityIcon, AlertIcon, CheckIcon, ClockIcon, RefreshIcon, ShieldIcon } from "./icons";
 import type { PaymentScenario, PaymentStatus } from "@/lib/payment/types";
 
@@ -244,8 +245,8 @@ export function FailureSimulator() {
   return (
     <main className="sim-shell">
       <header className="sim-topbar">
-        <a className="brand" href="/"><span className="brand-mark"><ActivityIcon /></span><span>CheckoutIQ</span></a>
-        <nav className="product-nav" aria-label="Product navigation"><a href="/">Checkout</a><a className="active" href="/simulator">Failure simulator</a><a href="/dashboard">Operations</a></nav>
+        <Link className="brand" href="/"><span className="brand-mark"><ActivityIcon /></span><span>CheckoutIQ</span></Link>
+        <nav className="product-nav" aria-label="Product navigation"><Link href="/">Checkout</Link><Link className="active" href="/simulator">Failure simulator</Link><Link href="/dashboard">Operations</Link></nav>
         <span className="simulation-badge"><span /> Simulation only</span>
       </header>
 

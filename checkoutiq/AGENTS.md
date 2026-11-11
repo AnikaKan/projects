@@ -27,6 +27,8 @@ The HTTP layer validates transport input and calls the domain service. Payment c
 7. `SimulatedCharge.orderId`, `attemptId`, and `processorReference` remain unique.
 8. A retry after definitive failure must reference the latest failed attempt explicitly.
 9. Delayed processor events must target their original attempt ID and must be safe to replay.
+10. Reusing an idempotency key with a different request fingerprint must return a conflict and never reuse the original operation silently.
+11. A refreshed checkout must restore its active order and render persisted `PROCESSING` or `UNKNOWN` state accurately.
 
 ## Commands
 
@@ -37,6 +39,7 @@ npm run db:push
 npm run db:seed
 npm run dev
 npm test
+npm run lint
 ```
 
 ## Implementation plan

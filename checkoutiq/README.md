@@ -47,10 +47,13 @@ Open [http://localhost:3000](http://localhost:3000).
 ```bash
 npm test
 npm run typecheck
+npm run lint
 npm run build
 ```
 
 Tests use a separate SQLite database at `prisma/test.db`, reset on every run.
+
+The current correctness audit and scenario-by-scenario results are documented in [`TEST_REPORT.md`](./TEST_REPORT.md).
 
 `npm run db:seed` replaces only orders prefixed `DEMO-REL-`; simulator-created orders are preserved. The dashboard can also regenerate this dataset from its toolbar.
 

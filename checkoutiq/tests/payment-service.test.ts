@@ -3,10 +3,12 @@ import { afterAll, beforeEach, describe, expect, it } from "vitest";
 import { db } from "@/lib/db";
 import {
   DELAYED_PROCESSOR_MS,
+  IdempotencyConflictError,
   processPayment,
   reconcilePayment,
   settleDelayedProcessorEvent,
 } from "@/lib/payment/payment-service";
+import { PROCESSOR_SIMULATION_DELAY_MS } from "@/lib/payment/simulated-processor";
 
 let orderSequence = 0;
 
@@ -22,6 +24,16 @@ async function createOrder() {
   });
 }
 
+async function waitForOrderStatus(orderId: string, status: string) {
+  const deadline = Date.now() + PROCESSOR_SIMULATION_DELAY_MS * 4;
+  while (Date.now() < deadline) {
+    const order = await db.order.findUniqueOrThrow({ where: { id: orderId } });
+    if (order.status === status) return order;
+    await new Promise((resolve) => setTimeout(resolve, 5));
+  }
+  throw new Error(`Order ${orderId} did not reach ${status}.`);
+}
+
 beforeEach(async () => {
   await db.simulatedCharge.deleteMany();
   await db.paymentEvent.deleteMany();
@@ -34,6 +46,29 @@ afterAll(async () => {
 });
 
 describe("duplicate-charge prevention", () => {
+  it("persists a normal success, one charge, and its complete event trail", async () => {
+    const order = await createOrder();
+    const result = await processPayment({ orderId: order.id, idempotencyKey: "normal-success", scenario: "SUCCESS" }, db);
+    const persisted = await db.order.findUniqueOrThrow({ where: { id: order.id }, include: { paymentAttempts: true, events: { orderBy: { createdAt: "asc" } }, simulatedCharge: true } });
+
+    expect(result).toMatchObject({ orderStatus: "SUCCEEDED", attemptStatus: "SUCCEEDED", simulatedChargeCount: 1 });
+    expect(persisted.status).toBe("SUCCEEDED");
+    expect(persisted.paymentAttempts).toHaveLength(1);
+    expect(persisted.simulatedCharge?.amountCents).toBe(order.totalCents);
+    expect(persisted.events.map((event) => event.type)).toEqual(["PAYMENT_STARTED", "SIMULATED_CHARGE_CREATED"]);
+  });
+
+  it("persists a bank hard decline without creating a charge", async () => {
+    const order = await createOrder();
+    const result = await processPayment({ orderId: order.id, idempotencyKey: "issuer-decline", scenario: "HARD_DECLINE" }, db);
+    const persisted = await db.order.findUniqueOrThrow({ where: { id: order.id }, include: { paymentAttempts: true, events: true, simulatedCharge: true } });
+
+    expect(result).toMatchObject({ orderStatus: "FAILED", attemptStatus: "FAILED", simulatedChargeCount: 0 });
+    expect(persisted.paymentAttempts[0]).toMatchObject({ errorCode: "BANK_HARD_DECLINE", errorCategory: "ISSUER_DECLINE" });
+    expect(persisted.simulatedCharge).toBeNull();
+    expect(persisted.events.some((event) => event.type === "PAYMENT_FAILED")).toBe(true);
+  });
+
   it("reuses one persistent operation when a customer clicks Pay twice", async () => {
     const order = await createOrder();
     const input = { orderId: order.id, idempotencyKey: "double-click-key", scenario: "SUCCESS" as const };
@@ -69,6 +104,33 @@ describe("duplicate-charge prevention", () => {
       message: "Duplicate charge prevented — existing payment confirmed.",
     });
     expect(await db.paymentAttempt.count({ where: { orderId: order.id } })).toBe(1);
+    expect(await db.simulatedCharge.count({ where: { orderId: order.id } })).toBe(1);
+  });
+
+  it("rejects an idempotency key reused with different payment details", async () => {
+    const firstOrder = await createOrder();
+    const secondOrder = await createOrder();
+    await processPayment({ orderId: firstOrder.id, idempotencyKey: "conflicting-key", scenario: "SUCCESS" }, db);
+
+    await expect(processPayment({ orderId: firstOrder.id, idempotencyKey: "conflicting-key", scenario: "HARD_DECLINE" }, db)).rejects.toBeInstanceOf(IdempotencyConflictError);
+    await expect(processPayment({ orderId: secondOrder.id, idempotencyKey: "conflicting-key", scenario: "SUCCESS" }, db)).rejects.toBeInstanceOf(IdempotencyConflictError);
+
+    expect(await db.paymentAttempt.count({ where: { idempotencyKey: "conflicting-key" } })).toBe(1);
+    expect(await db.simulatedCharge.count({ where: { orderId: firstOrder.id } })).toBe(1);
+    expect(await db.simulatedCharge.count({ where: { orderId: secondOrder.id } })).toBe(0);
+    expect(await db.paymentEvent.count({ where: { type: "IDEMPOTENCY_CONFLICT" } })).toBe(2);
+  });
+
+  it("exposes persisted PROCESSING state so a refreshed client can recover", async () => {
+    const order = await createOrder();
+    const pending = processPayment({ orderId: order.id, idempotencyKey: "refresh-in-flight", scenario: "SUCCESS" }, db);
+
+    const processing = await waitForOrderStatus(order.id, "PROCESSING");
+    expect(processing.status).toBe("PROCESSING");
+    expect(await db.simulatedCharge.count({ where: { orderId: order.id } })).toBe(0);
+
+    await pending;
+    expect((await db.order.findUniqueOrThrow({ where: { id: order.id } })).status).toBe("SUCCEEDED");
     expect(await db.simulatedCharge.count({ where: { orderId: order.id } })).toBe(1);
   });
 
@@ -212,5 +274,23 @@ describe("duplicate-charge prevention", () => {
     await reconcilePayment(firstOrder.id, db, future);
     expect((await db.order.findUniqueOrThrow({ where: { id: firstOrder.id } })).status).toBe("SUCCEEDED");
     expect((await db.order.findUniqueOrThrow({ where: { id: secondOrder.id } })).status).toBe("UNKNOWN");
+  });
+
+  it("accepts a delayed processor event after reconciliation has already reported pending", async () => {
+    const order = await createOrder();
+    const unknown = await processPayment({ orderId: order.id, idempotencyKey: "late-after-reconcile", scenario: "CLIENT_TIMEOUT_BACKEND_SUCCESS" }, db);
+
+    const firstReconciliation = await reconcilePayment(order.id, db, new Date());
+    expect(firstReconciliation).toMatchObject({ orderStatus: "UNKNOWN", pending: true, simulatedChargeCount: 0 });
+
+    const future = new Date(Date.now() + DELAYED_PROCESSOR_MS + 1_000);
+    await settleDelayedProcessorEvent(unknown.attemptId!, db, future);
+    const finalReconciliation = await reconcilePayment(order.id, db, future);
+
+    expect(finalReconciliation).toMatchObject({ orderStatus: "SUCCEEDED", reconciled: true, simulatedChargeCount: 1 });
+    expect(await db.paymentAttempt.count({ where: { orderId: order.id } })).toBe(1);
+    expect(await db.simulatedCharge.count({ where: { orderId: order.id } })).toBe(1);
+    const eventTypes = (await db.paymentEvent.findMany({ where: { orderId: order.id }, orderBy: { createdAt: "asc" } })).map((event) => event.type);
+    expect(eventTypes).toEqual(["PAYMENT_STARTED", "PAYMENT_OUTCOME_UNKNOWN", "RECONCILIATION_PENDING", "PROCESSOR_SUCCEEDED_LATE", "RECONCILIATION_SUCCEEDED"]);
   });
 });

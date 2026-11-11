@@ -25,6 +25,7 @@ try {
   database.exec(readFileSync(resolve(process.cwd(), "prisma/migrations/0001_init/migration.sql"), "utf8"));
   if (!hasColumn("PaymentAttempt", "processorAvailableAt")) database.exec('ALTER TABLE "PaymentAttempt" ADD COLUMN "processorAvailableAt" DATETIME;');
   if (!hasColumn("PaymentAttempt", "processorCompletedAt")) database.exec('ALTER TABLE "PaymentAttempt" ADD COLUMN "processorCompletedAt" DATETIME;');
+  if (!hasColumn("PaymentAttempt", "requestFingerprint")) database.exec('ALTER TABLE "PaymentAttempt" ADD COLUMN "requestFingerprint" TEXT;');
   database.exec(`
     CREATE TABLE IF NOT EXISTS "SimulatedCharge" (
       "id" TEXT NOT NULL PRIMARY KEY,

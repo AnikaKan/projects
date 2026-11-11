@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import {
   Area,
   Bar,
@@ -69,7 +70,7 @@ export function DashboardExperience() {
     }
   }
 
-  useEffect(() => { void load(); }, []);
+  useEffect(() => { const timer = window.setTimeout(() => void load(), 0); return () => window.clearTimeout(timer); }, []);
 
   const errorOptions = useMemo(() => {
     if (!payload) return [];
@@ -94,8 +95,8 @@ export function DashboardExperience() {
   return (
     <main className="ops-shell">
       <header className="ops-topbar">
-        <a className="brand" href="/"><span className="brand-mark"><ActivityIcon /></span><span>CheckoutIQ</span></a>
-        <nav className="ops-nav" aria-label="Product navigation"><a href="/">Checkout</a><a href="/simulator">Simulator</a><a className="active" href="/dashboard">Reliability dashboard</a></nav>
+        <Link className="brand" href="/"><span className="brand-mark"><ActivityIcon /></span><span>CheckoutIQ</span></Link>
+        <nav className="ops-nav" aria-label="Product navigation"><Link href="/">Checkout</Link><Link href="/simulator">Simulator</Link><Link className="active" href="/dashboard">Reliability dashboard</Link></nav>
         <div className="ops-env"><span className="env-dot" />Simulation data <span>{payload?.transactions.length ?? 0} transactions</span></div>
       </header>
 

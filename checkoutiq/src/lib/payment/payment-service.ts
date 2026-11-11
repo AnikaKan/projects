@@ -1,4 +1,5 @@
 import { Prisma, type PaymentAttempt } from "@prisma/client";
+import { createHash } from "node:crypto";
 import { db as defaultDb } from "@/lib/db";
 import { assertTransition } from "./state-machine";
 import { runSimulatedProcessor } from "./simulated-processor";
@@ -16,6 +17,52 @@ export const DELAYED_PROCESSOR_MS = 2_000;
 const orderQueues = new Map<string, Promise<void>>();
 
 class OrderStateChangedError extends Error {}
+
+export class IdempotencyConflictError extends Error {
+  readonly code = "IDEMPOTENCY_KEY_REUSED_WITH_DIFFERENT_DETAILS";
+  constructor() {
+    super("This idempotency key is already associated with different payment details.");
+    this.name = "IdempotencyConflictError";
+  }
+}
+
+function requestFingerprint(input: ProcessPaymentInput, amountCents: number) {
+  return createHash("sha256").update(JSON.stringify({
+    orderId: input.orderId,
+    amountCents,
+    scenario: input.scenario,
+    retryOfAttemptId: input.retryOfAttemptId ?? null,
+  })).digest("hex");
+}
+
+function idempotencyDetailsMatch(attempt: PaymentAttempt, input: ProcessPaymentInput, amountCents: number) {
+  if (attempt.requestFingerprint) return attempt.requestFingerprint === requestFingerprint(input, amountCents);
+  return attempt.orderId === input.orderId && attempt.amountCents === amountCents && attempt.scenario === input.scenario;
+}
+
+async function assertIdempotencyDetailsMatch(
+  database: Database,
+  attempt: PaymentAttempt,
+  input: ProcessPaymentInput,
+  amountCents: number,
+) {
+  if (idempotencyDetailsMatch(attempt, input, amountCents)) return;
+  const error = new IdempotencyConflictError();
+  await database.paymentEvent.create({
+    data: {
+      orderId: input.orderId,
+      type: "IDEMPOTENCY_CONFLICT",
+      message: error.message,
+      metadata: JSON.stringify({
+        attemptedIdempotencyKey: input.idempotencyKey,
+        attemptedScenario: input.scenario,
+        existingOrderId: attempt.orderId,
+        existingAttemptId: attempt.id,
+      }),
+    },
+  });
+  throw error;
+}
 
 async function withOrderLock<T>(orderId: string, work: () => Promise<T>) {
   const previous = orderQueues.get(orderId) ?? Promise.resolve();
@@ -92,19 +139,20 @@ function duplicateMessage(status: string) {
 }
 
 async function currentStateResult(database: Database, input: ProcessPaymentInput): Promise<PaymentServiceResult> {
+  const currentOrder = await database.order.findUnique({ where: { id: input.orderId } });
+  if (!currentOrder || !isPaymentStatus(currentOrder.status)) throw new Error("Order not found.");
   const racedAttempt = await database.paymentAttempt.findUnique({
     where: { idempotencyKey: input.idempotencyKey },
     include: { order: true },
   });
   if (racedAttempt) {
+    await assertIdempotencyDetailsMatch(database, racedAttempt, input, currentOrder.totalCents);
     const message = duplicateMessage(racedAttempt.order.status);
     await database.paymentEvent.create({
       data: { orderId: racedAttempt.orderId, attemptId: racedAttempt.id, type: "DUPLICATE_REUSED", message },
     });
     return attemptResult(database, racedAttempt, racedAttempt.order.status, { reused: true, prevented: 1, message });
   }
-  const currentOrder = await database.order.findUnique({ where: { id: input.orderId } });
-  if (!currentOrder || !isPaymentStatus(currentOrder.status)) throw new Error("Order not found.");
   const message = duplicateMessage(currentOrder.status);
   return blockedResult(database, input, currentOrder.status, message, message);
 }
@@ -123,20 +171,20 @@ async function validateRetry(database: Database, input: ProcessPaymentInput, ord
 
 async function processOnce(database: Database, input: ProcessPaymentInput): Promise<PaymentServiceResult> {
   return withOrderLock(input.orderId, async () => {
+    const order = await database.order.findUnique({ where: { id: input.orderId } });
+    if (!order || !isPaymentStatus(order.status)) throw new Error("Order not found.");
     const existing = await database.paymentAttempt.findUnique({
       where: { idempotencyKey: input.idempotencyKey },
       include: { order: true },
     });
     if (existing) {
+      await assertIdempotencyDetailsMatch(database, existing, input, order.totalCents);
       const message = duplicateMessage(existing.order.status);
       await database.paymentEvent.create({
         data: { orderId: existing.orderId, attemptId: existing.id, type: "DUPLICATE_REUSED", message },
       });
       return attemptResult(database, existing, existing.order.status, { reused: true, prevented: 1, message });
     }
-
-    const order = await database.order.findUnique({ where: { id: input.orderId } });
-    if (!order || !isPaymentStatus(order.status)) throw new Error("Order not found.");
     if (["SUCCEEDED", "UNKNOWN", "PROCESSING"].includes(order.status)) {
       const message = duplicateMessage(order.status);
       return blockedResult(database, input, order.status, message, message);
@@ -157,6 +205,7 @@ async function processOnce(database: Database, input: ProcessPaymentInput): Prom
           data: {
             orderId: order.id,
             idempotencyKey: input.idempotencyKey,
+            requestFingerprint: requestFingerprint(input, order.totalCents),
             scenario: input.scenario,
             status: "PROCESSING",
             amountCents: order.totalCents,
@@ -353,6 +402,7 @@ export async function reconcilePayment(orderId: string, database: Database = def
           attemptId: unknownAttempt.id,
           type: "RECONCILIATION_PENDING",
           message: "The original processor operation is still pending. No retry or new charge was created.",
+          createdAt: now,
         },
       });
       return { orderId, orderStatus: "UNKNOWN" as const, reconciled: false, pending: true, simulatedChargeCount: 0 };
@@ -379,6 +429,7 @@ export async function reconcilePayment(orderId: string, database: Database = def
           message: resolvedStatus === "SUCCEEDED"
             ? "Reconciliation confirmed the original simulated charge. No replacement attempt was created."
             : "Reconciliation confirmed failure; an explicitly authorized retry is now safe.",
+          createdAt: new Date(now.getTime() + 1),
         },
       });
     });
