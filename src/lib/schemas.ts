@@ -1,0 +1,5 @@
+import { z } from "zod";
+export const claimSchema = z.object({ company:z.string(), role:z.string(), bullet:z.string(), status:z.enum(["strong","partial","unsupported","unevaluated"]), confidence:z.number().min(0).max(100), evidence:z.array(z.object({label:z.string(),value:z.string(),kind:z.enum(["fact","inference","missing","framing"]),confirmed:z.boolean()})), unanswered:z.array(z.string()), technicalFollowups:z.array(z.string()), productFollowups:z.array(z.string()) });
+export const extractionSchema = z.object({ claims:z.array(claimSchema).min(1).max(30) });
+export const turnSchema = z.object({ answered:z.boolean(), strengths:z.array(z.string()).max(3), gaps:z.array(z.string()).max(3), contradiction:z.string().nullable(), verbosity:z.enum(["concise","appropriate","long"]), action:z.enum(["drill","advance","redirect","offer_help"]), nextQuestion:z.string(), userFacingFeedback:z.string(), evidenceUpdates:z.array(z.object({claimId:z.string(), label:z.string(), value:z.string(), kind:z.enum(["fact","inference","missing","framing"]), confirmed:z.boolean()})) });
+export type InterviewTurn = z.infer<typeof turnSchema>;
